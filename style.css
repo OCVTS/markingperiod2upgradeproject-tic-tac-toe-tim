@@ -12,12 +12,15 @@ header {
     font-size:3em;
     text-align: center;
     color:white;
-    width:30vw;
+    width:50vw;
     position: absolute;
-    left:45vw;
+    left:26vw;
+    top:4vh;
+    
 }
 h1 {
-    display:inline-block
+    display:inline-block;
+    
 }
 
 .grid_container {
@@ -26,7 +29,7 @@ h1 {
     grid-template-columns:repeat(3, 1fr);
     width:30vw;
     position:fixed;
-    top:15vh;
+    top:23vh;
     left:45vw;
 }
 
@@ -46,10 +49,10 @@ h1 {
     display:grid;
     grid-template-rows:1;
     grid-template-columns:repeat(3, 1fr);
-    width:30vw;
+    width:26vw;
     position:fixed;
-    left:43vw;
-    bottom:8vh;
+    left:72vw;
+    bottom:81.5vh;
     padding:2vw;
     justify-items:center;
     /* border:2px solid black; */
@@ -76,6 +79,7 @@ button {
     background-color:red;
     border:4px solid green;
     font-size:2em;
+    cursor: pointer;
     
 }
 button:hover {
