@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title></title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Tic Tac Toe</title>
+        <link href ="style.css" rel="stylesheet"/>
     </head>
-    <body>sdfkvnsldfin
-        <header></header>
-        <main></main>
-        <footer></footer>
-        <script src="script.js"></script>
-    </body>
+<body>
+    <main>
+        <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header>
+        <img src="tree.png" id="tree">
+    <section id="tttgrid" class="grid_container">
+        <div class="grid_item GR GB RT RL" id="b1"><img class="row1 col1 dia1" id="1"></div>
+        <div class="grid_item GR GB RT" id="b2"><img class="row1 col2" id="2"></div>
+        <div class="grid_item GB RT RR" id="b3"><img class="row1 col3 dia2" id="3"></div>
+        <div class="grid_item GR GB RL" id="b4"><img class="row2 col1" id="4"></div>
+        <div class="grid_item GR GB" id="b5"><img class="row2 col2 dia1 dia2" id="5"></div>
+        <div class="grid_item GB RR" id="b6"><img class="row2 col3" id="6"></div>
+        <div class="grid_item GR RB RL" id="b7"><img class="row3 col1 dia2" id="7"></div>
+        <div class="grid_item GR RB" id="b8"><img class="row3 col2" id="8"></div>
+        <div class="grid_item RB RR" id="b9"><img class="row3 col3 dia1" id="9"></div>
+    </section>
+    <img src="tree.png" id="tree1">
+    <section class="grid_container1">
+        <p class="grid_item1" id="p1s"></p>
+        <p class="grid_item1" id="winnerStatus"></p>
+        <p class="grid_item1" id="p2s"></p>
+    </section>
+    <button onclick="resetGame()"><b>Reset</b></button>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>
