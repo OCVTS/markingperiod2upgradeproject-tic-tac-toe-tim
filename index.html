@@ -8,37 +8,59 @@
     </head>
 <body>
     <main>
-        <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header>
-        <a href = "sidebar.html">Click this link</a>
-        <img src="tree.png" id="tree">
-    <section id="tttgrid" class="grid_container">
-        <div class="grid_item GR GB RT RL" id="b1"><img class="row1 col1 dia1" id="1"></div>
-        <div class="grid_item GR GB RT" id="b2"><img class="row1 col2" id="2"></div>
-        <div class="grid_item GB RT RR" id="b3"><img class="row1 col3 dia2" id="3"></div>
-        <div class="grid_item GR GB RL" id="b4"><img class="row2 col1" id="4"></div>
-        <div class="grid_item GR GB" id="b5"><img class="row2 col2 dia1 dia2" id="5"></div>
-        <div class="grid_item GB RR" id="b6"><img class="row2 col3" id="6"></div>
-        <div class="grid_item GR RB RL" id="b7"><img class="row3 col1 dia2" id="7"></div>
-        <div class="grid_item GR RB" id="b8"><img class="row3 col2" id="8"></div>
-        <div class="grid_item RB RR" id="b9"><img class="row3 col3 dia1" id="9"></div>
+        <header></header>
+        <h1 id = "head1">Super</h1>
+        <br>
+        <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
+        <h3>Player 1:</h3>
+        <input type="text" id="p1Name" name="Player 1 name"><br>
+        <h3>Player 2:</h3>
+        <input type="text" id="p2Name" name="Player 2 name"><br>
+        <h2>Player Characters</h2>
+        <h3>Player 1</h3>
+        <select id="xCharacter">
+            <option value="X">X</option>
+            <option value="❌">❌</option>
+            <option value="⚒">⚒</option>
+            <option value="⚔">⚔</option>
+            <option value="✘">✘</option>
+            <option value="✻">✻</option>
+            <option value="❄">❄</option>
+            <option value="☣">☣</option>
+            <option value="❖">❖</option>
+          </select>
+          <h3>Player 2</h3>
+          <select id="oCharacter">
+            <option value="O">O</option> 
+            <option value="Δ">Δ</option>
+            <option value="🥚">🥚</option>
+            <option value="☺">☺</option>
+            <option value="☼">☼</option>
+            <option value="☹">☹</option>
+            <option value="☯">☯</option>
+            <option value="☮">☮</option>
+            <option value="☢">☢</option>
+          </select>
+          <br>
+          <button onclick="resetGame()"><b>Start/Reset</b></button>
+    
+    
+          <section id="tttgrid" class="grid_container">
+        <div class="grid_item" id="b1"><img class="row1 col1 dia1" id="1"></div>
+        <div class="grid_item" id="b2"><img class="row1 col2" id="2"></div>
+        <div class="grid_item" id="b3"><img class="row1 col3 dia2" id="3"></div>
+        <div class="grid_item" id="b4"><img class="row2 col1" id="4"></div>
+        <div class="grid_item" id="b5"><img class="row2 col2 dia1 dia2" id="5"></div>
+        <div class="grid_item" id="b6"><img class="row2 col3" id="6"></div>
+        <div class="grid_item" id="b7"><img class="row3 col1 dia2" id="7"></div>
+        <div class="grid_item" id="b8"><img class="row3 col2" id="8"></div>
+        <div class="grid_item" id="b9"><img class="row3 col3 dia1" id="9"></div>
     </section>
-    <section id="linesec">
-        <section><div id="l1" class="lines" /></section>
-        <section><div id="l2" class="lines" /></section>
-        <section><div id="l3" class="lines" /></section>
-        <section><div id="l4" class="lines" /></section>
-        <section><div id="l5" class="lines" /></section>
-        <section><div id="l6" class="lines" /></section>
-        <section><div id="l7" class="lines" /></section>
-        <section><div id="l8" class="lines" /></section>
-    </section>
-    <img src="tree.png" id="tree1">
     <section class="grid_container1">
         <p class="grid_item1" id="p1s"></p>
         <p class="grid_item1" id="winnerStatus"></p>
         <p class="grid_item1" id="p2s"></p>
     </section>
-    <button onclick="resetGame()"><b>Reset</b></button>
     </main>
     <script src="script.js"></script>
 </body>

@@ -6,6 +6,10 @@ let P1Score = 0;
 let P2Score = 0;
 let caneArray = [];
 let wreathArray = [];
+let p1Name = '';
+let p2Name = '';
+let p1Char = '';
+let p2Char = '';
 
 cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
@@ -44,7 +48,6 @@ for (let i =0; i<classArray.length; i++) {
   if (elements[0].src == elements[1].src && elements[0].src == elements[2].src){  
    winner = currentPlayer;
    
-   drawLine(i)
    document.getElementById('winnerStatus').innerHTML = 'Player ' + winner.toUpperCase() + ' wins!'
    
    if (currentPlayer == 'x') {
@@ -70,43 +73,10 @@ turnCounter = 0;
 for (let i = 1; i<10; i++){
 document.getElementById(i.toString()).setAttribute('src', 'transparent.png');
 }
-for (let i=0; i<8; i++){
-   drawLine(i, 'hidden')
-}
 cursor()
-}
-
-function drawLine(lineNum, status = 'visible') {
-
-      switch(lineNum) {
-         case 0:
-            document.getElementById('l1').style.visibility = status;
-         break;
-         case 1:
-            document.getElementById('l2').style.visibility = status;
-         break;
-         case 2:
-            document.getElementById('l3').style.visibility = status;
-         break;
-         case 3:
-            document.getElementById('l4').style.visibility = status;
-         break;
-         case 4:
-            document.getElementById('l5').style.visibility = status;
-         break;
-         case 5:
-            document.getElementById('l6').style.visibility = status;
-         break;
-         case 6:
-            document.getElementById('l7').style.visibility = status;
-         break;
-         case 7:
-            document.getElementById('l8').style.visibility = status;
-         break;
-         default:
-            alert('default')
-         break;
-   }
+p1Char = document.getElementById('xCharacter').value
+p2Char = document.getElementById('oCharacter').value
+document.getElementById('head1').innerHTML= p1Char + p2Char
 }
 
 function cursor() {
