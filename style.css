@@ -14,7 +14,11 @@ header {
     color:white;
 }
 h1 {
-    display:inline-block
+    display:inline-block;
+    color:white;
+}
+h2{
+    color:white;
 }
 
 .grid_container {
