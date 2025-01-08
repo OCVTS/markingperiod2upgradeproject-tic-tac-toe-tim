@@ -6,8 +6,8 @@ let turnCounter = 0;
 let classArray = ['col1', 'col2', 'col3', 'row1', 'row2', 'row3', 'dia1', 'dia2'];
 let P1Score = 0;
 let P2Score = 0;
-let p1Name = 'Brendan';
-let p2Name = 'Jacob';
+let p1Name = '';
+let p2Name = '';
 
 // cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
