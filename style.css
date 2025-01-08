@@ -49,7 +49,7 @@ h1 {
     display:grid;
     grid-template-rows:1;
     grid-template-columns:repeat(3, 1fr);
-    width:26vw;
+    width: 26vw;
     position:fixed;
     left:72vw;
     bottom:81.5vh;
@@ -97,7 +97,14 @@ button:hover {
 }
 #p1s, #p2s {
     border-color:red;
+    color: red
 }
+
+#p3s {
+    border-color:green;
+    color:green;
+}
+
 #winnerStatus {
     border-color:green;
 }
@@ -106,7 +113,7 @@ img {
     height:8vw;
 }
 
-#tree {
+/* #tree {
     position:fixed;
     left:4vw;
     top:15vh;
@@ -117,4 +124,6 @@ img {
     right:4vw;
     top:15vh;
     height:70vh;
-}
+} */
+
+
