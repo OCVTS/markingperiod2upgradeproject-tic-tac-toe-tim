@@ -33,7 +33,6 @@ if (winner == '') {
    } else {
     currentPlayer = p1;
       }
-    //   cursor()
    }
    }
 }
@@ -46,6 +45,14 @@ for (let i=0; i<classArray.length; i++) {
         winner=currentPlayer;
         
         document.getElementById('winnerStatus').innerHTML = `Player ${currentPlayer} Wins!`
+
+        if (currentPlayer == p1) {
+         P1Score++
+         document.getElementById('p1s').innerHTML = `P1 Score = ${P1Score}`
+        } else {
+         P2Score++
+         document.getElementById('p2s').innerHTML = `P2 Score = ${P2Score}`
+        }
   }
   }
    }
