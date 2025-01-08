@@ -20,7 +20,6 @@ header {
 }
 h1 {
     display:inline-block;
-<<<<<<< HEAD
     color:white;
 }
 h2{
@@ -28,9 +27,6 @@ h2{
 }
 h3{
     color:white;
-=======
-    
->>>>>>> origin/HEAD
 }
 
 .grid_container {
