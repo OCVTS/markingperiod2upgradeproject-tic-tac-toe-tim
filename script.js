@@ -62,6 +62,7 @@ for (let i=0; i<classArray.length; i++) {
 function resetGame() {
 currentPlayer = p1;
 winner = '';
+document.getElementById('winnerStatus').innerHTML = 'Winner Declaration'
 turnCounter = 0;
 for (let i = 1; i<10; i++){
 document.getElementById(i).innerHTML = '';
