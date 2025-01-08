@@ -90,6 +90,12 @@ button:hover {
     box-shadow:0px 0px 0px 1px red;
 }
 
+#instructions{
+    z-index: 100000;
+    background-color: white;
+    width:40vw;
+    height:40vh;
+}
 
 /************************** COLORS & IMAGES *********************/
 
