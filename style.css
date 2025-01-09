@@ -75,6 +75,7 @@ h3{
     font-size:16px;
     text-align:center;
     line-height: 6vw;
+    margin-top: 5vh;
 }
 
 button {
@@ -115,7 +116,25 @@ button:hover {
     border-color:green;
 }
 
+#pnames1 {
+    color:green;
+}
 
+#pnames2 {
+    color:red;
+}
+
+#cselect {
+    color:green;
+}
+
+#pcharacters1 {
+    color:red;
+}
+
+#pcharacters2 {
+    color:green;
+}
 /* #tree {
     position:fixed;
     left:4vw;
