@@ -70,7 +70,7 @@ const close = () => {
 /********************* Function resets the game board ********************************/
 function resetGame() {
 winner = '';
-document.getElementById('winnerStatus').innerHTML = 'Winner Declaration'
+document.getElementById('winnerStatus').innerHTML = 'Winner'
 turnCounter = 0;
 
 // for (let i = 1; i<10; i++){
