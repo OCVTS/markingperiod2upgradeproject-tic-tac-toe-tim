@@ -62,6 +62,9 @@ for (let i=0; i<classArray.length; i++) {
   }
    }
 }
+const close = () => {
+   document.getElementById("instructions-container").style.visibility = 'hidden';
+}
 
 /********************* Function resets the game board ********************************/
 function resetGame() {
@@ -77,6 +80,7 @@ p2Char = document.getElementById('oCharacter').value
 p1Name = document.getElementById('p1Name').value
 p2Name = document.getElementById('p2Name').value
 currentPlayer = p1Char;
+document.getElementById("instructions-container").style.visibility = 'visible'
 }
 
 // function cursor() {
@@ -87,3 +91,5 @@ currentPlayer = p1Char;
 //        document.getElementsByTagName("body")[0].style.cursor = "url('O cursor.png'), auto";
 //    }
 //    }
+
+document.getElementById('close').addEventListener('click',close)

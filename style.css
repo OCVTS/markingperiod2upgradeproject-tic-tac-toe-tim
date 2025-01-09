@@ -74,7 +74,7 @@ h3{
     line-height: 6vw;
 }
 
-button {
+#reset {
     width:8vw;
     height:3.5vw;
     bottom:3vh;
@@ -86,17 +86,32 @@ button {
     font-size:1.5em;
     
 }
-button:hover {
+#reset:hover {
     box-shadow:0px 0px 0px 1px red;
 }
 
 #instructions{
-    z-index: 100000;
     background-color: white;
     width:40vw;
     height:40vh;
+    font-size:36px;
 }
-
+#instructions-container{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(255,0,0,25%);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    visibility:visible;
+    /* opacity:0;
+    transition: opacity 0.3s ease; */
+    float:left;
+    z-index:100;
+}
 /************************** COLORS & IMAGES *********************/
 
 #h1-1, #h1-3, #winnerStatus {
