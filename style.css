@@ -145,6 +145,14 @@ button:hover {
 #pcharacters2 {
     color:green;
 }
+
+input[type=text] {
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}
+
 /* #tree {
     position:fixed;
     left:4vw;
