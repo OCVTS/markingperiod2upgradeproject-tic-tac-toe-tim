@@ -35,23 +35,33 @@ h3{
     display:grid;
     grid-template-rows:repeat(3, 1fr);
     grid-template-columns:repeat(3, 1fr);
-    width:42vw;
+    width:45vw;
     position:fixed;
-    top:23vh;
-    left:45vw;
+    top:6vh;
+    left:35vw;
 }
 
 .grid_item {
     border:2px solid white;
-    box-sizing: border-box;
-    width:14vw;
-    height:14vw;
+    width:16vw;
+    height:16vw;
     color:rgb(255, 255, 255);
     font-size:10vw;
     text-align:center;
     line-height: 10vw;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
 }
 
+.gridA {
+    display:inline-block;
+    border:1px solid green;
+    width:5vw;
+    height:5vw;
+    margin:0;
+    font-size:4vw;
+    line-height: 4vw;
+}
 
 .grid_container1 {
     display:grid;
