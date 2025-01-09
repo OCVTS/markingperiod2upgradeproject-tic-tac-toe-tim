@@ -12,12 +12,12 @@
         <h1 id = "head1">Super</h1>
         <br>
         <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
-        <h3>Player 1:</h3>
+        <h3 id="pnames1">Player 1:</h3>
         <input type="text" id="p1Name" name="Player 1 name"><br>
-        <h3>Player 2:</h3>
+        <h3 id="pnames2">Player 2:</h3>
         <input type="text" id="p2Name" name="Player 2 name"><br>
-        <h2>Player Characters</h2>
-        <h3>Player 1</h3>
+        <h2 id="cselect">Player Characters</h2>
+        <h3 id="pcharacters1">Player 1</h3>
         <select id="xCharacter">
             <option value="X">X</option>
             <option value="❌">❌</option>
@@ -29,7 +29,7 @@
             <option value="☣">☣</option>
             <option value="❖">❖</option>
           </select>
-          <h3>Player 2</h3>
+          <h3 id="pcharacters2">Player 2</h3>
           <select id="oCharacter">
             <option value="O">O</option> 
             <option value="Δ">Δ</option>
@@ -52,17 +52,109 @@
         <div id = "blurred2">
         <header><h1 id="winnerStatus">Winner Declaration</h1></header>
         <!-- <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header> -->
+          <button onclick="resetGame()"><b>Start/Reset</b></button>
+        <header><h1 id="winnerStatus">Winner</h1></header>
     <section id="tttgrid" class="grid_container">
-        <div class="grid_item row1 col1 dia1" id="1" onclick="playerMove('1')"></div>
-        <div class="grid_item row1 col2" id="2" onclick="playerMove('2')"></div>
-        <div class="grid_item row1 col3 dia2" id="3" onclick="playerMove('3')"></div>
-        <div class="grid_item row2 col1" id="4" onclick="playerMove('4')"></div>
-        <div class="grid_item row2 col2 dia1 dia2" id="5" onclick="playerMove('5')"></div>
-        <div class="grid_item row2 col3" id="6" onclick="playerMove('6')"></div>
-        <div class="grid_item row3 col1 dia2" id="7" onclick="playerMove('7')"></div>
-        <div class="grid_item row3 col2" id="8" onclick="playerMove('8')"></div>
-        <div class="grid_item row3 col3 dia1" id="9" onclick="playerMove('9')"></div>
-    
+        <div class="grid_item" id="1" onclick="playerMove('a1')">
+            <div class="gridA row1 col1 dia1" id="a1" onclick="playerMove('a1')"></div>
+            <div class="gridA row1 col2" id="a2" onclick="playerMove('a2')"></div>
+            <div class="gridA row1 col3 dia2" id="a3" onclick="playerMove('a3')"></div>
+            <div class="gridA row2 col1" id="a4" onclick="playerMove('a4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="a5" onclick="playerMove('a5')"></div>
+            <div class="gridA row2 col3" id="a6" onclick="playerMove('a6')"></div>
+            <div class="gridA row3 col1 dia2" id="a7" onclick="playerMove('a7')"></div>
+            <div class="gridA row3 col2" id="a8" onclick="playerMove('a8')"></div>
+            <div class="gridA row3 col3 dia1" id="a9" onclick="playerMove('a9')"></div>
+        </div>
+        <div class="grid_item" id="2" onclick="playerMove('2')">
+            <div class="gridA row1 col1 dia1" id="b1" onclick="playerMove('b1')"></div>
+            <div class="gridA row1 col2" id="b2" onclick="playerMove('b2')"></div>
+            <div class="gridA row1 col3 dia2" id="b3" onclick="playerMove('b3')"></div>
+            <div class="gridA row2 col1" id="b4" onclick="playerMove('b4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="b5" onclick="playerMove('b5')"></div>
+            <div class="gridA row2 col3" id="b6" onclick="playerMove('b6')"></div>
+            <div class="gridA row3 col1 dia2" id="b7" onclick="playerMove('b7')"></div>
+            <div class="gridA row3 col2" id="b8" onclick="playerMove('b8')"></div>
+            <div class="gridA row3 col3 dia1" id="b9" onclick="playerMove('b9')"></div>
+        </div>
+        <div class="grid_item" id="3" onclick="playerMove('3')">
+            <div class="gridA row1 col1 dia1" id="c1" onclick="playerMove('c1')"></div>
+            <div class="gridA row1 col2" id="c2" onclick="playerMove('c2')"></div>
+            <div class="gridA row1 col3 dia2" id="c3" onclick="playerMove('c3')"></div>
+            <div class="gridA row2 col1" id="c4" onclick="playerMove('c4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="c5" onclick="playerMove('c5')"></div>
+            <div class="gridA row2 col3" id="c6" onclick="playerMove('c6')"></div>
+            <div class="gridA row3 col1 dia2" id="c7" onclick="playerMove('c7')"></div>
+            <div class="gridA row3 col2" id="c8" onclick="playerMove('c8')"></div>
+            <div class="gridA row3 col3 dia1" id="c9" onclick="playerMove('c9')"></div>
+        </div>
+        <div class="grid_item" id="4" onclick="playerMove('4')">
+            <div class="gridA row1 col1 dia1" id="d1" onclick="playerMove('d1')"></div>
+            <div class="gridA row1 col2" id="d2" onclick="playerMove('d2')"></div>
+            <div class="gridA row1 col3 dia2" id="d3" onclick="playerMove('d3')"></div>
+            <div class="gridA row2 col1" id="d4" onclick="playerMove('d4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="d5" onclick="playerMove('d5')"></div>
+            <div class="gridA row2 col3" id="d6" onclick="playerMove('d6')"></div>
+            <div class="gridA row3 col1 dia2" id="d7" onclick="playerMove('d7')"></div>
+            <div class="gridA row3 col2" id="d8" onclick="playerMove('d8')"></div>
+            <div class="gridA row3 col3 dia1" id="d9" onclick="playerMove('d9')"></div>
+        </div>
+        <div class="grid_item" id="5" onclick="playerMove('5')">
+            <div class="gridA row1 col1 dia1" id="e1" onclick="playerMove('e1')"></div>
+            <div class="gridA row1 col2" id="e2" onclick="playerMove('e2')"></div>
+            <div class="gridA row1 col3 dia2" id="e3" onclick="playerMove('e3')"></div>
+            <div class="gridA row2 col1" id="e4" onclick="playerMove('e4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="e5" onclick="playerMove('e5')"></div>
+            <div class="gridA row2 col3" id="e6" onclick="playerMove('e6')"></div>
+            <div class="gridA row3 col1 dia2" id="e7" onclick="playerMove('e7')"></div>
+            <div class="gridA row3 col2" id="e8" onclick="playerMove('e8')"></div>
+            <div class="gridA row3 col3 dia1" id="e9" onclick="playerMove('e9')"></div>
+        </div>
+        <div class="grid_item" id="6" onclick="playerMove('6')">
+            <div class="gridA row1 col1 dia1" id="f1" onclick="playerMove('f1')"></div>
+            <div class="gridA row1 col2" id="f2" onclick="playerMove('f2')"></div>
+            <div class="gridA row1 col3 dia2" id="f3" onclick="playerMove('f3')"></div>
+            <div class="gridA row2 col1" id="f4" onclick="playerMove('f4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="f5" onclick="playerMove('f5')"></div>
+            <div class="gridA row2 col3" id="f6" onclick="playerMove('f6')"></div>
+            <div class="gridA row3 col1 dia2" id="f7" onclick="playerMove('f7')"></div>
+            <div class="gridA row3 col2" id="f8" onclick="playerMove('f8')"></div>
+            <div class="gridA row3 col3 dia1" id="f9" onclick="playerMove('f9')"></div>
+        </div>
+        <div class="grid_item" id="7" onclick="playerMove('7')">
+            <div class="gridA row1 col1 dia1" id="g1" onclick="playerMove('g1')"></div>
+            <div class="gridA row1 col2" id="g2" onclick="playerMove('g2')"></div>
+            <div class="gridA row1 col3 dia2" id="g3" onclick="playerMove('g3')"></div>
+            <div class="gridA row2 col1" id="g4" onclick="playerMove('g4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="g5" onclick="playerMove('g5')"></div>
+            <div class="gridA row2 col3" id="g6" onclick="playerMove('g6')"></div>
+            <div class="gridA row3 col1 dia2" id="g7" onclick="playerMove('g7')"></div>
+            <div class="gridA row3 col2" id="g8" onclick="playerMove('g8')"></div>
+            <div class="gridA row3 col3 dia1" id="g9" onclick="playerMove('g9')"></div>
+        </div>
+        <div class="grid_item" id="8" onclick="playerMove('8')">
+            <div class="gridA row1 col1 dia1" id="h1" onclick="playerMove('h1')"></div>
+            <div class="gridA row1 col2" id="h2" onclick="playerMove('h2')"></div>
+            <div class="gridA row1 col3 dia2" id="h3" onclick="playerMove('h3')"></div>
+            <div class="gridA row2 col1" id="h4" onclick="playerMove('h4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="h5" onclick="playerMove('h5')"></div>
+            <div class="gridA row2 col3" id="h6" onclick="playerMove('h6')"></div>
+            <div class="gridA row3 col1 dia2" id="h7" onclick="playerMove('h7')"></div>
+            <div class="gridA row3 col2" id="h8" onclick="playerMove('h8')"></div>
+            <div class="gridA row3 col3 dia1" id="h9" onclick="playerMove('h9')"></div>
+        </div>
+        <div class="grid_item" id="9" onclick="playerMove('9')">
+            <div class="gridA row1 col1 dia1" id="i1" onclick="playerMove('i1')"></div>
+            <div class="gridA row1 col2" id="i2" onclick="playerMove('i2')"></div>
+            <div class="gridA row1 col3 dia2" id="i3" onclick="playerMove('i3')"></div>
+            <div class="gridA row2 col1" id="i4" onclick="playerMove('i4')"></div>
+            <div class="gridA row2 col2 dia1 dia2" id="i5" onclick="playerMove('i5')"></div>
+            <div class="gridA row2 col3" id="i6" onclick="playerMove('i6')"></div>
+            <div class="gridA row3 col1 dia2" id="i7" onclick="playerMove('i7')"></div>
+            <div class="gridA row3 col2" id="i8" onclick="playerMove('i8')"></div>
+            <div class="gridA row3 col3 dia1" id="i9" onclick="playerMove('i9')"></div>
+        </div>
+    </section>
     <section class="grid_container1">
         <p class="grid_item1" id="p1s"></p>
         <p class="grid_item1" id="p3s">Score Board</p>

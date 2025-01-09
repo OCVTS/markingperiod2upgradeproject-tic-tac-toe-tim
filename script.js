@@ -6,8 +6,8 @@ let turnCounter = 0;
 let classArray = ['col1', 'col2', 'col3', 'row1', 'row2', 'row3', 'dia1', 'dia2'];
 let P1Score = 0;
 let P2Score = 0;
-let p1Name = '';
-let p2Name = '';
+let p1Name = 'P1';
+let p2Name = 'P2';
 
 // cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
@@ -23,8 +23,7 @@ if (winner == false) {
    }
    
  checkWinner()
-//  alert(currentPlayer)
- turnCounter++
+ 
  if (turnCounter >= 9 && winner == false) {
    document.getElementById('winnerStatus').innerHTML = "It's a Tie!"
    setTimeout(resetGame, 4000)
@@ -74,9 +73,9 @@ winner = '';
 document.getElementById('winnerStatus').innerHTML = 'Winner Declaration'
 turnCounter = 0;
 
-for (let i = 1; i<10; i++){
-document.getElementById(i).innerHTML = '';
-}
+// for (let i = 1; i<10; i++){
+// document.getElementById(i).innerHTML = '';
+// }
 p1Char = document.getElementById('xCharacter').value
 p2Char = document.getElementById('oCharacter').value
 p1Name = document.getElementById('p1Name').value
