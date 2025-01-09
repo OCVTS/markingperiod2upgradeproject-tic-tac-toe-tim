@@ -23,7 +23,7 @@ if (winner == false) {
    }
    
  checkWinner()
- turnCounter++
+ 
  if (turnCounter >= 9 && winner == false) {
    document.getElementById('winnerStatus').innerHTML = "It's a Tie!"
    setTimeout(resetGame, 4000)
@@ -65,7 +65,7 @@ for (let i=0; i<classArray.length; i++) {
 /********************* Function resets the game board ********************************/
 function resetGame() {
 winner = '';
-document.getElementById('winnerStatus').innerHTML = 'Winner'
+document.getElementById('winnerStatus').innerHTML = 'Winner Declaration'
 turnCounter = 0;
 
 // for (let i = 1; i<10; i++){
