@@ -95,6 +95,7 @@ h3{
     width:40vw;
     height:40vh;
     font-size:36px;
+    
 }
 #instructions-container{
     position:fixed;
@@ -107,10 +108,14 @@ h3{
     align-items: center;
     display:flex;
     visibility:visible;
-    /* opacity:0;
-    transition: opacity 0.3s ease; */
     float:left;
     z-index:100;
+}
+#blurred1{
+    filter:blur(1.5rem);
+}
+#blurred2{
+    filter:blur(1.5rem);
 }
 /************************** COLORS & IMAGES *********************/
 
@@ -132,6 +137,7 @@ h3{
 
 #winnerStatus {
     border-color:green;
+
 }
 
 

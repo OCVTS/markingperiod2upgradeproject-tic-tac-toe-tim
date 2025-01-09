@@ -8,6 +8,7 @@
     </head>
 <body>
     <main>
+        <div id = "blurred1">
         <h1 id = "head1">Super</h1>
         <br>
         <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
@@ -42,11 +43,13 @@
           </select>
           <br>
           <button id="reset" onclick="resetGame()"><b>Start/Reset</b></button>
+          </div>
           <div id = 'instructions-container'><div id="instructions">
             <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
             <button id = "close">Got it!</button>
         </div>
         </div>
+        <div id = "blurred2">
         <header><h1 id="winnerStatus">Winner Declaration</h1></header>
         <!-- <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header> -->
     <section id="tttgrid" class="grid_container">
@@ -65,7 +68,8 @@
         <p class="grid_item1" id="p3s">Score Board</p>
         <p class="grid_item1" id="p2s"></p>
     </section>
-    </main>
+</div>    
+</main>
     <script src="script.js"></script>
 </body>
 </html>

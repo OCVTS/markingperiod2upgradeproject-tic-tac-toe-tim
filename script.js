@@ -64,6 +64,8 @@ for (let i=0; i<classArray.length; i++) {
 }
 const close = () => {
    document.getElementById("instructions-container").style.visibility = 'hidden';
+   document.getElementById("blurred1").style.filter = 'blur(0)';
+   document.getElementById("blurred2").style.filter = 'blur(0)';
 }
 
 /********************* Function resets the game board ********************************/
