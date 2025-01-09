@@ -7,16 +7,13 @@ body {
     background-color:rgb(0, 0, 0);
 }
 
-header {
-    display:inline-block;
+#winnerStatus {
     font-size:2em;
     text-align: center;
     color:white;
-    width:50vw;
-    position: absolute;
-    left:-13vw;
-    top:50vh;
-    
+    width:22vw;
+    border: 1px white solid;
+    margin-top: 3vh
 }
 h1 {
     display:inline-block;
@@ -27,6 +24,11 @@ h2{
 }
 h3{
     color:white;
+}
+
+#head1 {
+    color: green;
+    margin-left: 1.8vw;
 }
 
 .grid_container {
@@ -69,6 +71,7 @@ h3{
     position:fixed;
     left:-2vw;
     bottom:50vh;
+    top:35vh;
     padding:2vw;
     justify-items:center;
     /* border:2px solid black; */
@@ -82,12 +85,12 @@ h3{
     font-size:16px;
     text-align:center;
     line-height: 6vw;
+    margin-top: 5vh;
 }
 
 button {
     width:8vw;
     height:3.5vw;
-    bottom:3vh;
     left:56vw;
     border-radius:30px;
     color:green;
@@ -123,7 +126,25 @@ button:hover {
     border-color:green;
 }
 
+#pnames1 {
+    color:green;
+}
 
+#pnames2 {
+    color:red;
+}
+
+#cselect {
+    color:green;
+}
+
+#pcharacters1 {
+    color:red;
+}
+
+#pcharacters2 {
+    color:green;
+}
 /* #tree {
     position:fixed;
     left:4vw;
