@@ -11,9 +11,10 @@ body {
     font-size:2em;
     text-align: center;
     color:white;
-    width:22vw;
+    width:10vw;
     border: 1px white solid;
-    margin-top: 3vh
+    margin-top: 5vh;
+    margin-bottom:32.7vh;
 }
 h1 {
     display:inline-block;
@@ -28,7 +29,7 @@ h3{
 
 #head1 {
     color: green;
-    margin-left: 1.8vw;
+    margin-top: 1vh;
 }
 
 .grid_container {
@@ -64,7 +65,7 @@ h3{
 }
 
 .grid_container1 {
-    display:grid;
+    display:flex;
     grid-template-rows:1;
     grid-template-columns:repeat(3, 1fr);
     width: 22vw;
@@ -74,6 +75,8 @@ h3{
     top:35vh;
     padding:2vw;
     justify-items:center;
+    margin-top:29vh;
+
     /* border:2px solid black; */
 }
 
@@ -88,7 +91,7 @@ h3{
     margin-top: 5vh;
 }
 
-button {
+#resetbtn {
     width:8vw;
     height:3.5vw;
     left:56vw;
@@ -99,11 +102,38 @@ button {
     font-size:1.5em;
     
 }
-button:hover {
+#resetbtn:hover {
     box-shadow:0px 0px 0px 1px red;
 }
 
-
+#instructions{
+    background-color: white;
+    width:40vw;
+    height:40vh;
+    font-size:36px;
+    text-align: center;
+    padding:15px;
+}
+#instructions-container{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(255,255,255,10%);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    visibility:visible;
+    float:left;
+    z-index:100;
+}
+#blurred1{
+    filter:blur(1.5rem);
+}
+#blurred2{
+    filter:blur(1.5rem);
+}
 /************************** COLORS & IMAGES *********************/
 
 #h1-1, #h1-3, #winnerStatus {
@@ -124,6 +154,7 @@ button:hover {
 
 #winnerStatus {
     border-color:green;
+
 }
 
 #pnames1 {
@@ -135,6 +166,7 @@ button:hover {
 }
 
 #cselect {
+    margin-top:6vh;
     color:green;
 }
 
@@ -147,12 +179,65 @@ button:hover {
 }
 
 input[type=text] {
-    border: 3px solid white;
-    background-color: black;
-    color: white;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 6px;
 }
 
+#flexbox {
+    position: fixed;
+    width: 22vw;
+    margin-left: 0vw;
+    text-align: center;
+    flex-direction:column;
+}
+#sidenavBG{
+    background-color:white;
+    height:800%
+}
+#resetbtn {
+    margin-top: 1vh;
+    
+}
+
+#xCharacter {
+    border: 3px solid black;
+    border-radius: 60px;
+    width: 100px;
+    height:100px;
+    text-align: center;
+    font-size:80px;
+}
+
+#oCharacter {
+    border: 3px solid black;
+    border-radius: 10px;
+    border-radius: 60px;
+    width: 100px;
+    height:100px;
+    text-align: center;
+    font-size:80px;
+}
+#close{
+    height:6vh;
+    width:12vw;
+    border-radius:30px;
+    font-size:1.5rem;
+    margin-top:2vh;
+}
+#tttgrid{
+    filter:blur(1.5rem);
+}
+#turn{
+    color:green;
+    text-align:center;
+    margin-top:-10vh;
+    display:grid;
+    flex-direction: column;
+    background-color:white;
+    padding-bottom:7.3vh;
+}
 /* #tree {
     position:fixed;
     left:4vw;
