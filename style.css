@@ -229,6 +229,15 @@ input[type=text] {
 #tttgrid{
     filter:blur(1.5rem);
 }
+#turn{
+    color:green;
+    text-align:center;
+    margin-top:-10vh;
+    display:grid;
+    flex-direction: column;
+    background-color:white;
+    padding-bottom:7.3vh;
+}
 /* #tree {
     position:fixed;
     left:4vw;
