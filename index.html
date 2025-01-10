@@ -10,6 +10,7 @@
     <main>
         <div id = "blurred1">
         <div id="flexbox">
+            <div id = "sidenavBG">
         <h1 id = "head1">Super</h1>
         <br>
         <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
@@ -26,7 +27,7 @@
             <option value="⚔">⚔</option>
             <option value="✘">✘</option>
             <option value="✻">✻</option>
-            <option value="🂡">🂡</option>
+            <option value="⛝">⛝</option>
             <option value="☣">☣</option>
             <option value="❖">❖</option>
           </select>
@@ -43,7 +44,14 @@
             <option value="☢">☢</option>
           </select>
           <br>
-          <button id="reset" onclick="resetGame()"><b>Start/Reset</b></button>
+          <button id="resetbtn" onclick="resetGame()"><b>Start/Reset</b></button>
+          <header><h1 id="winnerStatus">Winner</h1></header>
+          <section class="grid_container1">
+              <p class="grid_item1" id="p1s"></p>
+              <p class="grid_item1" id="p3s">Score Board</p>
+              <p class="grid_item1" id="p2s"></p>  
+            </div>
+            </div>
           </div>
           <div id = 'instructions-container'><div id="instructions">
             <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
@@ -51,14 +59,8 @@
         </div>
         </div>
         <div id = "blurred2">
-        <header><h1 id="winnerStatus">Winner Declaration</h1></header>
         <!-- <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header> -->
-          <button id="resetbtn" onclick="resetGame()"><b>Start/Reset</b></button>
-        <header><h1 id="winnerStatus">Winner</h1></header>
-        <section class="grid_container1">
-            <p class="grid_item1" id="p1s"></p>
-            <p class="grid_item1" id="p3s">Score Board</p>
-            <p class="grid_item1" id="p2s"></p>
+     
         </section>
     </div>
     <section id="tttgrid" class="grid_container">
@@ -161,11 +163,6 @@
             <div class="gridA row3 col2" id="i8" onclick="playerMove('i8')"></div>
             <div class="gridA row3 col3 dia1" id="i9" onclick="playerMove('i9')"></div>
         </div>
-    </section>
-    <section class="grid_container1">
-        <p class="grid_item1" id="p1s"></p>
-        <p class="grid_item1" id="p3s">Score Board</p>
-        <p class="grid_item1" id="p2s"></p>
     </section>
 </div>    
 </main>

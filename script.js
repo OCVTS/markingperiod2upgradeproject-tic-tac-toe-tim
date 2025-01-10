@@ -80,9 +80,33 @@ p1Char = document.getElementById('xCharacter').value
 p2Char = document.getElementById('oCharacter').value
 p1Name = document.getElementById('p1Name').value
 p2Name = document.getElementById('p2Name').value
-currentPlayer = p1Char;
-document.getElementById("instructions-container").style.visibility = 'visible'
+/******************************************Easter Egg*****************************************/
+if(document.getElementById('p1Name').value == 'kalel' || document.getElementById('p1Name').value == 'Kalel' ){
+   p1Char = '🂡'
+}if(document.getElementById('p2Name').value == 'kalel' || document.getElementById('p2Name').value == 'Kalel'){
+p2Char = '🦸'
 }
+ if(document.getElementById('p1Name').value == 'brendan' || document.getElementById('p1Name').value == 'Brendan'){
+p1Char = '😛'
+}if(document.getElementById('p2Name').value == 'brendan' || document.getElementById('p2Name').value == 'Brendan'){
+   p2Char = '🥋'
+}
+if(document.getElementById('p1Name').value == 'jacob' || document.getElementById('p1Name').value == 'Jacob'){
+   p1Char = '🧝'
+   }if(document.getElementById('p2Name').value == 'jacob' || document.getElementById('p2Name').value == 'Jacob'){
+      p2Char = '🍚'
+   }
+   if(document.getElementById('p1Name').value == 'ivan' || document.getElementById('p1Name').value == 'Ivan'){
+      p1Char = '🏈'
+      }if(document.getElementById('p2Name').value == 'ivan' || document.getElementById('p2Name').value == 'Ivan'){
+         p2Char = '⁵²'
+      }
+currentPlayer = p1Char;
+document.getElementById("tttgrid").style.filter = 'blur(0)';
+}
+
+
+
 
 // function cursor() {
 
