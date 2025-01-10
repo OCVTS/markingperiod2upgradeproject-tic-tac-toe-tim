@@ -52,7 +52,10 @@ h3{
     line-height: 10vw;
     display:grid;
     grid-template-columns:repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
 }
+
 
 .gridA {
     display:inline-block;

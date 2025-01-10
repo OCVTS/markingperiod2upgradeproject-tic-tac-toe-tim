@@ -72,15 +72,17 @@ function checkWinner() {
            if ((board[classArray[i][0]] == board[classArray[i][1]]) && (board[classArray[i][1]] == board[classArray[i][2]])) {
             winner=true
             if (currentPlayer == p1Char){
-               alert(p1Char + 'won' + board.name)
+               alert(p1Name + ' won ' + board.name)
+               document.getElementById(board.name).innerHTML = p1Char
             } else {
-               alert(p2Char + 'won' + board.name)
+               alert(p2Name + ' won ' + board.name)
+               document.getElementById(board.name).innerHTML = p2Char
             }
            }
          })
       }
    }
-}
+
 const close = () => {
    document.getElementById("instructions-container").style.visibility = 'hidden';
    document.getElementById("blurred1").style.filter = 'blur(0)';
@@ -92,10 +94,6 @@ function resetGame() {
 winner = '';
 document.getElementById('winnerStatus').innerHTML = 'Winner'
 turnCounter = 0;
-// commenting out resetting squares part of reset game
-// for (let i = 1; i<10; i++){
-// document.getElementById(i).innerHTML = '';
-// }
 p1Char = document.getElementById('xCharacter').value
 p2Char = document.getElementById('oCharacter').value
 p1Name = document.getElementById('p1Name').value
@@ -125,47 +123,5 @@ currentPlayer = p1Char;
 document.getElementById("tttgrid").style.filter = 'blur(0)';
 }
 
-
-
-
-// function cursor() {
-
-//    if(currentPlayer == p1Char){
-//        document.getElementsByTagName("body")[0].style.cursor = "url('X cursor.png'), auto";
-//    }else{
-//        document.getElementsByTagName("body")[0].style.cursor = "url('O cursor.png'), auto";
-//    }
-//    }
-
 document.getElementById('close').addEventListener('click',close)
 
-
-// function checkWinner() {
-// for (let i=0; i<classArray.length; i++) {
-//     const elements = document.getElementsByClassName(classArray[i])
-//     if (elements[0].innerHTML != '') {
-//         if (elements[0].innerHTML == elements[1].innerHTML && elements[0].innerHTML == elements[2].innerHTML){  
-//         winner=true;
-//         if (turnCounter % 2 == 0) {
-//          document.getElementById('winnerStatus').innerHTML = `${p1Name} Wins!`
-//         } else {
-//          document.getElementById('winnerStatus').innerHTML = `${p2Name} Wins!`
-//         }
-
-//         if (currentPlayer == p1Char) {
-//          P1Score++
-//          document.getElementById('p1s').innerHTML = `P1 Score = ${P1Score}`
-//         } else {
-//          P2Score++
-//          document.getElementById('p2s').innerHTML = `P2 Score = ${P2Score}`
-//         }
-//   }
-//   }
-//    }
-// }
-
-
-//  if (turnCounter >= 9 && winner == false) {
-//    document.getElementById('winnerStatus').innerHTML = "It's a Tie!"
-//    setTimeout(resetGame, 4000)
-//    }
