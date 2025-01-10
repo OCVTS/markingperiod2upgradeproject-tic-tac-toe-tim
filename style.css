@@ -31,6 +31,11 @@ h3{
 #head1 {
     color: white;
     margin-top: 1vh;
+    font-size: 60px;
+}
+
+#h1-1{
+    font-size: 40px;
 }
 
 .grid_container {
@@ -163,10 +168,12 @@ h3{
 
 #pnames1 {
     color:white;
+    font-size: 26px;
 }
 
 #pnames2 {
     color:#133863;
+    font-size: 26px;
 }
 
 #cselect {
