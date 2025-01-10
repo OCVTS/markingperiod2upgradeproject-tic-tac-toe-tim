@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color:white
+    /* background-color: #16355e; */
+     background-color:#091D34 
 }
 
 #winnerStatus {
@@ -28,7 +29,7 @@ h3{
 }
 
 #head1 {
-    color: green;
+    color: white;
     margin-top: 1vh;
 }
 
@@ -56,7 +57,7 @@ h3{
 
 .gridA {
     display:inline-block;
-    border:1px solid green;
+    border:1px solid #2369B8;
     width:5vw;
     height:5vw;
     margin:0;
@@ -96,14 +97,14 @@ h3{
     height:3.5vw;
     left:56vw;
     border-radius:30px;
-    color:green;
-    background-color:red;
-    border:4px solid green;
+    color:white;
+    background-color:#133863;
+    border:4px solid white;
     font-size:1.5em;
     
 }
 #resetbtn:hover {
-    box-shadow:0px 0px 0px 1px red;
+    box-shadow:0px 0px 0px 1px #133863;
 }
 
 #instructions{
@@ -137,45 +138,45 @@ h3{
 /************************** COLORS & IMAGES *********************/
 
 #h1-1, #h1-3, #winnerStatus {
-    color:red;
+    color:#133863;
 }
 #h1-2, #p1s, #p2s {
-    color: green;
+    color: white;
 }
 #p1s, #p2s {
-    border-color:red;
-    color: red
+    border-color:#133863;
+    color: #133863
 }
 
 #p3s {
-    border-color:green;
-    color:green;
+    border-color:white;
+    color:#fff;
 }
 
 #winnerStatus {
-    border-color:green;
+    border-color:white;
 
 }
 
 #pnames1 {
-    color:green;
+    color:white;
 }
 
 #pnames2 {
-    color:red;
+    color:#133863;
 }
 
 #cselect {
     margin-top:6vh;
-    color:green;
+    color:white;
 }
 
 #pcharacters1 {
-    color:red;
+    color:#133863;
 }
 
 #pcharacters2 {
-    color:green;
+    color:white;
 }
 
 input[type=text] {
@@ -193,8 +194,8 @@ input[type=text] {
     flex-direction:column;
 }
 #sidenavBG{
-    background-color:white;
-    height:800%
+    background-color:#2369B8;
+    height:100vh;
 }
 #resetbtn {
     margin-top: 1vh;
@@ -204,20 +205,20 @@ input[type=text] {
 #xCharacter {
     border: 3px solid black;
     border-radius: 60px;
-    width: 100px;
-    height:100px;
+    width: 70px;
+    height:70px;
     text-align: center;
-    font-size:80px;
+    font-size:30px;
 }
 
 #oCharacter {
     border: 3px solid black;
     border-radius: 10px;
     border-radius: 60px;
-    width: 100px;
-    height:100px;
+    width: 70px;
+    height:70px;
     text-align: center;
-    font-size:80px;
+    font-size:30px;
 }
 #close{
     height:6vh;
@@ -225,18 +226,25 @@ input[type=text] {
     border-radius:30px;
     font-size:1.5rem;
     margin-top:2vh;
+    border: none;
+    background-color: #2369B8;
+    color: #fff;
+}
+#close:hover {
+    background-color: #133863;
+    color: rgb(194, 197, 201);
 }
 #tttgrid{
     filter:blur(1.5rem);
 }
 #turn{
-    color:green;
+    color:white;
     text-align:center;
-    margin-top:-10vh;
+    margin-top:-6vh;
     display:grid;
     flex-direction: column;
-    background-color:white;
-    padding-bottom:11.2vh;
+    background-color:#2369B8;
+    padding-bottom:7.3vh;
 }
 /* #tree {
     position:fixed;
