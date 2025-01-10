@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color:rgb(0, 0, 0);
+    background-color:white
 }
 
 #winnerStatus {
@@ -236,7 +236,7 @@ input[type=text] {
     display:grid;
     flex-direction: column;
     background-color:white;
-    padding-bottom:7.3vh;
+    padding-bottom:11.2vh;
 }
 /* #tree {
     position:fixed;
