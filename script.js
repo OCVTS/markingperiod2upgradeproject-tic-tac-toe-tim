@@ -80,7 +80,7 @@ function checkWinner() {
          })
       }
    }
-}
+
 const close = () => {
    document.getElementById("instructions-container").style.visibility = 'hidden';
    document.getElementById("blurred1").style.filter = 'blur(0)';
