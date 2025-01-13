@@ -14,13 +14,13 @@
         <h1 id = "head1">Super</h1>
         <br>
         <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
-        <h3 id="pnames1">Player 1:</h3>
-        <input type="text" id="p1Name" value="P1" name="Player 1 name"><br>
-        <h3 id="pnames2">Player 2:</h3>
-        <input type="text" id="p2Name" value="P2" name="Player 2 name"><br>
-        <h2 id="cselect">Player Characters</h2>
-        <h3 id="pcharacters1">Player 1</h3>
-        <select id="xCharacter">
+        <h3 class="names"id="pnames1">Player 1:</h3>
+        <input type="text" class = "names" id="p1Name" value="P1" name="Player 1 name"><br>
+        <h3 id="pnames2" class = "names">Player 2:</h3>
+        <input type="text" class="names" id="p2Name" value="P2" name="Player 2 name"><br>
+        <h2 id="cselect" class="chars">Player Characters</h2>
+        <h3 class="chars" id="pcharacters1">Player 1</h3>
+        <select class="chars" id="xCharacter">
             <option value="X">X</option>
             <option value="❌">❌</option>
             <option value="⚒">⚒</option>
@@ -31,8 +31,8 @@
             <option value="☣">☣</option>
             <option value="❖">❖</option>
           </select>
-          <h3 id="pcharacters2">Player 2</h3>
-          <select id="oCharacter">
+          <h3 class="chars" id="pcharacters2">Player 2</h3>
+          <select class = "chars" id="oCharacter">
             <option value="O">O</option> 
             <option value="Δ">Δ</option>
             <option value="🥚">🥚</option>
@@ -44,10 +44,10 @@
             <option value="☢">☢</option>
           </select>
           <br>
-          <button id="resetbtn" onclick="resetGame()"><b>Start/Reset</b></button>
+          <button id="startbtn" onclick="startGame()"><b>Start</b></button>
+          <button id="resetbtn" onclick="resetGame()"><b>Reset</b></button>
           <header><h1 id="winnerStatus">Winner</h1></header>
-          <h2 id="turn">Player Turn</h2>
-          <section class="grid_container1">
+          <section id="scoreboard" class="grid_container1">
               <p class="grid_item1" id="p1s"></p>
               <p class="grid_item1" id="p3s">Score Board</p>
               <p class="grid_item1" id="p2s"></p>  

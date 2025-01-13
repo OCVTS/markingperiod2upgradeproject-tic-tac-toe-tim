@@ -90,50 +90,77 @@ const close = () => {
 }
 
 /********************* Function resets the game board ********************************/
+function startGame(){
+   p1Char = document.getElementById('xCharacter').value
+   p2Char = document.getElementById('oCharacter').value
+   p1Name = document.getElementById('p1Name').value
+   p2Name = document.getElementById('p2Name').value
+   /******************************************Easter Egg*****************************************/
+   switch(p1Name){
+      case "kalel":
+      p1Char = '🂡'
+      break;
+      case "jacob":
+      p1Char = '🧝'
+      break;
+      case "brendan":
+      p1Char = '🥋'
+      break;
+      case "ivan":
+      p1Char = '🏈'
+      break;
+   }
+   switch(p2Name){
+      case "kalel":
+      p1Char = '🦸'
+      break;
+      case "jacob":
+      p1Char = '🍚'
+      break;
+      case "brendan":
+      p1Char = '😛'
+      break;
+      case "ivan":
+      p1Char = '⁵²'
+      break;
+   }
+   switch(p1Name){
+      case "Kalel":
+      p1Char = '🂡'
+      break;
+      case "Jacob":
+      p1Char = '🧝'
+      break;
+      case "Brendan":
+      p1Char = '🥋'
+      break;
+      case "Ivan":
+      p1Char = '🏈'
+      break;
+   }
+   switch(p2Name){
+      case "Kalel":
+      p1Char = '🦸'
+      break;
+      case "Jacob":
+      p1Char = '🍚'
+      break;
+      case "Brendan":
+      p1Char = '😛'
+      break;
+      case "Ivan":
+      p1Char = '⁵²'
+      break;
+   }
+   currentPlayer = p1Char;
+   
+   document.getElementById("tttgrid").style.filter = 'blur(0)';
+}
 function resetGame() {
 winner = '';
 document.getElementById('winnerStatus').innerHTML = 'Winner'
 turnCounter = 0;
-p1Char = document.getElementById('xCharacter').value
-p2Char = document.getElementById('oCharacter').value
-p1Name = document.getElementById('p1Name').value
-p2Name = document.getElementById('p2Name').value
-/******************************************Easter Egg*****************************************/
-switch(p1Name.toLowerCase){
-   case "kalel":
-   p1Char = '🂡'
-   break;
-   case "jacob":
-   p1Char = '🧝'
-   break;
-   case "brendan":
-   p1Char = '🥋'
-   break;
-   case "ivan":
-   p1Char = '🏈'
-   break;
 }
-switch(p2Name.toLowerCase){
-   case "kalel":
-   p1Char = '🦸'
-   break;
-   case "jacob":
-   p1Char = '🍚'
-   break;
-   case "brendan":
-   p1Char = '😛'
-   break;
-   case "ivan":
-   p1Char = '⁵²'
-   break;
-}
-currentPlayer = p1Char;
-document.getElementById("tttgrid").style.filter = 'blur(0)';
-}
-
-<<<<<<< HEAD
-
-
 
 // function cursor() {
 
@@ -144,7 +171,4 @@ document.getElementById("tttgrid").style.filter = 'blur(0)';
 //    }
 //    }
 //𒁬 -tim
-=======
->>>>>>> origin/HEAD
 document.getElementById('close').addEventListener('click',close)
-
