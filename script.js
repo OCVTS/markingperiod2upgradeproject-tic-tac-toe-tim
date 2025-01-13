@@ -152,7 +152,6 @@ currentPlayer = p1Char;
 document.getElementById("tttgrid").style.filter = 'blur(0)';
 }
 
-<<<<<<< HEAD
 
 
 
@@ -165,7 +164,5 @@ document.getElementById("tttgrid").style.filter = 'blur(0)';
 //    }
 //    }
 //𒁬 -tim
-=======
->>>>>>> origin/HEAD
 document.getElementById('close').addEventListener('click',close)
 
