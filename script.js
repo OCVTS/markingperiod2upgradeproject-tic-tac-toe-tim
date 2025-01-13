@@ -55,13 +55,13 @@ if (board.name == previousSpace || previousSpace == ''){
          }
       }
    }
-   if (boardArray[num-1].open) {
-   previousSpace = boardArray[num-1].name
-   } else {
-      previousSpace = ''
-   }
    turnCounter++
    checkWinner()
+   if (boardArray[num-1].open) {
+      previousSpace = boardArray[num-1].name
+      } else {
+         previousSpace = ''
+      }
    if (currentPlayer == p1Char) {
    currentPlayer = p2Char;
    } else {
