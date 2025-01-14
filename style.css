@@ -149,7 +149,8 @@ h3{
 }
 #p1s, #p2s {
     border-color:#133863;
-    color: #133863
+    color: #133863;
+    font-size:5vh;
 }
 
 #p3s {

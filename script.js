@@ -65,11 +65,14 @@ function checkWinner() {
                board.winner = p1Char
                document.getElementById(board.name).classList.remove('openBoard')
                document.getElementById(board.name).innerHTML = p1Char
+               
             } else {
                board.open = false
                board.winner = p2Char
                document.getElementById(board.name).classList.remove('openBoard')
                document.getElementById(board.name).innerHTML = p2Char
+               
+
             }
            }
          }
@@ -79,6 +82,15 @@ function checkWinner() {
          if (boardArray[con[0]-1].winner == boardArray[con[1]-1].winner && boardArray[con[0]-1].winner == boardArray[con[2]-1].winner && boardArray[con[0]-1].winner != '') {
             winner=true
             alert('you win')
+            if (currentPlayer == p1Char) {
+               document.getElementById('winnerStatus').innerHTML = p1Name + ' Wins'
+               P1Score++
+               document.getElementById('p1s').innerHTML = P1Score
+            } else if (currentPlayer == p2Char) {
+               document.getElementById('winnerStatus').innerHTML = p2Name + ' Wins'
+               P2Score++
+               document.getElementById('p2s').innerHTML = P2Score
+            }
          } else {
             return
          }
@@ -87,6 +99,7 @@ function checkWinner() {
       boardArray.forEach(board => {if (board.winner != ''){numBoardWon++}})
       if (numBoardWon == 9 && winner == false) {
          alert('Full Tie')
+         document.getElementById('winnerStatus').innerHTML = 'Full Tie'
       }
    }
 
@@ -105,7 +118,7 @@ function startGame(){
    /******************************************Easter Egg*****************************************/
    switch(p1Name.toLowerCase()){
       case "kalel":
-      p1Char = '🂡'
+      p1Char = '🦸'
       break;
       case "jacob":
       p1Char = '🧝'
@@ -114,12 +127,12 @@ function startGame(){
       p1Char = '🥋'
       break;
       case "ivan":
-      p1Char = '🏈'
+      p1Char = '⁵²'
       break;
    }
    switch(p2Name.toLowerCase()){
       case "kalel":
-      p2Char = '🦸'
+      p2Char = '🂡'
       break;
       case "jacob":
       p2Char = '🍚'
@@ -128,7 +141,7 @@ function startGame(){
       p2Char = '😛'
       break;
       case "ivan":
-      p2Char = '⁵²'
+      p2Char = '🏈'
       break;
    }
    currentPlayer = p1Char;
