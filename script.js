@@ -27,7 +27,7 @@ const H = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'H', open:
 const I = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'I', open:true, winner:'', count:0};
 const boardArray = [A, B, C, D, E, F, G, H, I]
 
-// cursor()
+cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
 if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false)){
@@ -37,6 +37,7 @@ if ((board.name == previousSpace || previousSpace == '') && (board.open == true)
       board.count++
    }
    checkWinner()
+
    if (board.winner == '' && board.count >= 9) {
       board.open = false
       document.getElementById(board.name).style.filter = 'blur(2px)'
@@ -51,6 +52,7 @@ if ((board.name == previousSpace || previousSpace == '') && (board.open == true)
    } else {
    currentPlayer = p1Char;
    }
+   cursor()
 }
 }
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
@@ -137,6 +139,7 @@ function startGame(){
 function resetGame() {
    winner = false;
    previousSpace = ''
+   currentPlayer = p1Char
    boardArray.forEach(board => {
       document.getElementById(board.name).innerHTML = '';
       for (let i = 1; i<10;i++){
@@ -153,19 +156,34 @@ function resetGame() {
       if (!document.getElementById(board.name).classList.contains('openBoard'))
          document.getElementById(board.name).classList.add('openBoard')
    })
+   cursor()
    }
+function cursor(){
 
-
-
-
-// function cursor() {
-
-//    if(currentPlayer == p1Char){
-//        document.getElementsByTagName("body")[0].style.cursor = "url('X cursor.png'), auto";
-//    }else{
-//        document.getElementsByTagName("body")[0].style.cursor = "url('O cursor.png'), auto";
-//    }
-//    }
-//𒁬 -tim
+if(previousSpace == ''){
+   if(currentPlayer == p1Char){
+      boardArray.forEach(board => {
+         document.getElementById(board.name).style.cursor = "url('X cursor.png'), auto";
+      })
+   }else{
+      boardArray.forEach(board => {
+         document.getElementById(board.name).style.cursor = "url('O cursor.png'), auto";
+      })
+   }
+}else{
+   boardArray.forEach(board => {
+      if(board.name != previousSpace){
+         document.getElementById(board.name).style.cursor = 'not-allowed';
+      }else{
+         if(currentPlayer == p1Char){
+            document.getElementById(board.name).style.cursor = "url('X cursor.png'), auto";
+         }else{
+            document.getElementById(board.name).style.cursor = "url('O cursor.png'), auto";
+         }
+      }
+   })
+}
+}
+//𒁬 -Timothy.
 document.getElementById('close').addEventListener('click',close)
 
