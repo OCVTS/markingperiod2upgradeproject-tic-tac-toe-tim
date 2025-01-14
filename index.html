@@ -11,38 +11,48 @@
         <div id = "blurred1">
         <div id="flexbox">
             <div id = "sidenavBG">
-        <h1 id = "head1">Super</h1>
-        <br>
+        <h1 id = "head1">Super </h1>
         <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
+        <br>
+        <div class="namesBox">
         <h3 class="names"id="pnames1">Player 1:</h3>
         <input type="text" class = "names" id="p1Name" value="P1" name="Player 1 name"><br>
+        <br>
         <h3 id="pnames2" class = "names">Player 2:</h3>
         <input type="text" class="names" id="p2Name" value="P2" name="Player 2 name"><br>
-        <h2 id="cselect" class="chars">Player Characters</h2>
-        <h3 class="chars" id="pcharacters1">Player 1</h3>
-        <select class="chars" id="xCharacter">
-            <option value="X">X</option>
-            <option value="❌">❌</option>
-            <option value="⚒">⚒</option>
-            <option value="⚔">⚔</option>
-            <option value="✘">✘</option>
-            <option value="✻">✻</option>
-            <option value="⛝">⛝</option>
-            <option value="☣">☣</option>
-            <option value="❖">❖</option>
-          </select>
-          <h3 class="chars" id="pcharacters2">Player 2</h3>
-          <select class = "chars" id="oCharacter">
-            <option value="O">O</option> 
-            <option value="Δ">Δ</option>
-            <option value="🥚">🥚</option>
-            <option value="☺">☺</option>
-            <option value="☼">☼</option>
-            <option value="☹">☹</option>
-            <option value="☯">☯</option>
-            <option value="☮">☮</option>
-            <option value="☢">☢</option>
-          </select>
+        <br>
+        </div>
+        <div id="charSelect">
+        <!-- <h2 id="cselect" class="chars">Player Characters</h2> -->
+            <div id="p1CharSel" class="innerCharSel">
+            <h3 class="chars" id="pcharacters1">Player 1</h3>
+            <select class="chars" id="xCharacter">
+                <option value="X">X</option>
+                <option value="❌">❌</option>
+                <option value="⚒">⚒</option>
+                <option value="⚔">⚔</option>
+                <option value="✘">✘</option>
+                <option value="✻">✻</option>
+                <option value="⛝">⛝</option>
+                <option value="☣">☣</option>
+                <option value="❖">❖</option>
+            </select>
+            </div>
+            <div id="p2CharSel" class="innerCharSel">
+            <h3 class="chars" id="pcharacters2">Player 2</h3>
+            <select class = "chars" id="oCharacter">
+                <option value="O">O</option> 
+                <option value="Δ">Δ</option>
+                <option value="🥚">🥚</option>
+                <option value="☺">☺</option>
+                <option value="☼">☼</option>
+                <option value="☹">☹</option>
+                <option value="☯">☯</option>
+                <option value="☮">☮</option>
+                <option value="☢">☢</option>
+            </select>
+            </div>
+        </div>
           <br>
           <button id="startbtn" onclick="startGame()"><b>Start</b></button>
           <button id="resetbtn" onclick="resetGame()"><b>Reset</b></button>
@@ -52,9 +62,9 @@
               <p class="grid_item1" id="p3s">Score Board</p>
               <p class="grid_item1" id="p2s"></p>  
           </section>
-            </div>
-            </div>
-          </div>
+        </div>
+        </div>
+        </div>
           <div id = 'instructions-container'><div id="instructions">
             <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
             <button id = "close">Got it!</button>
