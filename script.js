@@ -27,13 +27,9 @@ const H = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'H', open:
 const I = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'I', open:true, winner:'', count:0};
 const boardArray = [A, B, C, D, E, F, G, H, I]
 
-let test = false;
 // cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
-   if (test) {
-      alert('ye')
-   }
 if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false)){
    if (board[num] == '') {
       document.getElementById(board.name+num).innerHTML = currentPlayer
@@ -121,54 +117,24 @@ function startGame(){
       p1Char = '🏈'
       break;
    }
-   switch(p2Name.toLowerCase){
+   switch(p2Name.toLowerCase()){
       case "kalel":
-      p1Char = '🦸'
+      p2Char = '🦸'
       break;
       case "jacob":
-      p1Char = '🍚'
+      p2Char = '🍚'
       break;
       case "brendan":
-      p1Char = '😛'
+      p2Char = '😛'
       break;
       case "ivan":
-      p1Char = '⁵²'
+      p2Char = '⁵²'
       break;
    }
-   // switch(p1Name){
-   //    case "Kalel":
-   //    p1Char = '🂡'
-   //    break;
-   //    case "Jacob":
-   //    p1Char = '🧝'
-   //    break;
-   //    case "Brendan":
-   //    p1Char = '🥋'
-   //    break;
-   //    case "Ivan":
-   //    p1Char = '🏈'
-   //    break;
-   // }
-   // switch(p2Name){
-   //    case "Kalel":
-   //    p1Char = '🦸'
-   //    break;
-   //    case "Jacob":
-   //    p1Char = '🍚'
-   //    break;
-   //    case "Brendan":
-   //    p1Char = '😛'
-   //    break;
-   //    case "Ivan":
-   //    p1Char = '⁵²'
-   //    break;
-   // }
-   // currentPlayer = p1Char;
-   
+   currentPlayer = p1Char;
    document.getElementById("tttgrid").style.filter = 'blur(0)';
 }
 function resetGame() {
-test=true
 winner = false;
 previousSpace = ''
 boardArray.forEach(board => {

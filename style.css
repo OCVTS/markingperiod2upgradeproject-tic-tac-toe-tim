@@ -4,7 +4,6 @@
 }
 
 body {
-    /* background-color: #16355e; */
      background-color:#091D34 
 }
 
@@ -43,15 +42,15 @@ h3{
     grid-template-rows:repeat(3, 1fr);
     grid-template-columns:repeat(3, 1fr);
     width:45vw;
-    position:fixed;
-    top:6vh;
+    position:absolute;
+    top:5vh;
     left:35vw;
 }
 
 .grid_item {
     border:2px solid white;
-    width:16vw;
-    height:16vw;
+    width:15vw;
+    height:30vh;
     color:rgb(255, 255, 255);
     font-size:10vw;
     text-align:center;
@@ -68,7 +67,7 @@ h3{
     display:inline-block;
     border:1px solid #2369B8;
     width:5vw;
-    height:5vw;
+    height:10vh;
     margin:0;
     font-size:4vw;
     line-height: 4vw;
@@ -79,7 +78,7 @@ h3{
     grid-template-rows:1;
     grid-template-columns:repeat(3, 1fr);
     width: 22vw;
-    position:fixed;
+    position:absolute;
     left:-2vw;
     bottom:50vh;
     top:35vh;
@@ -102,7 +101,6 @@ h3{
 #resetbtn {
     width:8vw;
     height:3.5vw;
-    left:56vw;
     border-radius:30px;
     color:white;
     background-color:#133863;
@@ -123,7 +121,7 @@ h3{
     padding:15px;
 }
 #instructions-container{
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     height:100%;
@@ -133,7 +131,6 @@ h3{
     align-items: center;
     display:flex;
     visibility:visible;
-    float:left;
     z-index:100;
 }
 #blurred1{
@@ -196,7 +193,7 @@ input[type=text] {
 }
 
 #flexbox {
-    position: fixed;
+    position: absolute;
     width: 22vw;
     margin-left: 0vw;
     text-align: center;
@@ -213,7 +210,6 @@ input[type=text] {
 #startbtn{
     width:8vw;
     height:3.5vw;
-    left:56vw;
     border-radius:30px;
     color:white;
     background-color:#133863;
@@ -257,18 +253,6 @@ input[type=text] {
     filter:blur(1.5rem);
 }
 
-/* #tree {
-    position:fixed;
-    left:4vw;
-    top:15vh;
-    height:70vh;
-}
-#tree1 {
-    position:fixed;
-    right:4vw;
-    top:15vh;
-    height:70vh;
-} */
 @media(max-width:580px){
 #instructions{
         font-size:20px;
