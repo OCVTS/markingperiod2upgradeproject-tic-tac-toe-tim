@@ -4,7 +4,6 @@
 }
 
 body {
-    /* background-color: #16355e; */
      background-color:#091D34 
 }
 
@@ -43,31 +42,32 @@ h3{
     grid-template-rows:repeat(3, 1fr);
     grid-template-columns:repeat(3, 1fr);
     width:45vw;
-    position:fixed;
-    top:6vh;
+    position:absolute;
+    top:5vh;
     left:35vw;
 }
 
 .grid_item {
     border:2px solid white;
-    width:16vw;
-    height:16vw;
+    width:15vw;
+    height:30vh;
     color:rgb(255, 255, 255);
     font-size:10vw;
     text-align:center;
-    line-height: 10vw;
+    line-height: 16vw;
+}
+.openBoard {
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     justify-content: center;
     align-items: center;
 }
 
-
-.gridA {
+.innerGrid {
     display:inline-block;
     border:1px solid #2369B8;
     width:5vw;
-    height:5vw;
+    height:10vh;
     margin:0;
     font-size:4vw;
     line-height: 4vw;
@@ -78,15 +78,13 @@ h3{
     grid-template-rows:1;
     grid-template-columns:repeat(3, 1fr);
     width: 22vw;
-    position:fixed;
+    position:absolute;
     left:-2vw;
     bottom:50vh;
     top:35vh;
     padding:2vw;
     justify-items:center;
     margin-top:29vh;
-
-    /* border:2px solid black; */
 }
 
 .grid_item1 {
@@ -103,7 +101,6 @@ h3{
 #resetbtn {
     width:8vw;
     height:3.5vw;
-    left:56vw;
     border-radius:30px;
     color:white;
     background-color:#133863;
@@ -117,14 +114,14 @@ h3{
 
 #instructions{
     background-color: white;
-    width:40vw;
+    width:45vw;
     height:40vh;
     font-size:36px;
     text-align: center;
     padding:15px;
 }
 #instructions-container{
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     height:100%;
@@ -134,7 +131,6 @@ h3{
     align-items: center;
     display:flex;
     visibility:visible;
-    float:left;
     z-index:100;
 }
 #blurred1{
@@ -197,7 +193,7 @@ input[type=text] {
 }
 
 #flexbox {
-    position: fixed;
+    position: absolute;
     width: 22vw;
     margin-left: 0vw;
     text-align: center;
@@ -210,6 +206,15 @@ input[type=text] {
 #resetbtn {
     margin-top: 1vh;
     
+}
+#startbtn{
+    width:8vw;
+    height:3.5vw;
+    border-radius:30px;
+    color:white;
+    background-color:#133863;
+    border:4px solid white;
+    font-size:1.5em;
 }
 
 #xCharacter {
@@ -247,26 +252,72 @@ input[type=text] {
 #tttgrid{
     filter:blur(1.5rem);
 }
-#turn{
-    color:white;
-    text-align:center;
-    margin-top:-6vh;
-    display:grid;
-    flex-direction: column;
-    background-color:#2369B8;
-    padding-bottom:7.3vh;
-}
-/* #tree {
-    position:fixed;
-    left:4vw;
-    top:15vh;
-    height:70vh;
-}
-#tree1 {
-    position:fixed;
-    right:4vw;
-    top:15vh;
-    height:70vh;
-} */
 
+@media(max-width:580px){
+#instructions{
+        font-size:20px;
+    }
+#close{
+    height:4vh;
+    width:20vw;
+    margin-top: 0vh;
+}
+#flexbox{
+max-height:48vh;
+display:flex;
+float:bottom;
+overflow:hidden;
+margin-top:50vh;
+width:100vw;
+}
+.names{
+    float:left;
+}
+.chars{
+float:left;
+}
+#scoreboard{
+    margin-top:51vh;
+    width:100vw;
+}
+#pcharacters1{
+    margin-top:-5vh;
+}
+#pcharacters2{
+    margin-top:-5vh;
+    margin-left:5px;
+}
+#head1{
+margin:none;
+    text-align:left;
+}
+#startbtn{
+width:25vw;
+height:5vh;
+}
+#resetbtn{
+width:25vw;
+height:5vh;
+    }
+#cselect{
+    visibility: hidden;
+}
+#winnerStatus{
+    overflow:hidden;
+    width:40vw;
+    margin-right:30vw;
+}
+#p1s{
+    width:60vw;
+    height:5vh;
+}
+#p2s{
+    width:60vw;
+    height:5vh;
+}
+#p3s{
+    width:100vw;
+    height:5vh;
+}
 
+}
