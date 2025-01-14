@@ -135,45 +135,25 @@ function startGame(){
    document.getElementById("tttgrid").style.filter = 'blur(0)';
 }
 function resetGame() {
-winner = '';
-document.getElementById('winnerStatus').innerHTML = 'Winner'
-turnCounter = 0;
-p1Char = document.getElementById('xCharacter').value
-p2Char = document.getElementById('oCharacter').value
-p1Name = document.getElementById('p1Name').value
-p2Name = document.getElementById('p2Name').value
-/******************************************Easter Egg*****************************************/
-switch(p1Name){
-   case "kalel":
-   p1Char = '🂡'
-   break;
-   case "jacob":
-   p1Char = '🧝'
-   break;
-   case "brendan":
-   p1Char = '🥋'
-   break;
-   case "ivan":
-   p1Char = '🏈'
-   break;
-}
-switch(p2Name){
-   case "kalel":
-   p1Char = '🦸'
-   break;
-   case "jacob":
-   p1Char = '🍚'
-   break;
-   case "brendan":
-   p1Char = '😛'
-   break;
-   case "ivan":
-   p1Char = '⁵²'
-   break;
-}
-currentPlayer = p1Char;
-document.getElementById("tttgrid").style.filter = 'blur(0)';
-}
+   winner = false;
+   previousSpace = ''
+   boardArray.forEach(board => {
+      document.getElementById(board.name).innerHTML = '';
+      for (let i = 1; i<10;i++){
+         board[i] = '';
+         board.count=0
+         board.winner=''
+         board.open=true
+         const div = document.createElement('div')
+         div.id = board.name + i
+         div.classList.add('innerGrid')
+         div.onclick = function(){playerMove(board, i)}
+         document.getElementById(board.name).appendChild(div)
+      }
+      if (!document.getElementById(board.name).classList.contains('openBoard'))
+         document.getElementById(board.name).classList.add('openBoard')
+   })
+   }
 
 
 
