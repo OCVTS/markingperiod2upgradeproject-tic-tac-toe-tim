@@ -135,25 +135,28 @@ function startGame(){
    document.getElementById("tttgrid").style.filter = 'blur(0)';
 }
 function resetGame() {
-winner = false;
-previousSpace = ''
-boardArray.forEach(board => {
-   document.getElementById(board.name).innerHTML = '';
-   for (let i = 1; i<10;i++){
-      board[i] = '';
-      board.count=0
-      board.winner=''
-      board.open=true
-      const div = document.createElement('div')
-      div.id = board.name + i
-      div.classList.add('innerGrid')
-      div.onclick = function(){playerMove(board, i)}
-      document.getElementById(board.name).appendChild(div)
+   winner = false;
+   previousSpace = ''
+   boardArray.forEach(board => {
+      document.getElementById(board.name).innerHTML = '';
+      for (let i = 1; i<10;i++){
+         board[i] = '';
+         board.count=0
+         board.winner=''
+         board.open=true
+         const div = document.createElement('div')
+         div.id = board.name + i
+         div.classList.add('innerGrid')
+         div.onclick = function(){playerMove(board, i)}
+         document.getElementById(board.name).appendChild(div)
+      }
+      if (!document.getElementById(board.name).classList.contains('openBoard'))
+         document.getElementById(board.name).classList.add('openBoard')
+   })
    }
-   if (!document.getElementById(board.name).classList.contains('openBoard'))
-      document.getElementById(board.name).classList.add('openBoard')
-})
-}
+
+
+
 
 // function cursor() {
 
@@ -165,3 +168,4 @@ boardArray.forEach(board => {
 //    }
 //𒁬 -tim
 document.getElementById('close').addEventListener('click',close)
+
