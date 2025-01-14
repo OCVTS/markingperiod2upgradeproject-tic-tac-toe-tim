@@ -203,7 +203,7 @@ input[type=text] {
     text-align: center;
     flex-direction:column;
 }
-#sidenavBG{
+#sidenavBG {
     background-color:#2369B8;
     height:100vh;
 }

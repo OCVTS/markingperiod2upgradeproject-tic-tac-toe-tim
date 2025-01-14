@@ -99,7 +99,7 @@ p2Char = document.getElementById('oCharacter').value
 p1Name = document.getElementById('p1Name').value
 p2Name = document.getElementById('p2Name').value
 /******************************************Easter Egg*****************************************/
-switch(p1Name.toLowerCase){
+switch(p1Name){
    case "kalel":
    p1Char = '🂡'
    break;
@@ -113,7 +113,7 @@ switch(p1Name.toLowerCase){
    p1Char = '🏈'
    break;
 }
-switch(p2Name.toLowerCase){
+switch(p2Name){
    case "kalel":
    p1Char = '🦸'
    break;
@@ -131,7 +131,6 @@ currentPlayer = p1Char;
 document.getElementById("tttgrid").style.filter = 'blur(0)';
 }
 
-<<<<<<< HEAD
 
 
 
@@ -144,7 +143,5 @@ document.getElementById("tttgrid").style.filter = 'blur(0)';
 //    }
 //    }
 //𒁬 -tim
-=======
->>>>>>> origin/HEAD
 document.getElementById('close').addEventListener('click',close)
 
