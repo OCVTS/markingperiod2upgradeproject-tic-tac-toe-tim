@@ -256,7 +256,7 @@ input[type=text] {
 
 @media(max-width:580px){
 #instructions{
-        font-size:20px;
+        font-size:2vh;
     }
 #close{
     height:4vh;
@@ -280,13 +280,14 @@ float:left;
 #scoreboard{
     margin-top:51vh;
     width:100vw;
+
 }
 #pcharacters1{
     margin-top:-5vh;
 }
 #pcharacters2{
     margin-top:-5vh;
-    margin-left:5px;
+    margin-left:3vw;
 }
 #head1{
 margin:none;
@@ -307,6 +308,8 @@ height:5vh;
     overflow:hidden;
     width:40vw;
     margin-right:30vw;
+    font-size: 3vh;
+    margin-top:2vh;
 }
 #p1s{
     width:60vw;
