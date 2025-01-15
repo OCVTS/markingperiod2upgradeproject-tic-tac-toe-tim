@@ -277,6 +277,22 @@ input[type=text] {
 
 
 @media(max-width:580px){
+* {
+    margin:0;
+}
+.grid_container {
+    position:fixed;
+    left:40px;
+    top:3px;
+}
+.grid_item {
+    width:27vw;
+    height:16vh;
+}
+.innerGrid {
+    width:9vw;
+    height:5vh;
+}
 #instructions{
         font-size:2vh;
     }
@@ -286,7 +302,7 @@ input[type=text] {
     margin-top: 0vh;
 }
 #flexbox{
-max-height:48vh;
+max-height:50vh;
 display:flex;
 float:bottom;
 overflow:hidden;
@@ -332,6 +348,27 @@ height:5vh;
     margin-right:30vw;
     font-size: 3vh;
     margin-top:2vh;
+}
+.namesBox {
+    /* border:1px solid white; */
+    display:inline-block;
+    position:relative;
+}
+#charSelect {
+    margin:0;
+    float:right;
+    width:30vw;
+    height:12vh;
+    /* border:1px solid white; */
+}
+#charSelect h3 {
+    margin:0;
+}
+.innerCharSel {
+    /* border:1px solid white; */
+    width:14vw;
+    height:12vh;
+    display:inline-block
 }
 #p1s{
     width:60vw;
