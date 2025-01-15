@@ -7,6 +7,7 @@ let P2Score = 0;
 let currentPlayer = p1Char;
 let winner = false;
 let previousSpace = '';
+let placementVar = '';
 let col1 = [1, 4, 7]
 let col2 = [2, 5, 8]
 let col3 = [3, 6, 9]
@@ -27,6 +28,7 @@ const H = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'H', open:
 const I = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'I', open:true, winner:'', count:0};
 const boardArray = [A, B, C, D, E, F, G, H, I]
 
+placement()
 // cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
@@ -51,6 +53,7 @@ if ((board.name == previousSpace || previousSpace == '') && (board.open == true)
    } else {
    currentPlayer = p1Char;
    }
+   placement();
 }
 }
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
@@ -167,10 +170,50 @@ function resetGame() {
          document.getElementById(board.name).classList.add('openBoard')
    })
    }
+ 
+   function placement(){
+document.getElementById('placement1').innerHTML = 'You must play in the'
+      switch(previousSpace){
+         case 'A':
+         placementVar = 'Top Left';
+         break;
+         case 'B':
+         placementVar = 'Top Middle';
+         break;
+         case 'C':
+         placementVar = 'Top Right';
+         break;
+         case 'D':
+         placementVar = 'Middle Left'
+         break;
+         case 'E':
+         placementVar = 'Center'
+         break;
+         case 'F':
+         placementVar = 'Middle Right'
+         break;
+         case 'G':
+         placementVar = 'Bottom Left'
+         break;
+         case 'H':
+         placementVar = 'Bottom Middle'
+         break;
+         case 'I':
+         placementVar = 'Bottom Right'
+         break;
+         default:
+         placementVar = 'any'
+         document.getElementById('placement1').innerHTML = 'You can play in'
+      }
+      document.getElementById('placementBoard').innerHTML = placementVar;
+      }
 
-
-
-
+function scoreReset(){
+P1Score = 0;
+P2Score = 0;
+document.getElementById('p1s').innerHTML = P1Score;
+document.getElementById('p2s').innerHTML = P2Score;
+}
 // function cursor() {
 
 //    if(currentPlayer == p1Char){
@@ -181,4 +224,3 @@ function resetGame() {
 //    }
 //𒁬 -tim
 document.getElementById('close').addEventListener('click',close)
-
