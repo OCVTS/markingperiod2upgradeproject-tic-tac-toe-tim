@@ -8,6 +8,7 @@ let P2Score = 0;
 let currentPlayer = p1Char;
 let winner = false;
 let previousSpace = '';
+let placementVar = '';
 let col1 = [1, 4, 7]
 let col2 = [2, 5, 8]
 let col3 = [3, 6, 9]
@@ -28,7 +29,8 @@ const H = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'H', open:
 const I = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'I', open:true, winner:'', count:0};
 const boardArray = [A, B, C, D, E, F, G, H, I]
 
-// cursor()
+placement()
+cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
 if (gameStart == true) {
@@ -39,6 +41,7 @@ if ((board.name == previousSpace || previousSpace == '') && (board.open == true)
       board.count++
    }
    checkWinner()
+
    if (board.winner == '' && board.count >= 9) {
       board.open = false
       document.getElementById(board.name).style.filter = 'blur(2px)'
@@ -53,6 +56,8 @@ if ((board.name == previousSpace || previousSpace == '') && (board.open == true)
    } else {
    currentPlayer = p1Char;
    }
+   placement();
+   cursor()
 }
 }
 }
@@ -68,11 +73,14 @@ function checkWinner() {
                board.winner = p1Char
                document.getElementById(board.name).classList.remove('openBoard')
                document.getElementById(board.name).innerHTML = p1Char
+               
             } else {
                board.open = false
                board.winner = p2Char
                document.getElementById(board.name).classList.remove('openBoard')
                document.getElementById(board.name).innerHTML = p2Char
+               
+
             }
            }
          }
@@ -82,6 +90,15 @@ function checkWinner() {
          if (boardArray[con[0]-1].winner == boardArray[con[1]-1].winner && boardArray[con[0]-1].winner == boardArray[con[2]-1].winner && boardArray[con[0]-1].winner != '') {
             winner=true
             alert('you win')
+            if (currentPlayer == p1Char) {
+               document.getElementById('winnerStatus').innerHTML = p1Name + ' Wins'
+               P1Score++
+               document.getElementById('p1s').innerHTML = P1Score
+            } else if (currentPlayer == p2Char) {
+               document.getElementById('winnerStatus').innerHTML = p2Name + ' Wins'
+               P2Score++
+               document.getElementById('p2s').innerHTML = P2Score
+            }
          } else {
             return
          }
@@ -90,6 +107,7 @@ function checkWinner() {
       boardArray.forEach(board => {if (board.winner != ''){numBoardWon++}})
       if (numBoardWon == 9 && winner == false) {
          alert('Full Tie')
+         document.getElementById('winnerStatus').innerHTML = 'Full Tie'
       }
    }
 
@@ -108,7 +126,7 @@ function startGame(){
    /******************************************Easter Egg*****************************************/
    switch(p1Name.toLowerCase()){
       case "kalel":
-      p1Char = '🂡'
+      p1Char = '🦸'
       break;
       case "jacob":
       p1Char = '🧝'
@@ -117,12 +135,12 @@ function startGame(){
       p1Char = '🥋'
       break;
       case "ivan":
-      p1Char = '🏈'
+      p1Char = '⁵²'
       break;
    }
    switch(p2Name.toLowerCase()){
       case "kalel":
-      p2Char = '🦸'
+      p2Char = '🂡'
       break;
       case "jacob":
       p2Char = '🍚'
@@ -131,7 +149,7 @@ function startGame(){
       p2Char = '😛'
       break;
       case "ivan":
-      p2Char = '⁵²'
+      p2Char = '🏈'
       break;
    }
    currentPlayer = p1Char;
@@ -151,6 +169,7 @@ function resetGame() {
    document.getElementById('p2Name').value = p2Name
    document.getElementById('xCharacter').value = p1Char
    document.getElementById('oCharacter').value = p2Char
+   currentPlayer = p1Char
    boardArray.forEach(board => {
       document.getElementById(board.name).innerHTML = '';
       for (let i = 1; i<10;i++){
@@ -168,18 +187,77 @@ function resetGame() {
          document.getElementById(board.name).classList.add('openBoard')
    })
    }
+ 
+   function placement(){
+document.getElementById('placement1').innerHTML = 'You must play in the'
+      switch(previousSpace){
+         case 'A':
+         placementVar = 'Top Left';
+         break;
+         case 'B':
+         placementVar = 'Top Middle';
+         break;
+         case 'C':
+         placementVar = 'Top Right';
+         break;
+         case 'D':
+         placementVar = 'Middle Left'
+         break;
+         case 'E':
+         placementVar = 'Center'
+         break;
+         case 'F':
+         placementVar = 'Middle Right'
+         break;
+         case 'G':
+         placementVar = 'Bottom Left'
+         break;
+         case 'H':
+         placementVar = 'Bottom Middle'
+         break;
+         case 'I':
+         placementVar = 'Bottom Right'
+         break;
+         default:
+         placementVar = 'any'
+         document.getElementById('placement1').innerHTML = 'You can play in'
+      }
+      document.getElementById('placementBoard').innerHTML = placementVar;
+      }
 
+function scoreReset(){
+P1Score = 0;
+P2Score = 0;
+document.getElementById('p1s').innerHTML = P1Score;
+document.getElementById('p2s').innerHTML = P2Score;
+}
 
-
-
-// function cursor() {
-
-//    if(currentPlayer == p1Char){
-//        document.getElementsByTagName("body")[0].style.cursor = "url('X cursor.png'), auto";
-//    }else{
-//        document.getElementsByTagName("body")[0].style.cursor = "url('O cursor.png'), auto";
-//    }
-//    }
 //𒁬 -tim
-document.getElementById('close').addEventListener('click',close)
+function cursor(){
 
+if(previousSpace == ''){
+   if(currentPlayer == p1Char){
+      boardArray.forEach(board => {
+         document.getElementById(board.name).style.cursor = "url('X cursor.png'), auto";
+      })
+   }else{
+      boardArray.forEach(board => {
+         document.getElementById(board.name).style.cursor = "url('O cursor.png'), auto";
+      })
+   }
+}else{
+   boardArray.forEach(board => {
+      if(board.name != previousSpace){
+         document.getElementById(board.name).style.cursor = 'not-allowed';
+      }else{
+         if(currentPlayer == p1Char){
+            document.getElementById(board.name).style.cursor = "url('X cursor.png'), auto";
+         }else{
+            document.getElementById(board.name).style.cursor = "url('O cursor.png'), auto";
+         }
+      }
+   })
+}
+}
+//𒁬 -Timothy.
+document.getElementById('close').addEventListener('click',close)

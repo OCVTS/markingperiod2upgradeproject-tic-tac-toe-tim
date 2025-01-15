@@ -43,7 +43,7 @@
             <h3 class="chars" id="pcharacters2">Player 2</h3>
             <select class = "chars" id="oCharacter">
                 <option value="O">O</option> 
-                <option value="Δ">Δ</option>
+                <option value="💙">💙</option>
                 <option value="🥚">🥚</option>
                 <option value="☺">☺</option>
                 <option value="☼">☼</option>
@@ -58,6 +58,7 @@
         <div>
           <button id="startbtn" onclick="startGame()"><b>Start</b></button>
           <button id="resetbtn" onclick="resetGame()"><b>Reset</b></button>
+          <button id = "resetScore" onclick="scoreReset()">Reset Score</button>
         </div>
         </div>
         </div>
@@ -67,6 +68,11 @@
             <p class="grid_item1" id="p3s">Score Board</p>
             <p class="grid_item1" id="p2s"></p>  
         </div>
+        <div id = "placement">
+            <h3 id = "placement1">You must play in the</h3>
+            <h2 id = "placementBoard">1</h2>
+            <h3 id = "placement2">board.</h3>
+          </div>
         </div>
           <div id = 'instructions-container'><div id="instructions">
             <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
