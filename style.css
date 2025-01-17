@@ -6,34 +6,108 @@
 body {
      background-color:#091D34 
 }
+
+#Sidebar {
+    position: fixed;
+    width: 20vw;
+    height:100vh;
+    background-color:#2369B8;
+}
+#SidebarTop {
+    border:1px solid white;
+    height:50vh;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+/* #Sidebar > * {
+    border:2px solid black;
+} */
+
 #winnerStatus {
     font-size:2em;
     text-align: center;
     color:white;
     width:10vw;
+    height:4vh;
     border: 1px white solid;
-    margin-top: 5vh;
 }
+
+#title {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:11vh;
+}
+#title div {
+    width:12vw;
+    height:5vh;
+    display:inline-block
+}
+#title #Super {
+    display:block;
+    width:100%;
+    height:6vh;
+}
+
 h1 {
     display:inline-block;
     color:white;
-}
-h2{
-    color:white;
-}
-h3{
-    color:white;
+    font-size:40px;
+    line-height:5vh;
+    text-align: center;
+    width:33%;
+    height:100%;
 }
 
-#head1 {
+#Superh1 {
     color: white;
-    margin-top: 1vh;
     font-size: 60px;
+    display:inline-block;
+    width:100%;
+    height:100%;
+    line-height: 6vh;
 }
 
-#h1-1{
-    font-size: 40px;
+.namesCharBox {
+    /* border:1px solid white; */
+    width:100%;
+    height:19vh;
+    padding:0 2vw;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-around;
 }
+#nameBox {
+    width:9.5vw;
+    height:18vh;
+    display:inline-block;
+    /* border:1px solid white; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#nameBox div {
+    display:inline-block;
+    /* border:1px solid white; */
+    height:7vh;
+}
+#charSelect {
+    /* border:2px solid white; */
+    display:inline-block;
+    width:4vw;
+    height:18vh;
+}
+
+.innerCharSel{
+    /* border:1px solid white; */
+    width:4vw;
+    display:inline-block
+}
+
+
 
 .grid_container {
     display:grid;
@@ -173,11 +247,6 @@ h3{
     font-size: 26px;
 }
 
-#cselect {
-    margin-top:6vh;
-    color:white;
-}
-
 #pcharacters1 {
     color:#133863;
 }
@@ -193,17 +262,6 @@ input[type=text] {
     border-radius: 6px;
 }
 
-#flexbox {
-    position: absolute;
-    width: 22vw;
-    margin-left: 0vw;
-    text-align: center;
-    flex-direction:column;
-}
-#sidenavBG {
-    background-color:#2369B8;
-    height:100vh;
-}
 #resetbtn {
     margin-top: 1vh;
     
@@ -329,10 +387,6 @@ float:left;
     margin-top:-5vh;
     margin-left:3vw;
 }
-#head1{
-margin:none;
-    text-align:left;
-}
 #startbtn{
 width:25vw;
 height:5vh;
@@ -384,5 +438,22 @@ height:5vh;
     width:100vw;
     height:5vh;
 }
+h1 {
+    display:inline-block;
+    color:white;
+    font-size:40px;
+    border:1px solid white;
+    width:14vw;
+}
+h2, h3{
+    color:white;
+}
 
+#Superh1 {
+    color: white;
+    margin-top: 1vh;
+    font-size: 60px;
+    display:inline-block;
+    width:34vw;
+}
 }

@@ -1,7 +1,8 @@
+let gameStart = false;
 let p1Char= 'X';
 let p2Char= 'O';
-let p1Name = 'P1';
-let p2Name = 'P2';
+let p1Name = '';
+let p2Name = '';
 let P1Score = 0;
 let P2Score = 0;
 let currentPlayer = p1Char;
@@ -32,6 +33,7 @@ placement()
 cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
+if (gameStart == true) {
 if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false)){
    if (board[num] == '') {
       document.getElementById(board.name+num).innerHTML = currentPlayer
@@ -56,6 +58,7 @@ if ((board.name == previousSpace || previousSpace == '') && (board.open == true)
    }
    placement();
    cursor()
+}
 }
 }
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
@@ -159,10 +162,21 @@ function startGame(){
    }
    currentPlayer = p1Char;
    document.getElementById("tttgrid").style.filter = 'blur(0)';
+   gameStart = true
 }
 function resetGame() {
+   gameStart = false
+   document.getElementById("tttgrid").style.filter = 'blur(1.5rem)';
    winner = false;
    previousSpace = ''
+   p1Char= 'X';
+   p2Char= 'O';
+   p1Name = '';
+   p2Name = '';
+   document.getElementById('p1Name').value = p1Name
+   document.getElementById('p2Name').value = p2Name
+   document.getElementById('xCharacter').value = p1Char
+   document.getElementById('oCharacter').value = p2Char
    currentPlayer = p1Char
    boardArray.forEach(board => {
       document.getElementById(board.name).innerHTML = '';
@@ -228,6 +242,7 @@ document.getElementById('p2s').innerHTML = P2Score;
 
 //𒁬 -tim
    cursor()
+   
 function cursor(){
 
 if(previousSpace == ''){

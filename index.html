@@ -9,21 +9,22 @@
 <body>
     <main>
         <div id = "blurred1">
-        <div id="flexbox">
-            <div id = "sidenavBG">
-        <h1 id = "head1">Super </h1>
-        <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
+        <div id="Sidebar">
+        <div id="SidebarTop">
+        <div id="title">
+            <div id="Super"><h1 id="Superh1">Super </h1></div>
+            <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div>
+        </div>
+        
+        <div class="namesCharBox ">
+        <div id="nameBox">
+        <div><h3 class="names"id="pnames1">Player 1:</h3>
+        <input type="text" class = "names" id="p1Name" name="Player 1 name"><br></div>
         <br>
-        <div class="namesBox">
-        <h3 class="names"id="pnames1">Player 1:</h3>
-        <input type="text" class = "names" id="p1Name" value="P1" name="Player 1 name"><br>
-        <br>
-        <h3 id="pnames2" class = "names">Player 2:</h3>
-        <input type="text" class="names" id="p2Name" value="P2" name="Player 2 name"><br>
-        <br>
+        <div><h3 id="pnames2" class = "names">Player 2:</h3>
+        <input type="text" class="names" id="p2Name" name="Player 2 name"><br></div>
         </div>
         <div id="charSelect">
-        <!-- <h2 id="cselect" class="chars">Player Characters</h2> -->
             <div id="p1CharSel" class="innerCharSel">
             <h3 class="chars" id="pcharacters1">Player 1</h3>
             <select class="chars" id="xCharacter">
@@ -53,24 +54,26 @@
             </select>
             </div>
         </div>
-          <br>
+        </div>
+        <div>
           <button id="startbtn" onclick="startGame()"><b>Start</b></button>
           <button id="resetbtn" onclick="resetGame()"><b>Reset</b></button>
           <button id = "resetScore" onclick="scoreReset()">Reset Score</button>
-          <header><h1 id="winnerStatus">Winner</h1></header>
-          <section id="scoreboard" class="grid_container1">
-              <p class="grid_item1" id="p1s">0</p>
-              <p class="grid_item1" id="p3s">Score Board</p>
-              <p class="grid_item1" id="p2s">0</p>  
-          </section>
-          <div id = "placement">
+        </div>
+        </div>
+        </div>
+        <div id="scoreboard" class="grid_container1">
+            <h1 id="winnerStatus">Winner</h1>
+            <p class="grid_item1" id="p1s"></p>
+            <p class="grid_item1" id="p3s">Score Board</p>
+            <p class="grid_item1" id="p2s"></p>  
+        </div>
+        <div id = "placement">
             <h3 id = "placement1">You must play in the</h3>
             <h2 id = "placementBoard">1</h2>
             <h3 id = "placement2">board.</h3>
           </div>
-            </div>
-            </div>
-          </div>
+        </div>
           <div id = 'instructions-container'><div id="instructions">
             <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
             <button id = "close">Got it!</button>
