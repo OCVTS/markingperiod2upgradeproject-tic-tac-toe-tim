@@ -121,6 +121,7 @@ function startGame(){
    p2Char = document.getElementById('oCharacter').value
    p1Name = document.getElementById('p1Name').value
    p2Name = document.getElementById('p2Name').value
+   
    /******************************************Easter Egg*****************************************/
    switch(p1Name.toLowerCase()){
       case "kalel":
@@ -135,6 +136,10 @@ function startGame(){
       case "ivan":
       p1Char = '⁵²'
       break;
+      case 'you like jazz?':
+      p1Char = '🐝'
+      break;
+   
    }
    switch(p2Name.toLowerCase()){
       case "kalel":
@@ -148,6 +153,9 @@ function startGame(){
       break;
       case "ivan":
       p2Char = '🏈'
+      break;
+      case 'you like smooth jazz?':
+      p2Char = '🍯'
       break;
    }
    currentPlayer = p1Char;
@@ -231,6 +239,8 @@ document.getElementById('p2s').innerHTML = P2Score;
 }
 
 //𒁬 -tim
+   cursor()
+   
 function cursor(){
 
 if(previousSpace == ''){
