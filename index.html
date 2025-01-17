@@ -55,24 +55,22 @@
             </div>
         </div>
         </div>
-        <div>
-          <button id="startbtn" onclick="startGame()"><b>Start</b></button>
-          <button id="resetbtn" onclick="resetGame()"><b>Reset</b></button>
-          <button id = "resetScore" onclick="scoreReset()">Reset Score</button>
+        <div id="buttonContainer">
+          <div><button id="startbtn" onclick="startGame()">Start</button></div>
+          <div><button id="resetbtn" onclick="resetGame()">Reset</button></div>
+          <p id="placement" class="">You can play in any Board.</p>
+        </div>
+        </div>
+        <div id="SidebarBot">
+        <div id="scoreboard">
+            <p id="winnerStatus" style="grid-area:winner">Winner</p>
+            <p class="scoreboardItem" id="p1s" style="grid-area:p1s"></p>
+            <p class="scoreboardItem" id="SB" style="grid-area:SB">Score Board</p>
+            <p class="scoreboardItem" id="p2s" style="grid-area:p2s"></p>
+            <div class="scoreboardItem" id="resetScoreDiv"><button id="resetScore" onclick="scoreReset()">Reset Score</button></div>
         </div>
         </div>
         </div>
-        <div id="scoreboard" class="grid_container1">
-            <h1 id="winnerStatus">Winner</h1>
-            <p class="grid_item1" id="p1s"></p>
-            <p class="grid_item1" id="p3s">Score Board</p>
-            <p class="grid_item1" id="p2s"></p>  
-        </div>
-        <div id = "placement">
-            <h3 id = "placement1">You must play in the</h3>
-            <h2 id = "placementBoard">1</h2>
-            <h3 id = "placement2">board.</h3>
-          </div>
         </div>
           <div id = 'instructions-container'><div id="instructions">
             <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>

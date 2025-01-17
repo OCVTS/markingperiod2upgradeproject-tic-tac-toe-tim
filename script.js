@@ -34,12 +34,10 @@ cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
 if (gameStart == true) {
-if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false)){
-   if (board[num] == '') {
+if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false) && (board[num] == '')){
       document.getElementById(board.name+num).innerHTML = currentPlayer
       board[num] = currentPlayer
       board.count++
-   }
    checkWinner()
 
    if (board.winner == '' && board.count >= 9) {
@@ -165,6 +163,7 @@ function resetGame() {
    p2Char= 'O';
    p1Name = '';
    p2Name = '';
+   cursor()
    document.getElementById('p1Name').value = p1Name
    document.getElementById('p2Name').value = p2Name
    document.getElementById('xCharacter').value = p1Char
@@ -189,41 +188,40 @@ function resetGame() {
    }
  
    function placement(){
-document.getElementById('placement1').innerHTML = 'You must play in the'
       switch(previousSpace){
          case 'A':
-         placementVar = 'Top Left';
+         placementVar = 'the Top Left';
          break;
          case 'B':
-         placementVar = 'Top Middle';
+         placementVar = 'the Top Middle';
          break;
          case 'C':
-         placementVar = 'Top Right';
+         placementVar = 'the Top Right';
          break;
          case 'D':
-         placementVar = 'Middle Left'
+         placementVar = 'the Middle Left'
          break;
          case 'E':
-         placementVar = 'Center'
+         placementVar = 'the Center'
          break;
          case 'F':
-         placementVar = 'Middle Right'
+         placementVar = 'the Middle Right'
          break;
          case 'G':
-         placementVar = 'Bottom Left'
+         placementVar = 'the Bottom Left'
          break;
          case 'H':
-         placementVar = 'Bottom Middle'
+         placementVar = 'the Bottom Middle'
          break;
          case 'I':
-         placementVar = 'Bottom Right'
+         placementVar = 'the Bottom Right'
          break;
          default:
          placementVar = 'any'
-         document.getElementById('placement1').innerHTML = 'You can play in'
+         break;
       }
-      document.getElementById('placementBoard').innerHTML = placementVar;
-      }
+      document.getElementById('placement').innerHTML = `You can play in ${placementVar} board`
+   }
 
 function scoreReset(){
 P1Score = 0;
