@@ -253,7 +253,7 @@ input[type=text] {
     filter:blur(1.5rem);
 }
 
-@media(max-width:580px){
+@media(max-width:390px){
 * {
     margin:0;
 }
@@ -359,5 +359,8 @@ height:5vh;
     width:100vw;
     height:5vh;
 }
+#slider{
+background-color:white;
 
+}
 }

@@ -30,14 +30,11 @@ const boardArray = [A, B, C, D, E, F, G, H, I]
 cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
-if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false)){
-   if (board[num] == '') {
+   if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false) && (board[num] == '')){
       document.getElementById(board.name+num).innerHTML = currentPlayer
       board[num] = currentPlayer
       board.count++
-   }
    checkWinner()
-
    if (board.winner == '' && board.count >= 9) {
       board.open = false
       document.getElementById(board.name).style.filter = 'blur(2px)'
