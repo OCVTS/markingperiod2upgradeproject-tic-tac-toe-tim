@@ -131,6 +131,7 @@ h3{
     visibility:visible;
     z-index:100;
 }
+
 #blurred1{
     filter:blur(1.5rem);
 }
@@ -161,7 +162,7 @@ h3{
     border-color:white;
 
 }
-
+/* I <3 Jacob */
 #pnames1 {
     color:white;
     font-size: 26px;
@@ -263,6 +264,7 @@ input[type=text] {
 }
 #tttgrid{
     filter:blur(1.5rem);
+    color: white;
 }
 #placement{
     margin-top:16vh;
