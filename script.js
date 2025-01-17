@@ -1,12 +1,14 @@
+let gameStart = false;
 let p1Char= 'X';
 let p2Char= 'O';
-let p1Name = 'P1';
-let p2Name = 'P2';
+let p1Name = '';
+let p2Name = '';
 let P1Score = 0;
 let P2Score = 0;
 let currentPlayer = p1Char;
 let winner = false;
 let previousSpace = '';
+let placementVar = '';
 let col1 = [1, 4, 7]
 let col2 = [2, 5, 8]
 let col3 = [3, 6, 9]
@@ -27,6 +29,7 @@ const H = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'H', open:
 const I = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'I', open:true, winner:'', count:0};
 const boardArray = [A, B, C, D, E, F, G, H, I]
 
+placement()
 cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
@@ -49,7 +52,9 @@ function playerMove(board, num) {
    } else {
    currentPlayer = p1Char;
    }
+   placement();
    cursor()
+}
 }
 }
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
@@ -64,11 +69,14 @@ function checkWinner() {
                board.winner = p1Char
                document.getElementById(board.name).classList.remove('openBoard')
                document.getElementById(board.name).innerHTML = p1Char
+               
             } else {
                board.open = false
                board.winner = p2Char
                document.getElementById(board.name).classList.remove('openBoard')
                document.getElementById(board.name).innerHTML = p2Char
+               
+
             }
            }
          }
@@ -78,6 +86,15 @@ function checkWinner() {
          if (boardArray[con[0]-1].winner == boardArray[con[1]-1].winner && boardArray[con[0]-1].winner == boardArray[con[2]-1].winner && boardArray[con[0]-1].winner != '') {
             winner=true
             alert('you win')
+            if (currentPlayer == p1Char) {
+               document.getElementById('winnerStatus').innerHTML = p1Name + ' Wins'
+               P1Score++
+               document.getElementById('p1s').innerHTML = P1Score
+            } else if (currentPlayer == p2Char) {
+               document.getElementById('winnerStatus').innerHTML = p2Name + ' Wins'
+               P2Score++
+               document.getElementById('p2s').innerHTML = P2Score
+            }
          } else {
             return
          }
@@ -86,6 +103,7 @@ function checkWinner() {
       boardArray.forEach(board => {if (board.winner != ''){numBoardWon++}})
       if (numBoardWon == 9 && winner == false) {
          alert('Full Tie')
+         document.getElementById('winnerStatus').innerHTML = 'Full Tie'
       }
    }
 
@@ -101,10 +119,11 @@ function startGame(){
    p2Char = document.getElementById('oCharacter').value
    p1Name = document.getElementById('p1Name').value
    p2Name = document.getElementById('p2Name').value
+   
    /******************************************Easter Egg*****************************************/
    switch(p1Name.toLowerCase()){
       case "kalel":
-      p1Char = '🂡'
+      p1Char = '🦸'
       break;
       case "jacob":
       p1Char = '🧝'
@@ -113,12 +132,16 @@ function startGame(){
       p1Char = '🥋'
       break;
       case "ivan":
-      p1Char = '🏈'
+      p1Char = '⁵²'
       break;
+      case 'you like jazz?':
+      p1Char = '🐝'
+      break;
+   
    }
    switch(p2Name.toLowerCase()){
       case "kalel":
-      p2Char = '🦸'
+      p2Char = '🂡'
       break;
       case "jacob":
       p2Char = '🍚'
@@ -127,15 +150,30 @@ function startGame(){
       p2Char = '😛'
       break;
       case "ivan":
-      p2Char = '⁵²'
+      p2Char = '🏈'
+      break;
+      case 'you like smooth jazz?':
+      p2Char = '🍯'
       break;
    }
    currentPlayer = p1Char;
    document.getElementById("tttgrid").style.filter = 'blur(0)';
+   gameStart = true
 }
 function resetGame() {
+   gameStart = false
+   document.getElementById("tttgrid").style.filter = 'blur(1.5rem)';
    winner = false;
    previousSpace = ''
+   p1Char= 'X';
+   p2Char= 'O';
+   p1Name = '';
+   p2Name = '';
+   cursor()
+   document.getElementById('p1Name').value = p1Name
+   document.getElementById('p2Name').value = p2Name
+   document.getElementById('xCharacter').value = p1Char
+   document.getElementById('oCharacter').value = p2Char
    currentPlayer = p1Char
    boardArray.forEach(board => {
       document.getElementById(board.name).innerHTML = '';
@@ -153,8 +191,54 @@ function resetGame() {
       if (!document.getElementById(board.name).classList.contains('openBoard'))
          document.getElementById(board.name).classList.add('openBoard')
    })
-   cursor()
    }
+ 
+   function placement(){
+      switch(previousSpace){
+         case 'A':
+         placementVar = 'the Top Left';
+         break;
+         case 'B':
+         placementVar = 'the Top Middle';
+         break;
+         case 'C':
+         placementVar = 'the Top Right';
+         break;
+         case 'D':
+         placementVar = 'the Middle Left'
+         break;
+         case 'E':
+         placementVar = 'the Center'
+         break;
+         case 'F':
+         placementVar = 'the Middle Right'
+         break;
+         case 'G':
+         placementVar = 'the Bottom Left'
+         break;
+         case 'H':
+         placementVar = 'the Bottom Middle'
+         break;
+         case 'I':
+         placementVar = 'the Bottom Right'
+         break;
+         default:
+         placementVar = 'any'
+         break;
+      }
+      document.getElementById('placement').innerHTML = `You can play in ${placementVar} board`
+   }
+
+function scoreReset(){
+P1Score = 0;
+P2Score = 0;
+document.getElementById('p1s').innerHTML = P1Score;
+document.getElementById('p2s').innerHTML = P2Score;
+}
+
+//𒁬 -tim
+   cursor()
+   
 function cursor(){
 
 if(previousSpace == ''){
@@ -183,4 +267,3 @@ if(previousSpace == ''){
 }
 //𒁬 -Timothy.
 document.getElementById('close').addEventListener('click',close)
-

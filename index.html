@@ -9,21 +9,22 @@
 <body>
     <main>
         <div id = "blurred1">
-        <div id="flexbox">
-            <div id = "sidenavBG">
-        <h1 id = "head1">Super </h1>
-        <h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1>
+        <div id="Sidebar">
+        <div id="SidebarTop">
+        <div id="title">
+            <div id="Super"><h1 id="Superh1">Super </h1></div>
+            <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div>
+        </div>
+        
+        <div class="namesCharBox ">
+        <div id="nameBox">
+        <div><h3 class="names"id="pnames1">Player 1:</h3>
+        <input type="text" class = "names" id="p1Name" name="Player 1 name"><br></div>
         <br>
-        <div class="namesBox">
-        <h3 class="names"id="pnames1">Player 1:</h3>
-        <input type="text" class = "names" id="p1Name" value="P1" name="Player 1 name"><br>
-        <br>
-        <h3 id="pnames2" class = "names">Player 2:</h3>
-        <input type="text" class="names" id="p2Name" value="P2" name="Player 2 name"><br>
-        <br>
+        <div><h3 id="pnames2" class = "names">Player 2:</h3>
+        <input type="text" class="names" id="p2Name" name="Player 2 name"><br></div>
         </div>
         <div id="charSelect">
-        <!-- <h2 id="cselect" class="chars">Player Characters</h2> -->
             <div id="p1CharSel" class="innerCharSel">
             <h3 class="chars" id="pcharacters1">Player 1</h3>
             <select class="chars" id="xCharacter">
@@ -42,7 +43,7 @@
             <h3 class="chars" id="pcharacters2">Player 2</h3>
             <select class = "chars" id="oCharacter">
                 <option value="O">O</option> 
-                <option value="Δ">Δ</option>
+                <option value="💙">💙</option>
                 <option value="🥚">🥚</option>
                 <option value="☺">☺</option>
                 <option value="☼">☼</option>
@@ -53,16 +54,22 @@
             </select>
             </div>
         </div>
-          <br>
-          <button id="startbtn" onclick="startGame()"><b>Start</b></button>
-          <button id="resetbtn" onclick="resetGame()"><b>Reset</b></button>
-          <header><h1 id="winnerStatus">Winner</h1></header>
-          <section id="scoreboard" class="grid_container1">
-              <p class="grid_item1" id="p1s"></p>
-              <p class="grid_item1" id="p3s">Score Board</p>
-              <p class="grid_item1" id="p2s"></p>  
-          </section>
-          <div id = "slider">
+        </div>
+        <div id="buttonContainer">
+          <div><button id="startbtn" onclick="startGame()">Start</button></div>
+          <div><button id="resetbtn" onclick="resetGame()">Reset</button></div>
+          <p id="placement" class="">You can play in any Board.</p>
+        </div>
+        </div>
+        <div id="SidebarBot">
+        <div id="scoreboard">
+            <p id="winnerStatus" style="grid-area:winner">Winner</p>
+            <p class="scoreboardItem" id="p1s" style="grid-area:p1s"></p>
+            <p class="scoreboardItem" id="SB" style="grid-area:SB">Score Board</p>
+            <p class="scoreboardItem" id="p2s" style="grid-area:p2s"></p>
+            <div class="scoreboardItem" id="resetScoreDiv"><button id="resetScore" onclick="scoreReset()">Reset Score</button></div>
+        </div>
+        <div id = "slider">
             <h3>Website Color!</h3>
             <input type="range" min="-360" max="360" value="0"> 
             <button id = "colorBtn">Set Color</button>

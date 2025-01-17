@@ -7,6 +7,435 @@ body {
      background-color:#091D34 
 }
 
+#Sidebar {
+    position: fixed;
+    width: 20vw;
+    height:100vh;
+    background-color:#2369B8;
+}
+#SidebarTop {
+    /* border:1px solid white; */
+    height:41vh;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    margin-bottom:1vh;
+}
+
+#SidebarBot {
+    /* border:1px solid white; */
+    height:49vh;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+#title {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:11vh;
+}
+#title div {
+    width:12vw;
+    height:5vh;
+    display:inline-block
+}
+#title #Super {
+    display:block;
+    width:100%;
+    height:6vh;
+}
+
+h1 {
+    display:inline-block;
+    color:white;
+    font-size:40px;
+    line-height:5vh;
+    text-align: center;
+    width:33%;
+    height:100%;
+}
+
+#Superh1 {
+    color: white;
+    font-size: 60px;
+    display:inline-block;
+    width:100%;
+    height:100%;
+    line-height: 6vh;
+}
+
+.namesCharBox {
+    /* border:1px solid white; */
+    width:100%;
+    height:19vh;
+    padding:0 2vw;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-around;
+}
+#nameBox {
+    width:9.5vw;
+    height:18vh;
+    display:inline-block;
+    /* border:1px solid white; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#nameBox div {
+    display:inline-block;
+    /* border:1px solid white; */
+    height:7vh;
+}
+#charSelect {
+    /* border:2px solid white; */
+    display:inline-block;
+    width:4vw;
+    height:18vh;
+}
+
+.innerCharSel{
+    /* border:1px solid white; */
+    width:4vw;
+    display:inline-block
+}
+
+
+#xCharacter, #oCharacter {
+    border: 3px solid black;
+    border-radius: 60px;
+    width: 70px;
+    height:70px;
+    text-align: center;
+    font-size:30px;
+}
+
+#buttonContainer {
+    /* border: 1px solid white; */
+    display:flex;
+    width:20vw;
+    height:10vh;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#buttonContainer div {
+    /* border:1px solid white; */
+    display:inline-block;
+    width:8vw;
+    height:6vh;
+    margin:0;
+}
+
+#placement {
+    width:20vw;
+    height:4vh;
+    line-height: 4vh;
+    font-size:1.25em;
+    text-align: center;
+    color:white;
+}
+
+#resetbtn, #startbtn, #resetScore {
+    width:8vw;
+    height:6vh;
+    border-radius:30px;
+    color:white;
+    background-color:#133863;
+    border:4px solid white;
+    font-size:1.5em;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+#buttonContainer button:hover {
+    box-shadow:0px 0px 1px 1px #133863;
+}
+
+#scoreboard {
+    width:20vw;
+    height:0vh;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+#scoreboard * {
+    box-sizing: border-box;
+}
+
+.scoreboardItem {
+    width:6vw;
+    height:6vh;
+    color:rgb(255, 255, 255);
+    font-size:16px;
+    text-align:center;
+    border:1px solid white;
+}
+
+ #winnerStatus {
+    font-size:2em;
+    text-align: center;
+    color:white;
+    width:20vw;
+    height:4vh;
+}
+#resetScoreDiv {
+    width:8.5vw;
+    height:7vh;
+    padding:4px;
+    border:none;
+}
+
+.grid_container {
+    display:grid;
+    grid-template-rows:repeat(3, 1fr);
+    grid-template-columns:repeat(3, 1fr);
+    width:45vw;
+    position:absolute;
+    top:5vh;
+    left:35vw;
+}
+
+.grid_item {
+    border:2px solid white;
+    width:15vw;
+    height:30vh;
+    color:rgb(255, 255, 255);
+    font-size:10vw;
+    text-align:center;
+    line-height: 16vw;
+}
+.openBoard {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.innerGrid {
+    display:inline-block;
+    border:1px solid #2369B8;
+    width:5vw;
+    height:10vh;
+    margin:0;
+    font-size:4vw;
+    line-height: 4vw;
+}
+
+#instructions{
+    background-color: white;
+    width:45vw;
+    height:40vh;
+    font-size:36px;
+    text-align: center;
+    padding:15px;
+}
+
+#instructions-container{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(255,255,255,10%);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    visibility:visible;
+    z-index:100;
+}
+
+#blurred1{
+    filter:blur(1.5rem);
+}
+#blurred2{
+    filter:blur(1.5rem);
+}
+/************************** COLORS & IMAGES *********************/
+
+#h1-1, #h1-3, #winnerStatus {
+    color:#133863;
+}
+#h1-2 {
+    color: white;
+}
+
+#winnerStatus {
+    border-color:white;
+
+}
+/* I <3 Jacob */
+#pnames1 {
+    color:white;
+    font-size: 26px;
+}
+
+#pnames2 {
+    color:#133863;
+    font-size: 26px;
+}
+
+#pcharacters1 {
+    color:#133863;
+}
+
+#pcharacters2 {
+    color:white;
+}
+
+input[type=text] {
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+}
+
+
+#close{
+    height:6vh;
+    width:12vw;
+    border-radius:30px;
+    font-size:1.5rem;
+    margin-top:2vh;
+    border: none;
+    background-color: #2369B8;
+    color: #fff;
+}
+#close:hover {
+    background-color: #133863;
+    color: rgb(194, 197, 201);
+}
+
+#tttgrid{
+    filter:blur(1.5rem);
+    color: white;
+}
+
+
+@media(max-width:580px){
+* {
+    margin:0;
+}
+.grid_container {
+    position:fixed;
+    left:40px;
+    top:3px;
+}
+.grid_item {
+    width:27vw;
+    height:16vh;
+}
+.innerGrid {
+    width:9vw;
+    height:5vh;
+}
+#instructions{
+        font-size:2vh;
+    }
+#close{
+    height:4vh;
+    width:20vw;
+    margin-top: 0vh;
+}
+#flexbox{
+max-height:50vh;
+display:flex;
+float:bottom;
+overflow:hidden;
+margin-top:50vh;
+width:100vw;
+}
+.names{
+    float:left;
+}
+.chars{
+float:left;
+}
+#scoreboard{
+    margin-top:51vh;
+    width:100vw;
+
+}
+#pcharacters1{
+    margin-top:-5vh;
+}
+#pcharacters2{
+    margin-top:-5vh;
+    margin-left:3vw;
+}
+#startbtn{
+width:25vw;
+height:5vh;
+}
+#resetbtn{
+width:25vw;
+height:5vh;
+    }
+#cselect{
+    visibility: hidden;
+}
+#winnerStatus{
+    overflow:hidden;
+    width:40vw;
+    margin-right:30vw;
+    font-size: 3vh;
+    margin-top:2vh;
+}
+.namesBox {
+    /* border:1px solid white; */
+    display:inline-block;
+    position:relative;
+}
+#charSelect {
+    margin:0;
+    float:right;
+    width:30vw;
+    height:12vh;
+    /* border:1px solid white; */
+}
+#charSelect h3 {
+    margin:0;
+}
+.innerCharSel {
+    /* border:1px solid white; */
+    width:14vw;
+    height:12vh;
+    display:inline-block
+}
+h1 {
+    display:inline-block;
+    color:white;
+    font-size:40px;
+    border:1px solid white;
+    width:14vw;
+}
+h2, h3{
+    color:white;
+}
+
+#Superh1 {
+    color: white;
+    margin-top: 1vh;
+    font-size: 60px;
+    display:inline-block;
+    width:34vw;
+}
+}* {
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+     background-color:#091D34 
+}
+
 #winnerStatus {
     font-size:2em;
     text-align: center;
