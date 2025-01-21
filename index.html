@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html id = "html">
-    <head>
+<html>
+    <head> <!--head tag that shows wher ethe top of the document begins-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Tic Tac Toe Tim
         </title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-<body id ="nicebod">
+<body>
     <main>
         <div id = "blurred1">
         <div id="Sidebar">
@@ -16,7 +16,7 @@
             <div id="Super"><h1 id="Superh1">Super </h1></div>
             <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div>
         </div>
-        
+       
         <div class="namesCharBox ">
         <div id="nameBox">
         <div><h3 class="names"id="pnames1">Player 1:</h3>
@@ -43,7 +43,7 @@
             <div id="p2CharSel" class="innerCharSel">
             <h3 class="chars" id="pcharacters2">Player 2</h3>
             <select class = "chars" id="oCharacter">
-                <option value="O">O</option> 
+                <option value="O">O</option>
                 <option value="💙">💙</option>
                 <option value="🥚">🥚</option>
                 <option value="☺">☺</option>
@@ -72,9 +72,9 @@
         </div>
         <div id = "slider">
             <h3>Website Color!</h3>
-            <input id = "sliderNum" type="range" min="0" max="360" steps = "360" value="0" oninput = "displayColor()"> 
-            <button id = "colorBtn" onclick="setColor()">Set Color</button> 
-            <button id = "rndmColor" onclick="rndmColor()">Random</button> 
+            <input id = "sliderNum" type="range" min="0" max="360" steps = "360" value="0" oninput = "displayColor()">
+            <button id = "colorBtn" onclick="setColor()">Set Color</button>
+            <button id = "rndmColor" onclick="rndmColor()">Random</button>
             <br>
             <input type="text" class = "names" id="colorInput" oninput = "displayColor()" name="ClrInpt">
         </div>
@@ -82,7 +82,7 @@
         </div>
         </div>
         </div>
-        
+       
           <div id = 'instructions-container'><div id="instructions">
             <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
             <button id = "close">Got it!</button>
@@ -90,6 +90,7 @@
         </div>
         <div id = "blurred2">
         <!-- <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header> -->
+
 
     </div>
     <section id="tttgrid" class="grid_container">
@@ -104,97 +105,108 @@
             <div class="innerGrid" id="A8" onclick="playerMove(A, '8')"></div>
             <div class="innerGrid" id="A9" onclick="playerMove(A, '9')"></div>
         </div>
-        <div class="grid_item openBoard" id="B">
-            <div class="innerGrid" id="B1" onclick="playerMove(B, '1')"></div>
-            <div class="innerGrid" id="B2" onclick="playerMove(B, '2')"></div>
-            <div class="innerGrid" id="B3" onclick="playerMove(B, '3')"></div>
-            <div class="innerGrid" id="B4" onclick="playerMove(B, '4')"></div>
-            <div class="innerGrid" id="B5" onclick="playerMove(B, '5')"></div>
-            <div class="innerGrid" id="B6" onclick="playerMove(B, '6')"></div>
-            <div class="innerGrid" id="B7" onclick="playerMove(B, '7')"></div>
-            <div class="innerGrid" id="B8" onclick="playerMove(B, '8')"></div>
-            <div class="innerGrid" id="B9" onclick="playerMove(B, '9')"></div>
-        </div>
-        <div class="grid_item openBoard" id="C">
-            <div class="innerGrid" id="C1" onclick="playerMove(C, '1')"></div>
-            <div class="innerGrid" id="C2" onclick="playerMove(C, '2')"></div>
-            <div class="innerGrid" id="C3" onclick="playerMove(C, '3')"></div>
-            <div class="innerGrid" id="C4" onclick="playerMove(C, '4')"></div>
-            <div class="innerGrid" id="C5" onclick="playerMove(C, '5')"></div>
-            <div class="innerGrid" id="C6" onclick="playerMove(C, '6')"></div>
-            <div class="innerGrid" id="C7" onclick="playerMove(C, '7')"></div>
-            <div class="innerGrid" id="C8" onclick="playerMove(C, '8')"></div>
-            <div class="innerGrid" id="C9" onclick="playerMove(C, '9')"></div>
-        </div>
-        <div class="grid_item openBoard" id="D">
-            <div class="innerGrid" id="D1" onclick="playerMove(D, '1')"></div>
-            <div class="innerGrid" id="D2" onclick="playerMove(D, '2')"></div>
-            <div class="innerGrid" id="D3" onclick="playerMove(D, '3')"></div>
-            <div class="innerGrid" id="D4" onclick="playerMove(D, '4')"></div>
-            <div class="innerGrid" id="D5" onclick="playerMove(D, '5')"></div>
-            <div class="innerGrid" id="D6" onclick="playerMove(D, '6')"></div>
-            <div class="innerGrid" id="D7" onclick="playerMove(D, '7')"></div>
-            <div class="innerGrid" id="D8" onclick="playerMove(D, '8')"></div>
-            <div class="innerGrid" id="D9" onclick="playerMove(D, '9')"></div>
-        </div>
-        <div class="grid_item openBoard" id="E">
-            <div class="innerGrid" id="E1" onclick="playerMove(E, '1')"></div>
-            <div class="innerGrid" id="E2" onclick="playerMove(E, '2')"></div>
-            <div class="innerGrid" id="E3" onclick="playerMove(E, '3')"></div>
-            <div class="innerGrid" id="E4" onclick="playerMove(E, '4')"></div>
-            <div class="innerGrid" id="E5" onclick="playerMove(E, '5')"></div>
-            <div class="innerGrid" id="E6" onclick="playerMove(E, '6')"></div>
-            <div class="innerGrid" id="E7" onclick="playerMove(E, '7')"></div>
-            <div class="innerGrid" id="E8" onclick="playerMove(E, '8')"></div>
-            <div class="innerGrid" id="E9" onclick="playerMove(E, '9')"></div>
-        </div>
-        <div class="grid_item openBoard" id="F">
-            <div class="innerGrid" id="F1" onclick="playerMove(F, '1')"></div>
-            <div class="innerGrid" id="F2" onclick="playerMove(F, '2')"></div>
-            <div class="innerGrid" id="F3" onclick="playerMove(F, '3')"></div>
-            <div class="innerGrid" id="F4" onclick="playerMove(F, '4')"></div>
-            <div class="innerGrid" id="F5" onclick="playerMove(F, '5')"></div>
-            <div class="innerGrid" id="F6" onclick="playerMove(F, '6')"></div>
-            <div class="innerGrid" id="F7" onclick="playerMove(F, '7')"></div>
-            <div class="innerGrid" id="F8" onclick="playerMove(F, '8')"></div>
-            <div class="innerGrid" id="F9" onclick="playerMove(F, '9')"></div>
-        </div>
-        <div class="grid_item openBoard" id="G">
-            <div class="innerGrid" id="G1" onclick="playerMove(G, '1')"></div>
-            <div class="innerGrid" id="G2" onclick="playerMove(G, '2')"></div>
-            <div class="innerGrid" id="G3" onclick="playerMove(G, '3')"></div>
-            <div class="innerGrid" id="G4" onclick="playerMove(G, '4')"></div>
-            <div class="innerGrid" id="G5" onclick="playerMove(G, '5')"></div>
-            <div class="innerGrid" id="G6" onclick="playerMove(G, '6')"></div>
-            <div class="innerGrid" id="G7" onclick="playerMove(G, '7')"></div>
-            <div class="innerGrid" id="G8" onclick="playerMove(G, '8')"></div>
-            <div class="innerGrid" id="G9" onclick="playerMove(G, '9')"></div>
-        </div>
-        <div class="grid_item openBoard" id="H">
-            <div class="innerGrid" id="H1" onclick="playerMove(H, '1')"></div>
-            <div class="innerGrid" id="H2" onclick="playerMove(H, '2')"></div>
-            <div class="innerGrid" id="H3" onclick="playerMove(H, '3')"></div>
-            <div class="innerGrid" id="H4" onclick="playerMove(H, '4')"></div>
-            <div class="innerGrid" id="H5" onclick="playerMove(H, '5')"></div>
-            <div class="innerGrid" id="H6" onclick="playerMove(H, '6')"></div>
-            <div class="innerGrid" id="H7" onclick="playerMove(H, '7')"></div>
-            <div class="innerGrid" id="H8" onclick="playerMove(H, '8')"></div>
-            <div class="innerGrid" id="H9" onclick="playerMove(H, '9')"></div>
-        </div>
-        <div class="grid_item openBoard" id="I">
-            <div class="innerGrid" id="I1" onclick="playerMove(I, '1')"></div>
-            <div class="innerGrid" id="I2" onclick="playerMove(I, '2')"></div>
-            <div class="innerGrid" id="I3" onclick="playerMove(I, '3')"></div>
-            <div class="innerGrid" id="I4" onclick="playerMove(I, '4')"></div>
-            <div class="innerGrid" id="I5" onclick="playerMove(I, '5')"></div>
-            <div class="innerGrid" id="I6" onclick="playerMove(I, '6')"></div>
-            <div class="innerGrid" id="I7" onclick="playerMove(I, '7')"></div>
-            <div class="innerGrid" id="I8" onclick="playerMove(I, '8')"></div>
-            <div class="innerGrid" id="I9" onclick="playerMove(I, '9')"></div>
-        </div>
-    </section>    
-</div>
-</main>
-    <script src="script.js"></script>
+            <section id="tttgrid" class="grid_container"> <!--the whole tictactoe board and the class allows the innerGrid to have these inside of another grid, and the onlick allows a function to get run whenever they are pressed inside of-->
+                <div class="grid_item openBoard" id="A">
+                    <div class="innerGrid" id="A1" onclick="playerMove(A, '1')"></div>
+                    <div class="innerGrid" id="A2" onclick="playerMove(A, '2')"></div>
+                    <div class="innerGrid" id="A3" onclick="playerMove(A, '3')"></div>
+                    <div class="innerGrid" id="A4" onclick="playerMove(A, '4')"></div>
+                    <div class="innerGrid" id="A5" onclick="playerMove(A, '5')"></div>
+                    <div class="innerGrid" id="A6" onclick="playerMove(A, '6')"></div>
+                    <div class="innerGrid" id="A7" onclick="playerMove(A, '7')"></div>
+                    <div class="innerGrid" id="A8" onclick="playerMove(A, '8')"></div>
+                    <div class="innerGrid" id="A9" onclick="playerMove(A, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="B">
+                    <div class="innerGrid" id="B1" onclick="playerMove(B, '1')"></div>
+                    <div class="innerGrid" id="B2" onclick="playerMove(B, '2')"></div>
+                    <div class="innerGrid" id="B3" onclick="playerMove(B, '3')"></div>
+                    <div class="innerGrid" id="B4" onclick="playerMove(B, '4')"></div>
+                    <div class="innerGrid" id="B5" onclick="playerMove(B, '5')"></div>
+                    <div class="innerGrid" id="B6" onclick="playerMove(B, '6')"></div>
+                    <div class="innerGrid" id="B7" onclick="playerMove(B, '7')"></div>
+                    <div class="innerGrid" id="B8" onclick="playerMove(B, '8')"></div>
+                    <div class="innerGrid" id="B9" onclick="playerMove(B, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="C">
+                    <div class="innerGrid" id="C1" onclick="playerMove(C, '1')"></div>
+                    <div class="innerGrid" id="C2" onclick="playerMove(C, '2')"></div>
+                    <div class="innerGrid" id="C3" onclick="playerMove(C, '3')"></div>
+                    <div class="innerGrid" id="C4" onclick="playerMove(C, '4')"></div>
+                    <div class="innerGrid" id="C5" onclick="playerMove(C, '5')"></div>
+                    <div class="innerGrid" id="C6" onclick="playerMove(C, '6')"></div>
+                    <div class="innerGrid" id="C7" onclick="playerMove(C, '7')"></div>
+                    <div class="innerGrid" id="C8" onclick="playerMove(C, '8')"></div>
+                    <div class="innerGrid" id="C9" onclick="playerMove(C, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="D">
+                    <div class="innerGrid" id="D1" onclick="playerMove(D, '1')"></div>
+                    <div class="innerGrid" id="D2" onclick="playerMove(D, '2')"></div>
+                    <div class="innerGrid" id="D3" onclick="playerMove(D, '3')"></div>
+                    <div class="innerGrid" id="D4" onclick="playerMove(D, '4')"></div>
+                    <div class="innerGrid" id="D5" onclick="playerMove(D, '5')"></div>
+                    <div class="innerGrid" id="D6" onclick="playerMove(D, '6')"></div>
+                    <div class="innerGrid" id="D7" onclick="playerMove(D, '7')"></div>
+                    <div class="innerGrid" id="D8" onclick="playerMove(D, '8')"></div>
+                    <div class="innerGrid" id="D9" onclick="playerMove(D, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="E">
+                    <div class="innerGrid" id="E1" onclick="playerMove(E, '1')"></div>
+                    <div class="innerGrid" id="E2" onclick="playerMove(E, '2')"></div>
+                    <div class="innerGrid" id="E3" onclick="playerMove(E, '3')"></div>
+                    <div class="innerGrid" id="E4" onclick="playerMove(E, '4')"></div>
+                    <div class="innerGrid" id="E5" onclick="playerMove(E, '5')"></div>
+                    <div class="innerGrid" id="E6" onclick="playerMove(E, '6')"></div>
+                    <div class="innerGrid" id="E7" onclick="playerMove(E, '7')"></div>
+                    <div class="innerGrid" id="E8" onclick="playerMove(E, '8')"></div>
+                    <div class="innerGrid" id="E9" onclick="playerMove(E, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="F">
+                    <div class="innerGrid" id="F1" onclick="playerMove(F, '1')"></div>
+                    <div class="innerGrid" id="F2" onclick="playerMove(F, '2')"></div>
+                    <div class="innerGrid" id="F3" onclick="playerMove(F, '3')"></div>
+                    <div class="innerGrid" id="F4" onclick="playerMove(F, '4')"></div>
+                    <div class="innerGrid" id="F5" onclick="playerMove(F, '5')"></div>
+                    <div class="innerGrid" id="F6" onclick="playerMove(F, '6')"></div>
+                    <div class="innerGrid" id="F7" onclick="playerMove(F, '7')"></div>
+                    <div class="innerGrid" id="F8" onclick="playerMove(F, '8')"></div>
+                    <div class="innerGrid" id="F9" onclick="playerMove(F, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="G">
+                    <div class="innerGrid" id="G1" onclick="playerMove(G, '1')"></div>
+                    <div class="innerGrid" id="G2" onclick="playerMove(G, '2')"></div>
+                    <div class="innerGrid" id="G3" onclick="playerMove(G, '3')"></div>
+                    <div class="innerGrid" id="G4" onclick="playerMove(G, '4')"></div>
+                    <div class="innerGrid" id="G5" onclick="playerMove(G, '5')"></div>
+                    <div class="innerGrid" id="G6" onclick="playerMove(G, '6')"></div>
+                    <div class="innerGrid" id="G7" onclick="playerMove(G, '7')"></div>
+                    <div class="innerGrid" id="G8" onclick="playerMove(G, '8')"></div>
+                    <div class="innerGrid" id="G9" onclick="playerMove(G, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="H">
+                    <div class="innerGrid" id="H1" onclick="playerMove(H, '1')"></div>
+                    <div class="innerGrid" id="H2" onclick="playerMove(H, '2')"></div>
+                    <div class="innerGrid" id="H3" onclick="playerMove(H, '3')"></div>
+                    <div class="innerGrid" id="H4" onclick="playerMove(H, '4')"></div>
+                    <div class="innerGrid" id="H5" onclick="playerMove(H, '5')"></div>
+                    <div class="innerGrid" id="H6" onclick="playerMove(H, '6')"></div>
+                    <div class="innerGrid" id="H7" onclick="playerMove(H, '7')"></div>
+                    <div class="innerGrid" id="H8" onclick="playerMove(H, '8')"></div>
+                    <div class="innerGrid" id="H9" onclick="playerMove(H, '9')"></div>
+                </div>
+                <div class="grid_item openBoard" id="I">
+                    <div class="innerGrid" id="I1" onclick="playerMove(I, '1')"></div>
+                    <div class="innerGrid" id="I2" onclick="playerMove(I, '2')"></div>
+                    <div class="innerGrid" id="I3" onclick="playerMove(I, '3')"></div>
+                    <div class="innerGrid" id="I4" onclick="playerMove(I, '4')"></div>
+                    <div class="innerGrid" id="I5" onclick="playerMove(I, '5')"></div>
+                    <div class="innerGrid" id="I6" onclick="playerMove(I, '6')"></div>
+                    <div class="innerGrid" id="I7" onclick="playerMove(I, '7')"></div>
+                    <div class="innerGrid" id="I8" onclick="playerMove(I, '8')"></div>
+                    <div class="innerGrid" id="I9" onclick="playerMove(I, '9')"></div>
+                </div>
+            </section>    
+    </main>
+    <script src="script.js"></script> <!--js link-->
 </body>
 </html>
