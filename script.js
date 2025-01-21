@@ -252,11 +252,11 @@ function cursor(){
 if(previousSpace == ''){
    if(currentPlayer == p1Char){
       boardArray.forEach(board => {
-         document.getElementById(board.name).style.cursor = "url('X cursor.png'), auto";
+         document.getElementById(board.name).style.cursor = "url('images/X cursor.png'), auto";
       })
    }else{
       boardArray.forEach(board => {
-         document.getElementById(board.name).style.cursor = "url('O cursor.png'), auto";
+         document.getElementById(board.name).style.cursor = "url('images/O cursor.png'), auto";
       })
    }
 }else{
@@ -265,9 +265,9 @@ if(previousSpace == ''){
          document.getElementById(board.name).style.cursor = 'not-allowed';
       }else{
          if(currentPlayer == p1Char){
-            document.getElementById(board.name).style.cursor = "url('X cursor.png'), auto";
+            document.getElementById(board.name).style.cursor = "url('images/X cursor.png'), auto";
          }else{
-            document.getElementById(board.name).style.cursor = "url('O cursor.png'), auto";
+            document.getElementById(board.name).style.cursor = "url('images/O cursor.png'), auto";
          }
       }
    })
