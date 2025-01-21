@@ -176,7 +176,7 @@ h1 {
 
 #scoreboard {
     width:20vw;
-    height:24vh;
+    height:21vh;
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
@@ -274,10 +274,11 @@ h1 {
 #instructions{
     background-color: white;
     width:45vw;
-    height:40vh;
+    height:35vh;
     font-size:36px;
     text-align: center;
-    padding:15px;
+    padding:25px;
+    border-radius:30px;
 }
 
 
@@ -371,10 +372,6 @@ input[type=text] {
     filter:blur(1.5rem);
     color: white;
 }
-
-
-
-
 
 @media(max-width:580px){
 * {
