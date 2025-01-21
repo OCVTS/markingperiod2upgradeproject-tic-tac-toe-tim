@@ -19,7 +19,7 @@ let row3 = [7, 8, 9]
 let dia1 = [1, 5, 9]
 let dia2 = [3, 5, 7]
 // an array of those previous arrays, allowing easier way to loop through them
-let classArray = [col1, col2, col3, row1, row2, row3, dia1, dia2]; 
+let classArray = [col1, col2, col3, row1, row2, row3, dia1, dia2];
 // An object for each board including each space as a number, its name as a string, whether its full or not, who won the board, and the numer of times played in the board
 const A = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'A', open:true, winner:'', count:0};
 const B = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'B', open:true, winner:'', count:0};
@@ -33,9 +33,11 @@ const I = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'I', open:
 // an array of all the boardobjects to loop through
 const boardArray = [A, B, C, D, E, F, G, H, I]
 
+
 //calls functions of placement and cursor to show the user where to play before they start
 placement()
 cursor()
+
 
 function playerMove(board, num) { //playerMove function controls everything to do with the player clicking on a square in the board
 if (gameStart == true) { //checks if the game has started yet
@@ -70,6 +72,7 @@ if (gameStart == true) { //checks if the game has started yet
    }
 }
 
+
 function checkWinner() { //Checks winner in both the small boards, and the large board, in every possible direction, as well as changing all the necessary variables
    //These two loops combined go through both the boardArray to check each board, and the classArray to check all win conditions
    for (let i = 0; i<8;i++){
@@ -83,7 +86,7 @@ function checkWinner() { //Checks winner in both the small boards, and the large
                   board.open = false
                   board.winner = p1Char
                   document.getElementById(board.name).classList.remove('openBoard')
-                  document.getElementById(board.name).innerHTML = p1Char 
+                  document.getElementById(board.name).innerHTML = p1Char
                } else {
                   board.open = false
                   board.winner = p2Char
@@ -117,9 +120,12 @@ function checkWinner() { //Checks winner in both the small boards, and the large
    boardArray.forEach(board => {if (board.winner != ''){numBoardWon++}})
    if (numBoardWon == 9 && winner == false) {
 
+
       document.getElementById('winnerStatus').innerHTML = 'Full Tie'
    }
 }
+
+
 
 
 const close = () => {
@@ -127,6 +133,8 @@ const close = () => {
    document.getElementById("blurred1").style.filter = 'blur(0)';
    document.getElementById("blurred2").style.filter = 'blur(0)';
 }
+
+
 
 
 /********************* Function resets the game board ********************************/
@@ -174,6 +182,7 @@ function startGame(){
    document.getElementById("tttgrid").style.filter = 'blur(0)';
    gameStart = true
 }
+
 
 function resetGame() {
    gameStart = false
@@ -247,6 +256,8 @@ function placement(){
 }
 
 
+
+
 function scoreReset(){
    P1Score = 0;
    P2Score = 0;
@@ -255,8 +266,12 @@ function scoreReset(){
 }
 
 
+
+
 //𒁬 -tim
    cursor()
+
+
 
 
 function cursor(){
@@ -297,6 +312,7 @@ function rndmColor(){
    let rndmNum = Math.floor(Math.random()*360)
    document.getElementById('html').style.filter =`hue-rotate(${rndmNum}deg)`;
 }
+
 
 function displayColor(){
    if(document.getElementById('colorInput').value == ''){
