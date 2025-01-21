@@ -17,7 +17,9 @@ let row2 = [4, 5, 6]
 let row3 = [7, 8, 9]
 let dia1 = [1, 5, 9]
 let dia2 = [3, 5, 7]
+// an array of those previous arrays, allowing easier way to loop through them
 let classArray = [col1, col2, col3, row1, row2, row3, dia1, dia2];
+// An object for each board including each space as a number, its name as a string, whether its full or not, who won the board, and the numer of times played in the board
 const A = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'A', open:true, winner:'', count:0};
 const B = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'B', open:true, winner:'', count:0};
 const C = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'C', open:true, winner:'', count:0};
@@ -108,6 +110,8 @@ function checkWinner() {
          document.getElementById('winnerStatus').innerHTML = 'Full Tie'
       }
    }
+
+
 
 const close = () => {
    document.getElementById("instructions-container").style.visibility = 'hidden';
@@ -231,6 +235,8 @@ function resetGame() {
       document.getElementById('placement').innerHTML = `You can play in ${placementVar} board`
    }
 
+
+
 function scoreReset(){
 P1Score = 0;
 P2Score = 0;
@@ -269,3 +275,27 @@ if(previousSpace == ''){
 }
 //𒁬 -Timothy.
 document.getElementById('close').addEventListener('click',close)
+function setColor(){
+   if(document.getElementById('colorInput').value == ''){
+   let sliderNum = document.getElementById('sliderNum').value;
+   document.getElementById('html').style.filter =`hue-rotate(${sliderNum}deg)`;
+   }
+   document.getElementById('html').style.filter =`hue-rotate(${document.getElementById('colorInput').value}deg)`
+}
+function rndmColor(){
+   let rndmNum = Math.floor(Math.random()*360)
+   document.getElementById('html').style.filter =`hue-rotate(${rndmNum}deg)`;
+}
+
+
+function displayColor(){
+   if(document.getElementById('colorInput').value == ''){
+   document.getElementById('html').style.filter =`hue-rotate(0deg)`;
+   let sliderNum = document.getElementById('sliderNum').value;
+   document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
+}else{
+   let sliderNum = document.getElementById('colorInput').value
+   document.getElementById('html').style.filter =`hue-rotate(0deg)`;
+   document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
+}  
+}

@@ -3,78 +3,55 @@
     <head> <!--head tag that shows wher ethe top of the document begins-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <!--this allows for the image inside of the tab to change to whatevers linked in the pngs tab-->
-        <title>Super Tic Tac Toe</title> <!--name of the page in the tab-->
-       
+        <title>Tic Tac Toe Tim</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
 <body>
     <main>
         <div id = "blurred1">
-            <div id="Sidebar"> <!--sidebar div-->
-                <div id="SidebarTop">
-                    <div id="title">
-                        <div id="Super"><h1 id="Superh1">Super </h1></div>
-                        <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div> <!--text in the sidenav-->
-                    </div>
-                    <div class="namesCharBox ">
-                        <div id="nameBox">
-                            <div>
-                                <h3 class="names"id="pnames1">Player 1:</h3>
-                                <input type="text" class = "names" id="p1Name" name="Player 1 name"><br> <!--input where you type in your custom name which can get sent to the js and can be used as an actaul name thingy-->
-                            </div>
-                            <div>
-                                <h3 id="pnames2" class = "names">Player 2:</h3>
-                                <input type="text" class="names" id="p2Name" name="Player 2 name"><br>
-                            </div>
-                        </div>
-                            <div id="charSelect">
-                                <div id="p1CharSel" class="innerCharSel">
-                                    <h3 class="chars" id="pcharacters1">Player 1</h3> <!--where you can pick your custom character-->
-                                        <select class="chars" id="xCharacter"> <!--this allows for there to be something on the page that does a dropdown-->
-                                            <option value="X">X</option> <!--the options inside of the select tag allow whatevers in the tag to be an option-->
-                                            <option value="❌">❌</option>
-                                            <option value="⚒">⚒</option>
-                                            <option value="⚔">⚔</option>
-                                            <option value="✘">✘</option>
-                                            <option value="✻">✻</option>
-                                            <option value="⛝">⛝</option>
-                                            <option value="☣">☣</option>
-                                            <option value="❖">❖</option>
-                                        </select>
-                                </div>
-                                    <div id="p2CharSel" class="innerCharSel">
-                                        <h3 class="chars" id="pcharacters2">Player 2</h3>
-                                        <select class = "chars" id="oCharacter">
-                                            <option value="O">O</option> 
-                                            <option value="💙">💙</option>
-                                            <option value="🥚">🥚</option>
-                                            <option value="☺">☺</option>
-                                            <option value="☼">☼</option>
-                                            <option value="☹">☹</option>
-                                            <option value="☯">☯</option>
-                                            <option value="☮">☮</option>
-                                            <option value="☢">☢</option>
-                                        </select>
-                                    </div>
-                            </div>
-                    </div>
-                    <div id="buttonContainer">
-                        <div><button id="startbtn" onclick="startGame()">Start</button></div> <!--start game button and its connected to the js to allow the function to get ran when its pressed-->
-                        <div><button id="resetbtn" onclick="resetGame()">Reset</button></div> <!--reset game button and its connected to the js to allow the function to get ran when its pressed-->
-                        <p id="placement" class="">You can play in any Board.</p>
-                    </div>
-                </div>
-            <div id="SidebarBot">
-                <div id="scoreboard">
-                    <p id="winnerStatus" style="grid-area:winner">Winner</p>
-                    <p class="scoreboardItem" id="p1s" style="grid-area:p1s">-</p>
-                    <p class="scoreboardItem" id="SB" style="grid-area:SB">Score Board</p>
-                    <p class="scoreboardItem" id="p2s" style="grid-area:p2s">-</p>
-                    <div class="scoreboardItem" id="resetScoreDiv">
-                    <button id="resetScore" onclick="scoreReset()">Reset Score</button></div> <!--score reset button and its connected to the js to allow the function to get ran when its pressed-->
-                </div>
+        <div id="Sidebar">
+        <div id="SidebarTop">
+        <div id="title">
+            <div id="Super"><h1 id="Superh1">Super </h1></div>
+            <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div>
+        </div>
+       
+        <div class="namesCharBox ">
+        <div id="nameBox">
+        <div><h3 class="names"id="pnames1">Player 1:</h3>
+        <input type="text" class = "names" id="p1Name" name="Player 1 name"><br></div>
+        <br>
+        <div><h3 id="pnames2" class = "names">Player 2:</h3>
+        <input type="text" class="names" id="p2Name" name="Player 2 name"><br></div>
+        </div>
+        <div id="charSelect">
+            <div id="p1CharSel" class="innerCharSel">
+            <h3 class="chars" id="pcharacters1">Player 1</h3>
+            <select class="chars" id="xCharacter">
+                <option value="X">X</option>
+                <option value="❌">❌</option>
+                <option value="⚒">⚒</option>
+                <option value="⚔">⚔</option>
+                <option value="✘">✘</option>
+                <option value="✻">✻</option>
+                <option value="⛝">⛝</option>
+                <option value="☣">☣</option>
+                <option value="❖">❖</option>
+            </select>
             </div>
+            <div id="p2CharSel" class="innerCharSel">
+            <h3 class="chars" id="pcharacters2">Player 2</h3>
+            <select class = "chars" id="oCharacter">
+                <option value="O">O</option>
+                <option value="💙">💙</option>
+                <option value="🥚">🥚</option>
+                <option value="☺">☺</option>
+                <option value="☼">☼</option>
+                <option value="☹">☹</option>
+                <option value="☯">☯</option>
+                <option value="☮">☮</option>
+                <option value="☢">☢</option>
+            </select>
             </div>
         </div>
             <div id = 'instructions-container'> <!--the instructions to how to play the game and a lightbox is used to hover the selected items over anything else-->
@@ -85,6 +62,20 @@
             </div>
         <div id = "blurred2">
         <!-- <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header> -->
+
+
+    </div>
+    <section id="tttgrid" class="grid_container">
+        <div class="grid_item openBoard" id="A">
+            <div class="innerGrid" id="A1" onclick="playerMove(A, '1')"></div>
+            <div class="innerGrid" id="A2" onclick="playerMove(A, '2')"></div>
+            <div class="innerGrid" id="A3" onclick="playerMove(A, '3')"></div>
+            <div class="innerGrid" id="A4" onclick="playerMove(A, '4')"></div>
+            <div class="innerGrid" id="A5" onclick="playerMove(A, '5')"></div>
+            <div class="innerGrid" id="A6" onclick="playerMove(A, '6')"></div>
+            <div class="innerGrid" id="A7" onclick="playerMove(A, '7')"></div>
+            <div class="innerGrid" id="A8" onclick="playerMove(A, '8')"></div>
+            <div class="innerGrid" id="A9" onclick="playerMove(A, '9')"></div>
         </div>
             <section id="tttgrid" class="grid_container"> <!--the whole tictactoe board and the class allows the innerGrid to have these inside of another grid, and the onlick allows a function to get run whenever they are pressed inside of-->
                 <div class="grid_item openBoard" id="A">
