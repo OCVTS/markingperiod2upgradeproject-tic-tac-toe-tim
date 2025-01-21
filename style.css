@@ -467,6 +467,7 @@ input[type=text] {
 
 #numbervalues {
     color: white;
+    margin-top: .4vh;
 }
 
 @media(max-width:580px){
