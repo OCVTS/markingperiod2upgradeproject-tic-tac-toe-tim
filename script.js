@@ -29,15 +29,19 @@ const H = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'H', open:
 const I = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', name:'I', open:true, winner:'', count:0};
 const boardArray = [A, B, C, D, E, F, G, H, I]
 
+
 placement()
 cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {
-   if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false) && (board[num] == '')){
+if (gameStart == true) {
+if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false) && (board[num] == '')){
       document.getElementById(board.name+num).innerHTML = currentPlayer
       board[num] = currentPlayer
       board.count++
    checkWinner()
+
+
    if (board.winner == '' && board.count >= 9) {
       board.open = false
       document.getElementById(board.name).style.filter = 'blur(2px)'
@@ -59,6 +63,7 @@ function playerMove(board, num) {
 }
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
 
+
 function checkWinner() {
    for (let i = 0; i<8;i++){
          boardArray.forEach((board) => {
@@ -76,6 +81,7 @@ function checkWinner() {
                document.getElementById(board.name).classList.remove('openBoard')
                document.getElementById(board.name).innerHTML = p2Char
                
+
 
             }
            }
@@ -98,7 +104,7 @@ function checkWinner() {
          } else {
             return
          }
-      }) 
+      })
       let numBoardWon = 0;
       boardArray.forEach(board => {if (board.winner != ''){numBoardWon++}})
       if (numBoardWon == 9 && winner == false) {
@@ -107,11 +113,13 @@ function checkWinner() {
       }
    }
 
+
 const close = () => {
    document.getElementById("instructions-container").style.visibility = 'hidden';
    document.getElementById("blurred1").style.filter = 'blur(0)';
    document.getElementById("blurred2").style.filter = 'blur(0)';
 }
+
 
 /********************* Function resets the game board ********************************/
 function startGame(){
@@ -229,17 +237,21 @@ function resetGame() {
       document.getElementById('placement').innerHTML = `You can play in ${placementVar} board`
    }
 
+
 function scoreReset(){
 P1Score = 0;
 P2Score = 0;
-document.getElementById('p1s').innerHTML = P1Score;
-document.getElementById('p2s').innerHTML = P2Score;
+document.getElementById('p1s').innerHTML = '-';
+document.getElementById('p2s').innerHTML = '-';
 }
+
 
 //𒁬 -tim
    cursor()
-   
+
+
 function cursor(){
+
 
 if(previousSpace == ''){
    if(currentPlayer == p1Char){
@@ -267,3 +279,26 @@ if(previousSpace == ''){
 }
 //𒁬 -Timothy.
 document.getElementById('close').addEventListener('click',close)
+function setColor(){
+   if(document.getElementById('colorInput').value == ''){
+   let sliderNum = document.getElementById('sliderNum').value;
+   document.getElementById('html').style.filter =`hue-rotate(${sliderNum}deg)`;
+   }
+   document.getElementById('html').style.filter =`hue-rotate(${document.getElementById('colorInput').value}deg)`
+}
+function rndmColor(){
+   let rndmNum = Math.floor(Math.random()*360)
+   document.getElementById('html').style.filter =`hue-rotate(${rndmNum}deg)`;
+}
+
+function displayColor(){
+   if(document.getElementById('colorInput').value == ''){
+   document.getElementById('html').style.filter =`hue-rotate(0deg)`;
+   let sliderNum = document.getElementById('sliderNum').value;
+   document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
+}else{
+   let sliderNum = document.getElementById('colorInput').value
+   document.getElementById('html').style.filter =`hue-rotate(0deg)`;
+   document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
+}  
+}

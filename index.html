@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html id = "html">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Tic Tac Toe Tim</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-<body>
+<body id ="nicebod">
     <main>
         <div id = "blurred1">
         <div id="Sidebar">
@@ -71,9 +71,13 @@
         </div>
         <div id = "slider">
             <h3>Website Color!</h3>
-            <input type="range" min="-360" max="360" value="0"> 
-            <button id = "colorBtn">Set Color</button>
+            <input id = "sliderNum" type="range" min="0" max="360" steps = "360" value="0" oninput = "displayColor()"> 
+            <button id = "colorBtn" onclick="setColor()">Set Color</button> 
+            <button id = "rndmColor" onclick="rndmColor()">Random</button> 
+            <br>
+            <input type="text" class = "names" id="colorInput" oninput = "displayColor()" name="ClrInpt">
         </div>
+        <div id = "colorDisplay">Color</div>
         </div>
         </div>
         </div>
@@ -187,8 +191,8 @@
             <div class="innerGrid" id="I8" onclick="playerMove(I, '8')"></div>
             <div class="innerGrid" id="I9" onclick="playerMove(I, '9')"></div>
         </div>
-    </section>
-</div>    
+    </section>    
+</div>
 </main>
     <script src="script.js"></script>
 </body>
