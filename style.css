@@ -4,15 +4,9 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-
-
-
 body {
      background-color:#091D34;
 }
-
-
-
 
 #Sidebar {
     position: fixed;
@@ -31,9 +25,6 @@ body {
     margin-bottom:1vh;
 }
 
-
-
-
 #SidebarBot {
     border:1px solid white;
     height:40vh;
@@ -43,9 +34,6 @@ body {
     justify-content: center;
 }
 
-
-
-
 #title {
     display:flex;
     flex-direction: column;
@@ -53,19 +41,18 @@ body {
     align-items: center;
     height:11vh;
 }
+
 #title div {
     width:12vw;
     height:5vh;
     display:inline-block
 }
+
 #title #Super {
     display:block;
     width:100%;
     height:6vh;
 }
-
-
-
 
 h1 {
     display:inline-block;
@@ -77,9 +64,6 @@ h1 {
     height:100%;
 }
 
-
-
-
 #Superh1 {
     color: white;
     font-size: 60px;
@@ -88,9 +72,6 @@ h1 {
     height:100%;
     line-height: 6vh;
 }
-
-
-
 
 .namesCharBox {
     /* border:1px solid white; */
@@ -101,6 +82,7 @@ h1 {
     display:flex;
     justify-content: space-around;
 }
+
 #nameBox {
     width:9.5vw;
     height:18vh;
@@ -110,11 +92,13 @@ h1 {
     flex-direction: column;
     justify-content: center;
 }
+
 #nameBox div {
     display:inline-block;
     /* border:1px solid white; */
     height:7vh;
 }
+
 #charSelect {
     /* border:2px solid white; */
     display:inline-block;
@@ -122,21 +106,11 @@ h1 {
     height:18vh;
 }
 
-
-
-
 .innerCharSel{
     /* border:1px solid white; */
     width:4vw;
     display:inline-block
 }
-
-
-
-
-
-
-
 
 #xCharacter, #oCharacter {
     border: 3px solid black;
@@ -147,9 +121,6 @@ h1 {
     font-size:30px;
 }
 
-
-
-
 #buttonContainer {
     /* border: 1px solid white; */
     display:flex;
@@ -159,9 +130,6 @@ h1 {
     justify-content: space-evenly;
 }
 
-
-
-
 #buttonContainer div {
     /* border:1px solid white; */
     display:inline-block;
@@ -169,9 +137,6 @@ h1 {
     height:6vh;
     margin:0;
 }
-
-
-
 
 #placement {
     width:20vw;
@@ -181,9 +146,6 @@ h1 {
     text-align: center;
     color:white;
 }
-
-
-
 
 #resetbtn, #startbtn, #resetScore {
     width:8vw;
@@ -197,15 +159,9 @@ h1 {
     cursor:pointer;
 }
 
-
-
-
 #buttonContainer button:hover {
     box-shadow:0px 0px 1px 1px #133863;
 }
-
-
-
 
 #scoreboard {
     width:20vw;
@@ -216,15 +172,9 @@ h1 {
     /* border:solid 1px white; */
 }
 
-
-
-
 #scoreboard * {
     box-sizing: border-box;
 }
-
-
-
 
 .scoreboardItem {
     width:6vw;
@@ -236,9 +186,6 @@ h1 {
     line-height:8vh;
 }
 
-
-
-
  #winnerStatus {
     font-size:2em;
     text-align: center;
@@ -246,13 +193,13 @@ h1 {
     width:20vw;
     height:4vh;
 }
+
 #resetScoreDiv {
     width:8.5vw;
     height:7vh;
     padding:4px;
     border:none;
 }
-
 
 #slider{
     /* padding-bottom:-5vh; */
@@ -284,9 +231,6 @@ h1 {
     left:35vw;
 }
 
-
-
-
 .grid_item {
     border:2px solid white;
     width:15vw;
@@ -296,15 +240,13 @@ h1 {
     text-align:center;
     line-height: 30vh;
 }
+
 .openBoard {
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 .innerGrid {
     display:inline-block;
@@ -316,9 +258,6 @@ h1 {
     line-height: 10vh;
 }
 
-
-
-
 #instructions{
     background-color: white;
     width:45vw;
@@ -328,9 +267,6 @@ h1 {
     padding:25px;
     border-radius:30px;
 }
-
-
-
 
 #instructions-container{
     position:absolute;
@@ -346,82 +282,43 @@ h1 {
     z-index:100;
 }
 
-
-
-
 #blurred1{
     filter:blur(1.5rem);
 }
 #blurred2{
     filter:blur(1.5rem);
 }
+
 /************************** COLORS & IMAGES *********************/
-
-
-
-
 #h1-1, #h1-3, #winnerStatus {
     color:#133863;
 }
 #h1-2 {
     color: white;
 }
-
-
-
-
 #winnerStatus {
     border-color:white;
-
-
-
-
 }
-/* I <3 Jacob */
 #pnames1 {
     color:white;
     font-size: 26px;
 }
-
-
-
-
 #pnames2 {
     color:#133863;
     font-size: 26px;
 }
-
-
-
-
 #pcharacters1 {
     color:#133863;
 }
-
-
-
-
 #pcharacters2 {
     color:white;
 }
-
-
-
-
 input[type=text] {
     border: 3px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border-radius: 6px;
 }
-
-
-
-
-
-
-
-
 #close{
     height:6vh;
     width:12vw;
@@ -436,128 +333,88 @@ input[type=text] {
     background-color: #133863;
     color: rgb(194, 197, 201);
 }
-
-
-
-
 #tttgrid{
     filter:blur(1.5rem);
     color: white;
 }
 
-
-@media(max-width:580px){
-* {
-    margin:0;
-}
-.grid_container {
-    position:fixed;
-    left:40px;
-    top:3px;
-}
-.grid_item {
-    width:27vw;
-    height:16vh;
-}
-.innerGrid {
-    width:9vw;
-    height:5vh;
-}
-#instructions{
-        font-size:2vh;
+@media (max-width:580px){
+    .grid_container {
+        width:90vw;
+        height:60vh;
+        position:absolute;
+        left:3vw;
+        top:1vh;
+        margin:0;
+        padding:0;
+        border:none
     }
-#close{
-    height:4vh;
-    width:20vw;
-    margin-top: 0vh;
-}
-#flexbox{
-max-height:50vh;
-display:flex;
-float:bottom;
-overflow:hidden;
-margin-top:50vh;
-width:100vw;
-}
-.names{
-    float:left;
-}
-.chars{
-float:left;
-}
-#scoreboard{
-    margin-top:51vh;
-    width:100vw;
-
-
-
-
-}
-#pcharacters1{
-    margin-top:-5vh;
-}
-#pcharacters2{
-    margin-top:-5vh;
-    margin-left:3vw;
-}
-#startbtn{
-width:25vw;
-height:5vh;
-}
-#resetbtn{
-width:25vw;
-height:5vh;
+    .grid_item {
+        width:30vw;
+        height:20vh;
+        margin:0;
+        padding:0;
+        line-height: 20vh;
+        font-size:15vh;
+        
     }
-#cselect{
-    visibility: hidden;
-}
-#winnerStatus{
-    overflow:hidden;
-    width:40vw;
-    margin-right:30vw;
-    font-size: 3vh;
-    margin-top:2vh;
-}
-.namesBox {
-    /* border:1px solid white; */
-    display:inline-block;
-    position:relative;
-}
-#charSelect {
-    margin:0;
-    float:right;
-    width:30vw;
-    height:12vh;
-    /* border:1px solid white; */
-}
-#charSelect h3 {
-    margin:0;
-}
-.innerCharSel {
-    /* border:1px solid white; */
-    width:14vw;
-    height:12vh;
-    display:inline-block
-}
-h1 {
-    display:inline-block;
-    color:white;
-    font-size:40px;
-    border:1px solid white;
-    width:14vw;
-}
-h2, h3{
-    color:white;
-}
+    .innerGrid {
+        width:10vw;
+        height:6.5vh;
+        line-height: 6vh;
+        font-size:5vh;
+    }
+    #Sidebar{
+        width:100vw;
+        height:35vh;
+        position:absolute;
+        bottom:-100vh;
+    }
+    #SidebarTop{
+        width:45vw;
+        height:30vh;
+        float:left;
+    }
+    #SidebarBot{
+        width:45vw;
+        height:30vh;
+        float:right;
+    }
 
-
-
-
-#Superh1 {
-    color: white;
-    margin-top: 1vh;
-    font-size: 60px;
-    display:inline-block;
-    width:34vw;
-}
+    #title {
+        border:1px solid white;
+        width:45vw;
+        height:10vh;
+    }
+    #title div {
+        width:12vw;
+        height:5vh;
+        display:inline-block;
+        border:1px solid white;
+    }
+    #title #Super {
+        display:block;
+        width:45vw;
+        height:5vh;
+    }
+    .namesCharBox {
+        border:1px solid white;
+        width:45vw;
+        height:15vh;
+    }
+    #nameBox {
+        width:30vw;
+        height:15vh;
+        display:inline-block;
+        /* border:1px solid white; */
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #nameBox div {
+        display:inline-block;
+        /* border:1px solid white; */
+        /* width:10vw; */
+        height:7vh;
+    }
 }
