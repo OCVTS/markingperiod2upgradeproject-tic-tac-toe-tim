@@ -193,12 +193,12 @@ function resetGame() {
    p2Char= 'O';
    p1Name = '';
    p2Name = '';
+   cursor()
    document.getElementById('p1Name').value = p1Name
    document.getElementById('p2Name').value = p2Name
    document.getElementById('xCharacter').value = p1Char
    document.getElementById('oCharacter').value = p2Char
    currentPlayer = p1Char
-   cursor()
    boardArray.forEach(board => {
       document.getElementById(board.name).innerHTML = '';
       for (let i = 1; i<10;i++){
