@@ -234,13 +234,13 @@ function resetGame() {
 function scoreReset(){
 P1Score = 0;
 P2Score = 0;
-document.getElementById('p1s').innerHTML = P1Score;
-document.getElementById('p2s').innerHTML = P2Score;
+document.getElementById('p1s').innerHTML = '-';
+document.getElementById('p2s').innerHTML = '-';
 }
 
 //𒁬 -tim
    cursor()
-   
+
 function cursor(){
 
 if(previousSpace == ''){

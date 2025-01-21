@@ -26,7 +26,7 @@ body {
 
 #SidebarBot {
     /* border:1px solid white; */
-    height:49vh;
+    height:21vh;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -172,11 +172,12 @@ h1 {
 
 .scoreboardItem {
     width:6vw;
-    height:6vh;
+    height:8vh;
     color:rgb(255, 255, 255);
     font-size:16px;
     text-align:center;
     border:1px solid white;
+    line-height:8vh;
 }
 
  #winnerStatus {
