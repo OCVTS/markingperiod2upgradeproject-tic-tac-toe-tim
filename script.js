@@ -121,11 +121,13 @@ function checkWinner() { //Checks winner in both the small boards, and the large
    }
 }
 
+
 const close = () => {
    document.getElementById("instructions-container").style.visibility = 'hidden';
    document.getElementById("blurred1").style.filter = 'blur(0)';
    document.getElementById("blurred2").style.filter = 'blur(0)';
 }
+
 
 /********************* Function resets the game board ********************************/
 function startGame(){
@@ -244,6 +246,7 @@ function placement(){
    document.getElementById('placement').innerHTML = `You can play in ${placementVar} board`
 }
 
+
 function scoreReset(){
    P1Score = 0;
    P2Score = 0;
@@ -251,9 +254,11 @@ function scoreReset(){
    document.getElementById('p2s').innerHTML = P2Score;
 }
 
+
 //𒁬 -tim
    cursor()
-   
+
+
 function cursor(){
    if(previousSpace == ''){
       if(currentPlayer == p1Char){
@@ -281,3 +286,26 @@ function cursor(){
 }
 //𒁬 -Timothy.
 document.getElementById('close').addEventListener('click',close)
+function setColor(){
+   if(document.getElementById('colorInput').value == ''){
+   let sliderNum = document.getElementById('sliderNum').value;
+   document.getElementById('html').style.filter =`hue-rotate(${sliderNum}deg)`;
+   }
+   document.getElementById('html').style.filter =`hue-rotate(${document.getElementById('colorInput').value}deg)`
+}
+function rndmColor(){
+   let rndmNum = Math.floor(Math.random()*360)
+   document.getElementById('html').style.filter =`hue-rotate(${rndmNum}deg)`;
+}
+
+function displayColor(){
+   if(document.getElementById('colorInput').value == ''){
+   document.getElementById('html').style.filter =`hue-rotate(0deg)`;
+   let sliderNum = document.getElementById('sliderNum').value;
+   document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
+}else{
+   let sliderNum = document.getElementById('colorInput').value
+   document.getElementById('html').style.filter =`hue-rotate(0deg)`;
+   document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
+}  
+}
