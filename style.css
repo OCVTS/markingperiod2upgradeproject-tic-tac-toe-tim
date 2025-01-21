@@ -311,6 +311,7 @@ h1 {
 }
 #h1-2 {
     color: white;
+
 }
 #winnerStatus {
     border-color:white;
@@ -346,6 +347,8 @@ input[type=text] {
     color: rgb(0, 0, 0);
     border-radius: 6px;
 }
+
+
 
 
 #close{
