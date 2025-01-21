@@ -54,12 +54,39 @@
             </select>
             </div>
         </div>
-            <div id = 'instructions-container'> <!--the instructions to how to play the game and a lightbox is used to hover the selected items over anything else-->
-                <div id="instructions">
-                    <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
-                    <button id = "close">Got it!</button>
-                </div>
-            </div>
+        </div>
+        <div id="buttonContainer">
+          <div><button id="startbtn" onclick="startGame()">Start</button></div>
+          <div><button id="resetbtn" onclick="resetGame()">Reset</button></div>
+          <p id="placement" class="">You can play in any Board.</p>
+        </div>
+        </div>
+        <div id="SidebarBot">
+        <div id="scoreboard">
+            <p id="winnerStatus" style="grid-area:winner">Winner</p>
+            <p class="scoreboardItem" id="p1s" style="grid-area:p1s"></p>
+            <p class="scoreboardItem" id="SB" style="grid-area:SB">Score Board</p>
+            <p class="scoreboardItem" id="p2s" style="grid-area:p2s"></p>
+            <div class="scoreboardItem" id="resetScoreDiv"><button id="resetScore" onclick="scoreReset()">Reset Score</button></div>
+        </div>
+        <div id = "slider">
+            <h3>Website Color!</h3>
+            <input id = "sliderNum" type="range" min="0" max="360" steps = "360" value="0" oninput = "displayColor()">
+            <button id = "colorBtn" onclick="setColor()">Set Color</button>
+            <button id = "rndmColor" onclick="rndmColor()">Random</button>
+            <br>
+            <input type="text" class = "names" id="colorInput" oninput = "displayColor()" name="ClrInpt">
+        </div>
+        <div id = "colorDisplay">Color</div>
+        </div>
+        </div>
+        </div>
+       
+          <div id = 'instructions-container'><div id="instructions">
+            <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
+            <button id = "close">Got it!</button>
+        </div>
+        </div>
         <div id = "blurred2">
         <!-- <header><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></header> -->
 
