@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html id = "html">
-    <head>
-        <meta charset="utf-8">
+    <head> <!--head tag that shows where the top of the document begins-->
+        <meta charset="utf-8"><!--name of the page in the tab-->
         <meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <!--this allows for the image inside of the tab to change to whatevers linked in the pngs tab-->
         <title>Tic Tac Toe Tim</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link href="style.css" rel="stylesheet" type="text/css" />
@@ -10,26 +11,26 @@
 <body id ="nicebod">
     <main>
         <div id = "blurred1">
-        <div id="Sidebar">
+        <div id="Sidebar"> <!--sidebar div-->
         <div id="SidebarTop">
         <div id="title">
             <div id="Super"><h1 id="Superh1">Super </h1></div>
-            <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div>
+            <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div> <!--Text in the sidenav-->
         </div>
        
         <div class="namesCharBox ">
         <div id="nameBox">
         <div><h3 class="names"id="pnames1">Player 1:</h3>
         <input type="text" class = "names" id="p1Name" name="Player 1 name"><br></div>
-        <br>
+        <br> <!--input where you type in your custom name which can get sent to the js and can be used as an actual name thingy-->
         <div><h3 id="pnames2" class = "names">Player 2:</h3>
         <input type="text" class="names" id="p2Name" name="Player 2 name"><br></div>
         </div>
         <div id="charSelect">
             <div id="p1CharSel" class="innerCharSel">
-            <h3 class="chars" id="pcharacters1">Player 1</h3>
-            <select class="chars" id="xCharacter">
-                <option value="X">X</option>
+            <h3 class="chars" id="pcharacters1">Player 1</h3> <!--where you can pick your custom character-->
+            <select class="chars" id="xCharacter"> <!--this allows for there to be something on the page that does a dropdown-->
+                <option value="X">X</option> <!--the options inside of the select tag allow whatevers in the tag to be an option-->
                 <option value="❌">❌</option>
                 <option value="⚒">⚒</option>
                 <option value="⚔">⚔</option>
@@ -57,7 +58,7 @@
         </div>
         </div>
         <div id="buttonContainer">
-          <div><button id="startbtn" onclick="startGame()">Start</button></div>
+          <div><button id="startbtn" onclick="startGame()">Start</button></div><!---->
           <div><button id="resetbtn" onclick="resetGame()">Reset</button></div>
           <p id="placement" class="">You can play in any Board.</p>
         </div>
