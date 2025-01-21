@@ -445,6 +445,29 @@ input[type=text] {
     color: white;
 }
 
+#slider {
+    text-align: center;
+}
+
+#colorBtn {
+    border-radius: 1000px;
+    cursor:pointer;
+    background-color:#133863;
+    border:2px solid white;
+    color: white;
+}
+
+#rndmColor {
+    border-radius: 1000px;
+    cursor:pointer;
+    background-color:#133863;
+    border:2px solid white;
+    color: white;
+}
+
+#numbervalues {
+    color: white;
+}
 
 @media(max-width:580px){
 * {
