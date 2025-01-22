@@ -26,7 +26,7 @@ body {
 }
 
 #SidebarBot {
-    border:1px solid white;
+    /* border:1px solid white; */
     height:40vh;
     display:flex;
     flex-direction:row;
