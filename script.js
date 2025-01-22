@@ -139,8 +139,8 @@ function startGame(){ //initializes the variables using value of sidebar inputs
    if(gameStart != true) {
       p1Char = document.getElementById('xCharacter').value // .value takes the value of a 
       p2Char = document.getElementById('oCharacter').value
-      p1Name = document.getElementById('p1Name').value
-      p2Name = document.getElementById('p2Name').value
+      p1Name = document.getElementById('p1Name').value.toString()
+      p2Name = document.getElementById('p2Name').value.toString()
       /******************************************Easter Egg*****************************************/
       switch(p1Name.toLowerCase()){ // used to check if one of the users names is one of our preprogrammed easter eggs
          case "kalel":
@@ -158,6 +158,9 @@ function startGame(){ //initializes the variables using value of sidebar inputs
          case 'you like jazz?':
             p1Char = '🐝'
             break;
+         case '69':
+            p1Char = '👌'
+            break;
       }
       switch(p2Name.toLowerCase()){
          case "kalel":
@@ -174,6 +177,9 @@ function startGame(){ //initializes the variables using value of sidebar inputs
             break;
          case 'you like smooth jazz?':
             p2Char = '🍯'
+            break;
+         case '420':
+            p1Char = '🆒'
             break;
       }
       currentPlayer = p1Char; //sets player to 1
@@ -256,7 +262,7 @@ function placement(){ // edits the text on the sidebar to show the user where to
          placementVar = 'any'
          break;
    } 
-   document.getElementById('placement').innerHTML = `You can play in ${placementVar} board`; // displays the text
+   document.getElementById('placement').innerHTML = `Play in ${placementVar} board`; // displays the text
 }
 
 
@@ -297,9 +303,9 @@ function cursor(){ // changes cursor to display whos turn it is
       })
    }
 }
+
 //𒁬 -Timothy.
 
-document.getElementById('close').addEventListener('click',close)
 function setColor(){
    if(document.getElementById('colorInput').value == ''){
       let sliderNum = document.getElementById('sliderNum').value;
@@ -325,3 +331,5 @@ function displayColor(){
       document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
     }  
 }
+
+document.getElementById('close').addEventListener('click',close)
