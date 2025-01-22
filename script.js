@@ -273,27 +273,37 @@ if(previousSpace == ''){
    })
 }
 }
-//𒁬 -Timothy.
 document.getElementById('close').addEventListener('click',close)
+// This function takes the value of the slider and rotates the hue of the page by whatever number the slider is on
 function setColor(){
+   //Only use the slider value if the text input is empty
    if(document.getElementById('colorInput').value == ''){
+      //Get the value of the slider
    let sliderNum = document.getElementById('sliderNum').value;
+   // Rotate teh page hue by the slider value
    document.getElementById('html').style.filter =`hue-rotate(${sliderNum}deg)`;
    }
+   // If text input is not empty, rotate hue by the text input
    document.getElementById('html').style.filter =`hue-rotate(${document.getElementById('colorInput').value}deg)`
 }
+//This sets the color of the website to a random color scheme
 function rndmColor(){
+   //Gets a random number
    let rndmNum = Math.floor(Math.random()*360)
+   //Rotates the hue by the random number
    document.getElementById('html').style.filter =`hue-rotate(${rndmNum}deg)`;
 }
 
-
+//This is a function to display the color selected by the slider 
 function displayColor(){
+//If the text input is empty don't rotate the hue
    if(document.getElementById('colorInput').value == ''){
    document.getElementById('html').style.filter =`hue-rotate(0deg)`;
+   //Get the value of the slider and rotate the hue of color display
    let sliderNum = document.getElementById('sliderNum').value;
    document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;
 }else{
+   //Rotate hue by text input if text input is not empty
    let sliderNum = document.getElementById('colorInput').value
    document.getElementById('html').style.filter =`hue-rotate(0deg)`;
    document.getElementById('colorDisplay').style.filter =`hue-rotate(${sliderNum}deg)`;

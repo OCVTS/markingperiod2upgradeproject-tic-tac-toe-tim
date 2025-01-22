@@ -1,25 +1,23 @@
-
+/* This sets default styling */
 * {
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
 }
-
-
-
-
+/*Setting the background color */
 body {
      background-color:#091D34;
 }
 
 
 
-
+/*This is the light blue section where we have our different player options */
 #Sidebar {
     position: fixed;
     width: 20vw;
     height:100vh;
     background-color:#2369B8;
 }
+/* This is a div surrounding the top half of the sidebar */
 #SidebarTop {
     /* border:1px solid white; */
     height:41vh;
@@ -33,7 +31,7 @@ body {
 
 
 
-
+/*This is a div surrounding the bottom half of the sidebar */
 #SidebarBot {
     border:1px solid white;
     height:40vh;
@@ -45,7 +43,7 @@ body {
 
 
 
-
+/* This is a div containing the text "super tic tac toe" and this syles it */
 #title {
     display:flex;
     flex-direction: column;
@@ -53,11 +51,13 @@ body {
     align-items: center;
     height:11vh;
 }
+/* This styles the "Tic Tac Toe" part of the title */
 #title div {
     width:12vw;
     height:5vh;
     display:inline-block
 }
+/* This edits the "Super" part of the title */
 #title #Super {
     display:block;
     width:100%;
@@ -66,7 +66,7 @@ body {
 
 
 
-
+/*This styles main points in the sidebar using the H1 tag */
 h1 {
     display:inline-block;
     color:white;
@@ -79,7 +79,7 @@ h1 {
 
 
 
-
+/*This is seperate styling for the "Super" part of the title */
 #Superh1 {
     color: white;
     font-size: 60px;
@@ -91,7 +91,7 @@ h1 {
 
 
 
-
+/* This is a div that contains the player name and character inputs */
 .namesCharBox {
     /* border:1px solid white; */
     width:100%;
@@ -101,6 +101,7 @@ h1 {
     display:flex;
     justify-content: space-around;
 }
+/* This is more specific styling for the player names within the namesCharBox div */
 #nameBox {
     width:9.5vw;
     height:18vh;
@@ -110,13 +111,13 @@ h1 {
     flex-direction: column;
     justify-content: center;
 }
+/* Styling for every div in the nameBox div */
 #nameBox div {
     display:inline-block;
-    /* border:1px solid white; */
     height:7vh;
 }
+/* Styles the character select */
 #charSelect {
-    /* border:2px solid white; */
     display:inline-block;
     width:4vw;
     height:18vh;
@@ -124,20 +125,13 @@ h1 {
 
 
 
-
+/*This styles the inside of the character selection*/
 .innerCharSel{
     /* border:1px solid white; */
     width:4vw;
     display:inline-block
 }
-
-
-
-
-
-
-
-
+/*This is the styling of the outside of the character selection (when it is not clicked) */ 
 #xCharacter, #oCharacter {
     border: 3px solid black;
     border-radius: 60px;
@@ -149,9 +143,8 @@ h1 {
 
 
 
-
+/* This is a div that contains the start and reset buttons */
 #buttonContainer {
-    /* border: 1px solid white; */
     display:flex;
     width:20vw;
     height:10vh;
@@ -161,9 +154,8 @@ h1 {
 
 
 
-
+/* This styles every div that is within the button container */
 #buttonContainer div {
-    /* border:1px solid white; */
     display:inline-block;
     width:8vw;
     height:6vh;
@@ -172,7 +164,7 @@ h1 {
 
 
 
-
+/*This styles the line of text that tells you what board you must play in*/
 #placement {
     width:20vw;
     height:4vh;
@@ -184,7 +176,7 @@ h1 {
 
 
 
-
+/* This styles our primary  buttons */
 #resetbtn, #startbtn, #resetScore {
     width:8vw;
     height:6vh;
@@ -199,33 +191,32 @@ h1 {
 
 
 
-
+/* This styles the start and reset buttons when you hover */
 #buttonContainer button:hover {
     box-shadow:0px 0px 1px 1px #133863;
 }
 
 
 
-
+/*This sets the sizing of the three boxes in the scoreboard equally*/
 #scoreboard {
     width:20vw;
     height:21vh;
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
-    /* border:solid 1px white; */
 }
 
 
 
-
+/* This styles everything within the scoreboard */
 #scoreboard * {
     box-sizing: border-box;
 }
 
 
 
-
+/*This styles the inner portion of the scoreboard*/
 .scoreboardItem {
     width:6vw;
     height:8vh;
@@ -238,7 +229,7 @@ h1 {
 
 
 
-
+/* This styles our winner declaration */
  #winnerStatus {
     font-size:2em;
     text-align: center;
@@ -246,6 +237,7 @@ h1 {
     width:20vw;
     height:4vh;
 }
+/* This div contains the reset score button */
 #resetScoreDiv {
     width:8.5vw;
     height:7vh;
@@ -253,9 +245,7 @@ h1 {
     border:none;
 }
 
-
 #slider{
-    /* padding-bottom:-5vh; */
     height:5vh;
     width:15vw;
 }
@@ -273,7 +263,7 @@ h1 {
     text-align: center;
 }
 
-
+/* This sets the board to a 3x3 grid */
 .grid_container {
     display:grid;
     grid-template-rows:repeat(3, 1fr);
@@ -286,7 +276,7 @@ h1 {
 
 
 
-
+/* Character inside of the 3x3 grid */
 .grid_item {
     border:2px solid white;
     width:15vw;
@@ -296,6 +286,7 @@ h1 {
     text-align:center;
     line-height: 30vh;
 }
+/* If the board is open, it will apply this styling */
 .openBoard {
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -305,7 +296,7 @@ h1 {
 
 
 
-
+/*This is the styling for the smaller boards */
 .innerGrid {
     display:inline-block;
     border:1px solid #2369B8;
@@ -318,7 +309,7 @@ h1 {
 
 
 
-
+/*This is a lightbox to tell players how to play the game */
 #instructions{
     background-color: white;
     width:45vw;
@@ -331,7 +322,7 @@ h1 {
 
 
 
-
+/* Lightbox container */
 #instructions-container{
     position:absolute;
     top:0;
@@ -348,7 +339,7 @@ h1 {
 
 
 
-
+/* These ID's start the screen blurred, however they unblur after the instructions are closed */
 #blurred1{
     filter:blur(1.5rem);
 }
@@ -436,10 +427,6 @@ input[type=text] {
     background-color: #133863;
     color: rgb(194, 197, 201);
 }
-
-
-
-
 #tttgrid{
     filter:blur(1.5rem);
     color: white;
@@ -488,10 +475,6 @@ float:left;
 #scoreboard{
     margin-top:51vh;
     width:100vw;
-
-
-
-
 }
 #pcharacters1{
     margin-top:-5vh;
@@ -549,10 +532,6 @@ h1 {
 h2, h3{
     color:white;
 }
-
-
-
-
 #Superh1 {
     color: white;
     margin-top: 1vh;
