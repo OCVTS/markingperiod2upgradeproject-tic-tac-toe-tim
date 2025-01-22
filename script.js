@@ -262,7 +262,7 @@ function placement(){ // edits the text on the sidebar to show the user where to
          placementVar = 'any'
          break;
    } 
-   document.getElementById('placement').innerHTML = `You can play in ${placementVar} board`; // displays the text
+   document.getElementById('placement').innerHTML = `Play in ${placementVar} board`; // displays the text
 }
 
 
