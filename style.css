@@ -299,8 +299,8 @@ h1 {
 .openBoard {
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*centers horrizontaly */
+    align-items: center; /*centers veritcaly */
 }
 
 
@@ -361,7 +361,7 @@ h1 {
 
 
 #h1-1, #h1-3, #winnerStatus {
-    color:#133863;
+    color:#133863; 
 }
 #h1-2 {
     color: white;
@@ -408,7 +408,7 @@ h1 {
 
 
 
-input[type=text] {
+input[type=text] { /*the styling tag to style the inputs where you can put text, w3schools stated that the extra bit after input styles the text inside of the input */
     border: 3px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -422,7 +422,7 @@ input[type=text] {
 
 
 
-#close{
+#close{ /*button used to close the lightbox */
     height:6vh;
     width:12vw;
     border-radius:30px;
@@ -440,8 +440,8 @@ input[type=text] {
 
 
 
-#tttgrid{
-    filter:blur(1.5rem);
+#tttgrid{ /*this is the board that you play on */
+    filter:blur(1.5rem); /*the board starts blurred and unblurs when you start the game */
     color: white;
 }
 
@@ -470,7 +470,7 @@ input[type=text] {
     margin-top: .4vh;
 }
 
-@media(max-width:580px){
+@media(max-width:580px){ /*allows for that when the webpage gets a specific height and width itll change parts of the page this particularly is for a phone */
 * {
     margin:0;
 }
@@ -498,7 +498,7 @@ input[type=text] {
 #flexbox{
 max-height:50vh;
 display:flex;
-float:bottom;
+float:bottom; /*moves the selected things to the bottom of the screen */
 overflow:hidden;
 margin-top:50vh;
 width:100vw;
@@ -512,10 +512,6 @@ float:left;
 #scoreboard{
     margin-top:51vh;
     width:100vw;
-
-
-
-
 }
 #pcharacters1{
     margin-top:-5vh;
@@ -533,7 +529,7 @@ width:25vw;
 height:5vh;
     }
 #cselect{
-    visibility: hidden;
+    visibility: hidden; /*the selected items hidden unless another change occurs */
 }
 #winnerStatus{
     overflow:hidden;
