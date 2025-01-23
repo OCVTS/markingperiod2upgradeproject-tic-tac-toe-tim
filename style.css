@@ -282,6 +282,8 @@ h1 {
     z-index:100;
 }
 
+
+
 #blurred1{
     filter:blur(1.5rem);
 }
@@ -344,6 +346,9 @@ input[type=text] { /*the styling tag to style the inputs where you can put text,
 
 #slider {
     text-align: center;
+}
+#slider h3 {
+    color: #fff;
 }
 
 #colorBtn {
