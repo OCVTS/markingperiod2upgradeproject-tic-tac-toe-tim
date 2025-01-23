@@ -52,6 +52,7 @@ function playerMove(board, num) {//playerMove function controls everything to do
       //checks for tie by asking if there is no winner in a board, and if the turncount is 9 or greater, means all spaces are filled.
          if (board.winner == '' && board.count >= 9) {
             board.open = false
+            board.winner = 'Tie'
             document.getElementById(board.name).style.filter = 'blur(2px)'
          }
       // if the board that the user must play in is open, it sets previousSpace to the string value of the required board.
@@ -101,7 +102,7 @@ function checkWinner() { //Checks winner in both the small boards, and the large
    // loops through each win condition, to check if there are three boards in a row
    classArray.forEach(con => {
       // checks the winner value of board objects in the board array at the value of con(condition)-1 due to arrays starting at 0
-      if (boardArray[con[0]-1].winner == boardArray[con[1]-1].winner && boardArray[con[0]-1].winner == boardArray[con[2]-1].winner && boardArray[con[0]-1].winner != '') {
+      if (boardArray[con[0]-1].winner == boardArray[con[1]-1].winner && boardArray[con[0]-1].winner == boardArray[con[2]-1].winner && boardArray[con[0]-1].winner != '' && boardArray[con[0]-1].winner != 'Tie') {
          winner=true
          alert('you win')
          // changes the winner text in the sidebar and increases the score
@@ -200,7 +201,6 @@ function resetGame() {
    p2Char= 'O';
    p1Name = '';
    p2Name = '';
-   cursor()
    // resets the value of each input box
    document.getElementById('p1Name').value = p1Name
    document.getElementById('p2Name').value = p2Name
@@ -208,6 +208,7 @@ function resetGame() {
    document.getElementById('oCharacter').value = p2Char
    //sets the player to 1
    currentPlayer = p1Char
+   cursor()
    boardArray.forEach(board => { // resets each board and then recreates every inner board using a HTML constructor
       document.getElementById(board.name).innerHTML = '';
       for (let i = 1; i<10;i++){
