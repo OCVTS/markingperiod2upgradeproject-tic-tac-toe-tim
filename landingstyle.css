@@ -75,11 +75,13 @@ footer {
     width:35vw;
     height:60vh;
     margin-left:20px;
-    font-size:36px;
+    font-size:28px;
     text-align: center;
     padding:25px;
     border-radius:30px;
     visibility: hidden;
+    color: black;
+    line-height: 4vh;
 }
 .lightbox-opt {
     background-color: white;
