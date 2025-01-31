@@ -42,6 +42,9 @@ footer {
     width:20vw;
     height:5vh;
 }
+main div:hover {
+    cursor:pointer;
+}
 #startGame a, main div {
     color:white;
     font-size:3rem;
