@@ -342,3 +342,14 @@ function displayColor(){
 }
 
 document.getElementById('close').addEventListener('click',close)
+
+function closeOpenLandingLightbox(lightbox) {
+   if(lightbox!='All') {
+      document.getElementById('lightbox').classList.add('visible')
+      document.getElementById(lightbox).classList.add('visible')
+   }else{
+      document.getElementById('lightbox').classList.remove('visible')
+      document.getElementById('DescL').classList.remove('visible')
+      document.getElementById('OptionsL').classList.remove('visible')
+   }
+}

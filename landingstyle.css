@@ -14,18 +14,82 @@ header {
     top:0;
     text-align: center;
     background-color:#2369B8;
+    line-height: 10vh;
+    color:white;
 }
 main {
     width:100vw;
     height:85vh;
     position:fixed;
     top:10vh;
+    display:flex;
+    place-content: center center;
+    flex-flow:column wrap;
 }
 footer {
     width:100vw;
     height:5vh;
-    position:fixed;
+    position:absolute;
     bottom:0;
     text-align: center;
     background-color:#2369B8;
+    z-index: 0;
+    line-height: 5vh;
+    color:white;
+}
+#startGame, main div {
+    text-align: center;
+    width:20vw;
+    height:5vh;
+}
+#startGame a, main div {
+    color:white;
+    font-size:3rem;
+    text-decoration: none;
+}
+
+#lightbox {
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.4);
+    z-index: 100;
+    visibility: hidden;
+    opacity:0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.4s ease
+}
+
+#lightbox.visible, #DescL.visible, #OptionsL.visible {
+    visibility: visible;
+    opacity:1;
+}
+
+.lightbox-desc {
+    background-color: white;
+    filter:brightness(0.9);
+    width:35vw;
+    height:60vh;
+    margin-left:20px;
+    font-size:36px;
+    text-align: center;
+    padding:25px;
+    border-radius:30px;
+    visibility: hidden;
+}
+.lightbox-opt {
+    background-color: white;
+    filter:brightness(0.9);
+    width:35vw;
+    height:60vh;
+    margin-right:20px;
+    font-size:36px;
+    text-align: center;
+    padding:25px;
+    border-radius:30px;
+    visibility: hidden;
 }

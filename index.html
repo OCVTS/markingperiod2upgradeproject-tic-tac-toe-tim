@@ -9,14 +9,22 @@
             <link href="landingstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    
     <header>
         <h1>Super Tic Tac Toe</h1>
     </header>
     <main>
-        <a href="game.html" alt="Link to Game">Let's Play!</a>
+        <div id="startGame"><a href="game.html" alt="Link to Game">Let's Play!</a></div>
+        <div id="Desc" onclick="closeOpenLandingLightbox('DescL')">Description</div>
+        <div id="Options"  onclick="closeOpenLandingLightbox('OptionsL')">Options</div>
+        <div id="nuke" onclick="window.close()">Quit</div>
     </main>
     <footer>
-        
+        <div id="lightbox" class="" onclick="closeOpenLandingLightbox('All')">
+            <div id="DescL" class="lightbox-desc"></div>
+            <div id="OptionsL" class="lightbox-opt"></div>
+        </div>
+        <div>&copy; 2025 OCVTS comp sci</div>
     </footer>
 </body>
 <script src="script.js"></script>
