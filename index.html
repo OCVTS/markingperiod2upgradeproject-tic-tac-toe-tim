@@ -4,195 +4,29 @@
     <meta charset="utf-8"><!--name of the page in the tab-->
         <meta name="viewport" content="width=device-width">
             <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <!--this allows for the image inside of the tab to change to whatevers linked in the pngs tab-->
-            <title>Tic Tac Toe Tim</title>
+            <title>Super Tic Tac Toe</title>
             <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-            <link href="style.css" rel="stylesheet" type="text/css" />
+            <link href="landingstyle.css" rel="stylesheet" type="text/css" />
 </head>
-<body id ="nicebod">
+<body>
+    
+    <header>
+        <h1>Super Tic Tac Toe</h1>
+    </header>
     <main>
-        <div id = "blurred1">
-            <div id="Sidebar"> <!--sidebar div-->
-                <div id="SidebarTop">
-                    <div id="title">
-                        <div id="Super"><h1 id="Superh1">Super </h1></div>
-                            <div><h1 id="h1-1">Tic </h1><h1 id="h1-2">Tac </h1><h1 id="h1-3">Toe</h1></div> <!--Text in the sidenav-->
-                        </div>
-                        <div class="namesCharBox ">
-                            <div id="nameBox">
-                                <div><h3 class="names"id="pnames1">Player 1:</h3>
-                                <input type="text" class = "names" id="p1Name" name="Player 1 name"><br></div>
-                                    <br> <!--input where you type in your custom name which can get sent to the js and can be used as an actual name thingy-->
-                                    <div><h3 id="pnames2" class = "names">Player 2:</h3>
-                                    <input type="text" class="names" id="p2Name" name="Player 2 name"><br></div>
-                            </div>
-                            <div id="charSelect">
-                                <div id="p1CharSel" class="innerCharSel">
-                                    <h3 class="chars" id="pcharacters1">Player 1</h3> <!--where you can pick your custom character-->
-                                    <select class="chars" id="xCharacter"> <!--this allows for there to be something on the page that does a dropdown-->
-                                        <option value="X">X</option> <!--the options inside of the select tag allow whatevers in the tag to be an option-->
-                                        <option value="❌">❌</option>
-                                        <option value="⚒">⚒</option>
-                                        <option value="⚔">⚔</option>
-                                        <option value="✘">✘</option>
-                                        <option value="✻">✻</option>
-                                        <option value="⛝">⛝</option>
-                                        <option value="☣">☣</option>
-                                        <option value="❖">❖</option>
-                                    </select>
-                                </div>
-                            <div id="p2CharSel" class="innerCharSel">
-                                <h3 class="chars" id="pcharacters2">Player 2</h3>
-                                    <select class = "chars" id="oCharacter">
-                                        <option value="O">O</option>
-                                        <option value="💙">💙</option>
-                                        <option value="🥚">🥚</option>
-                                        <option value="☺">☺</option>
-                                        <option value="☼">☼</option>
-                                        <option value="☹">☹</option>
-                                        <option value="☯">☯</option>
-                                        <option value="☮">☮</option>
-                                        <option value="☢">☢</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="buttonContainer">
-                            <div><button id="startbtn" onclick="startGame()">Start</button></div><!--start game btn-->
-                            <div><button id="resetbtn" onclick="resetGame()">Reset</button></div><!--reset game btn-->
-                            <p id="placement" class="">You can play in any Board.</p>
-                        </div>
-                </div>
-                <div id="SidebarBot">
-                    <div id="scoreboard">
-                        <p id="winnerStatus" style="grid-area:winner">Winner</p>
-                        <p class="scoreboardItem" id="p1s" style="grid-area:p1s"></p>
-                        <p class="scoreboardItem" id="SB" style="grid-area:SB">Score Board</p>
-                        <p class="scoreboardItem" id="p2s" style="grid-area:p2s"></p>
-                        <div class="scoreboardItem" id="resetScoreDiv"><button id="resetScore" onclick="scoreReset()">Reset Score</button></div>
-                    </div>
-                    <div id = "slider">
-                        <h3>Website Color!</h3>
-                        <input id = "sliderNum" type="range" min="0" max="360" steps = "360" value="0" oninput = "displayColor()">
-                        <button id = "colorBtn" onclick="setColor()">Set Color</button>
-                        <button id = "rndmColor" onclick="rndmColor()">Random</button>
-                        <br>
-                        <p id="numbervalues">Enter Number Value</p>
-                        <input type="text" class = "names" id="colorInput" oninput = "displayColor()" name="ClrInpt">
-                        
-                    </div>
-                    <div id = "colorDisplay">Color</div>
-                </div>
-            </div>
-        </div>
-            <div id = 'instructions-container'><div id="instructions">
-                <p>In this game you will play a modified version of the classic children's game: Tic-Tac-Toe. In this version, within each box of the board, there is another board. Upon placing a piece in any box on a small board, you must now play in that box of the larger board. If you win on a small board, you now win that space on the large board.</p>
-                <button id = "close">Got it!</button>
-                </div>
-            </div>
-        <div id = "blurred2">
-            <section id="tttgrid" class="grid_container">
-                <div class="grid_item openBoard" id="A">
-                    <div class="innerGrid" id="A1" onclick="playerMove(A, '1')"></div>
-                    <div class="innerGrid" id="A2" onclick="playerMove(A, '2')"></div>
-                    <div class="innerGrid" id="A3" onclick="playerMove(A, '3')"></div>
-                    <div class="innerGrid" id="A4" onclick="playerMove(A, '4')"></div>
-                    <div class="innerGrid" id="A5" onclick="playerMove(A, '5')"></div>
-                    <div class="innerGrid" id="A6" onclick="playerMove(A, '6')"></div>
-                    <div class="innerGrid" id="A7" onclick="playerMove(A, '7')"></div>
-                    <div class="innerGrid" id="A8" onclick="playerMove(A, '8')"></div>
-                    <div class="innerGrid" id="A9" onclick="playerMove(A, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="B">
-                    <div class="innerGrid" id="B1" onclick="playerMove(B, '1')"></div>
-                    <div class="innerGrid" id="B2" onclick="playerMove(B, '2')"></div>
-                    <div class="innerGrid" id="B3" onclick="playerMove(B, '3')"></div>
-                    <div class="innerGrid" id="B4" onclick="playerMove(B, '4')"></div>
-                    <div class="innerGrid" id="B5" onclick="playerMove(B, '5')"></div>
-                    <div class="innerGrid" id="B6" onclick="playerMove(B, '6')"></div>
-                    <div class="innerGrid" id="B7" onclick="playerMove(B, '7')"></div>
-                    <div class="innerGrid" id="B8" onclick="playerMove(B, '8')"></div>
-                    <div class="innerGrid" id="B9" onclick="playerMove(B, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="C">
-                    <div class="innerGrid" id="C1" onclick="playerMove(C, '1')"></div>
-                    <div class="innerGrid" id="C2" onclick="playerMove(C, '2')"></div>
-                    <div class="innerGrid" id="C3" onclick="playerMove(C, '3')"></div>
-                    <div class="innerGrid" id="C4" onclick="playerMove(C, '4')"></div>
-                    <div class="innerGrid" id="C5" onclick="playerMove(C, '5')"></div>
-                    <div class="innerGrid" id="C6" onclick="playerMove(C, '6')"></div>
-                    <div class="innerGrid" id="C7" onclick="playerMove(C, '7')"></div>
-                    <div class="innerGrid" id="C8" onclick="playerMove(C, '8')"></div>
-                    <div class="innerGrid" id="C9" onclick="playerMove(C, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="D">
-                    <div class="innerGrid" id="D1" onclick="playerMove(D, '1')"></div>
-                    <div class="innerGrid" id="D2" onclick="playerMove(D, '2')"></div>
-                    <div class="innerGrid" id="D3" onclick="playerMove(D, '3')"></div>
-                    <div class="innerGrid" id="D4" onclick="playerMove(D, '4')"></div>
-                    <div class="innerGrid" id="D5" onclick="playerMove(D, '5')"></div>
-                    <div class="innerGrid" id="D6" onclick="playerMove(D, '6')"></div>
-                    <div class="innerGrid" id="D7" onclick="playerMove(D, '7')"></div>
-                    <div class="innerGrid" id="D8" onclick="playerMove(D, '8')"></div>
-                    <div class="innerGrid" id="D9" onclick="playerMove(D, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="E">
-                    <div class="innerGrid" id="E1" onclick="playerMove(E, '1')"></div>
-                    <div class="innerGrid" id="E2" onclick="playerMove(E, '2')"></div>
-                    <div class="innerGrid" id="E3" onclick="playerMove(E, '3')"></div>
-                    <div class="innerGrid" id="E4" onclick="playerMove(E, '4')"></div>
-                    <div class="innerGrid" id="E5" onclick="playerMove(E, '5')"></div>
-                    <div class="innerGrid" id="E6" onclick="playerMove(E, '6')"></div>
-                    <div class="innerGrid" id="E7" onclick="playerMove(E, '7')"></div>
-                    <div class="innerGrid" id="E8" onclick="playerMove(E, '8')"></div>
-                    <div class="innerGrid" id="E9" onclick="playerMove(E, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="F">
-                    <div class="innerGrid" id="F1" onclick="playerMove(F, '1')"></div>
-                    <div class="innerGrid" id="F2" onclick="playerMove(F, '2')"></div>
-                    <div class="innerGrid" id="F3" onclick="playerMove(F, '3')"></div>
-                    <div class="innerGrid" id="F4" onclick="playerMove(F, '4')"></div>
-                    <div class="innerGrid" id="F5" onclick="playerMove(F, '5')"></div>
-                    <div class="innerGrid" id="F6" onclick="playerMove(F, '6')"></div>
-                    <div class="innerGrid" id="F7" onclick="playerMove(F, '7')"></div>
-                    <div class="innerGrid" id="F8" onclick="playerMove(F, '8')"></div>
-                    <div class="innerGrid" id="F9" onclick="playerMove(F, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="G">
-                    <div class="innerGrid" id="G1" onclick="playerMove(G, '1')"></div>
-                    <div class="innerGrid" id="G2" onclick="playerMove(G, '2')"></div>
-                    <div class="innerGrid" id="G3" onclick="playerMove(G, '3')"></div>
-                    <div class="innerGrid" id="G4" onclick="playerMove(G, '4')"></div>
-                    <div class="innerGrid" id="G5" onclick="playerMove(G, '5')"></div>
-                    <div class="innerGrid" id="G6" onclick="playerMove(G, '6')"></div>
-                    <div class="innerGrid" id="G7" onclick="playerMove(G, '7')"></div>
-                    <div class="innerGrid" id="G8" onclick="playerMove(G, '8')"></div>
-                    <div class="innerGrid" id="G9" onclick="playerMove(G, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="H">
-                    <div class="innerGrid" id="H1" onclick="playerMove(H, '1')"></div>
-                    <div class="innerGrid" id="H2" onclick="playerMove(H, '2')"></div>
-                    <div class="innerGrid" id="H3" onclick="playerMove(H, '3')"></div>
-                    <div class="innerGrid" id="H4" onclick="playerMove(H, '4')"></div>
-                    <div class="innerGrid" id="H5" onclick="playerMove(H, '5')"></div>
-                    <div class="innerGrid" id="H6" onclick="playerMove(H, '6')"></div>
-                    <div class="innerGrid" id="H7" onclick="playerMove(H, '7')"></div>
-                    <div class="innerGrid" id="H8" onclick="playerMove(H, '8')"></div>
-                    <div class="innerGrid" id="H9" onclick="playerMove(H, '9')"></div>
-                </div>
-                <div class="grid_item openBoard" id="I">
-                    <div class="innerGrid" id="I1" onclick="playerMove(I, '1')"></div>
-                    <div class="innerGrid" id="I2" onclick="playerMove(I, '2')"></div>
-                    <div class="innerGrid" id="I3" onclick="playerMove(I, '3')"></div>
-                    <div class="innerGrid" id="I4" onclick="playerMove(I, '4')"></div>
-                    <div class="innerGrid" id="I5" onclick="playerMove(I, '5')"></div>
-                    <div class="innerGrid" id="I6" onclick="playerMove(I, '6')"></div>
-                    <div class="innerGrid" id="I7" onclick="playerMove(I, '7')"></div>
-                    <div class="innerGrid" id="I8" onclick="playerMove(I, '8')"></div>
-                    <div class="innerGrid" id="I9" onclick="playerMove(I, '9')"></div>
-                </div>
-            </section>
-        </div>
+        <div id="startGame"><a href="game.html" alt="Link to Game">Let's Play!</a></div>
+        <div id="Desc" onclick="closeOpenLandingLightbox('DescL')">Description</div>
+        <div id="Options"  onclick="closeOpenLandingLightbox('OptionsL')">Options</div>
+        <div id="nuke" onclick="window.close()">Quit</div>
     </main>
-    <script src="script.js"></script>
+    <footer>
+        <div id="lightbox" class="" onclick="closeOpenLandingLightbox('All')">
+            <div id="DescL" class="lightbox-desc">The purpose of Super Tic Tac Toe is to be an enjoyable game riddled with strategy and pain as either you or your opponent struggle to play the game correctly and or forget which box to play in.  All in all Super Tic Tac Toe is an upgraded version of the childhood game Tic Tac Toe, the way its played is there 9 big boxes and 9 little boxes inside of those big boxes.  Our website allows the game to be played without needing the use of white board or a piece of paper.  Also our game allows the players to know where their next move is by showing it on the side navigation.  Our website is good for anyone that would have the desire to play Super Tic Tac Toe because we're made it very well and all bugs have been removed, there are easter eggs and it runs very well.
+            </div>
+            <div id="OptionsL" class="lightbox-opt"></div>
+        </div>
+        <div>&copy; 2025 OCVTS comp sci</div>
+    </footer>
 </body>
+<script src="script.js"></script>
 </html>

@@ -340,6 +340,9 @@ input[type=text] { /*the styling tag to style the inputs where you can put text,
 #slider {
     text-align: center;
 }
+#slider h3 {
+    color: #fff;
+}
 
 #colorBtn {
     border-radius: 1000px;
