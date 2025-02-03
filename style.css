@@ -146,8 +146,8 @@ h1 {
 /* This styles our primary  buttons */
 #resetbtn, #startbtn, #resetScore {
     width:8vw;
-    height:6vh;
-    border-radius:30px;
+    height:6.5vh;
+    border-radius:35px;
     color:white;
     background-color:#133863;
     border:4px solid white;
@@ -323,6 +323,7 @@ input[type=text] { /*the styling tag to style the inputs where you can put text,
     border: none;
     background-color: #2369B8;
     color: #fff;
+    cursor:pointer;
 }
 #close:hover {
     background-color: #133863;
