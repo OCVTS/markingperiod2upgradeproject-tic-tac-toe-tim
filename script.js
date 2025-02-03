@@ -151,7 +151,6 @@ function checkWinner() { //Checks winner in both the small boards, and the large
       // checks the winner value of board objects in the board array at the value of con(condition)-1 due to arrays starting at 0
       if (boardArray[con[0]-1].winner == boardArray[con[1]-1].winner && boardArray[con[0]-1].winner == boardArray[con[2]-1].winner && boardArray[con[0]-1].winner != '' && boardArray[con[0]-1].winner != 'Tie') {
          winner=true
-         alert('you win')
          // changes the winner text in the sidebar and increases the score
          if (currentPlayer == p1Char) {
             document.getElementById('winnerStatus').innerHTML = p1Name + ' Wins'
