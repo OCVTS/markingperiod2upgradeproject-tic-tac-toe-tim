@@ -2,7 +2,9 @@
 
 // variables, p1 is player one and p2 is player two, Char is short for character
 let gameStart = false;
-// let cpu = true;
+let cpu = true;
+let rand;
+let randBoard;
 let p1Char= 'X';
 let p2Char= 'O';
 let p1Name = '';
@@ -71,55 +73,57 @@ function playerMove(board, num) {//playerMove function controls everything to do
          //runs functions to tell the player where and who to play
             placement();
             cursor()
-         // if (cpu = true && currentPlayer==p2Char) {
-         //    cpuMove(num)
-         // }
+         if (cpu = true) {
+            while (currentPlayer==p2Char && winner == false){
+               cpuMove(num)
+               if (randBoard[rand] == '') {
+                  playerMove(randBoard, rand)
+               }
+            }
+         }
       }
    }
 }
 
 // Attempt at an AI
-// function cpuMove(num){
-//    let rand;
-//    let randBoard;
-//    if (previousSpace == '') {
-//       rand = Math.floor(Math.random()*9)+1
-//       switch(rand) {
-//          case 1:
-//             randBoard = A
-//             break;
-//          case 1:
-//             randBoard = B
-//             break;
-//          case 1:
-//             randBoard = C
-//             break;
-//          case 1:
-//             randBoard = D
-//             break;
-//          case 1:
-//             randBoard = E
-//             break;
-//          case 1:
-//             randBoard = F
-//             break;
-//          case 1:
-//             randBoard = G
-//             break;
-//          case 1:
-//             randBoard = H
-//             break;
-//          case 1:
-//             randBoard = I
-//             break;
-//       }
-//       rand = Math.floor(Math.random()*9)+1
-//    } else{
-//       rand = Math.floor(Math.random()*9)+1;
-//       randBoard = boardArray[num-1]
-//    }
-//    playerMove(randBoard, rand)
-// }
+function cpuMove(num){
+   if (previousSpace == '') {
+      rand = Math.floor(Math.random()*9)+1
+      switch(rand) {
+         case 1:
+            randBoard = A
+            break;
+         case 1:
+            randBoard = B
+            break;
+         case 1:
+            randBoard = C
+            break;
+         case 1:
+            randBoard = D
+            break;
+         case 1:
+            randBoard = E
+            break;
+         case 1:
+            randBoard = F
+            break;
+         case 1:
+            randBoard = G
+            break;
+         case 1:
+            randBoard = H
+            break;
+         case 1:
+            randBoard = I
+            break;
+      }
+      rand = Math.floor(Math.random()*9)+1
+   } else{
+      rand = Math.floor(Math.random()*9)+1;
+      randBoard = boardArray[num-1]
+   }
+}
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
 
 function checkWinner() { //Checks winner in both the small boards, and the large board, in every possible direction, as well as changing all the necessary variables
