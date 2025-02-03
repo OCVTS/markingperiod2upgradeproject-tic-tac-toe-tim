@@ -58,7 +58,7 @@ main div:hover {
     top:0;
     left:0;
     background-color:rgba(0,0,0,0.4);
-    z-index: 100;
+    z-index: 10;
     visibility: hidden;
     opacity:0;
     display:flex;
@@ -97,4 +97,26 @@ main div:hover {
     padding:25px;
     border-radius:30px;
     visibility: hidden;
+    color:black;
+    z-index: 20;
+}
+
+#OptionsL div{
+    height:20vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#P1, #P2 {
+    width:16vw;
+    height:8vh;
+    border-radius:30px;
+    color:white;
+    background-color:#133863;
+    border:4px solid white;
+    font-size:1.5em;
+    font-weight: bold;
+    cursor:pointer;
+    z-index:100;
 }

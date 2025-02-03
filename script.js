@@ -2,6 +2,7 @@
 
 // variables, p1 is player one and p2 is player two, Char is short for character
 let gameStart = false;
+// let cpu = true;
 let p1Char= 'X';
 let p2Char= 'O';
 let p1Name = '';
@@ -42,37 +43,83 @@ cursor()
 /********************* Function handles the player input and places mark on board. This may be completed as more than one function if you choose ********************************/
 function playerMove(board, num) {//playerMove function controls everything to do with the player clicking on a square in the board
    if (gameStart == true) {//checks if the game has started yet
-      // This if statement checks if they are playing in the correct board, if that board is open, there has not been a winner, and if the space is empty, else function stops
-      if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false) && (board[num] == '')){
-      // Uses the element with the id of the board, and the numbered space, changes that space in both the html and the JS object
-         document.getElementById(board.name+num).innerHTML = currentPlayer
-         board[num] = currentPlayer
-         board.count++ //used for checking ties in individual boards
-         checkWinner()
-      //checks for tie by asking if there is no winner in a board, and if the turncount is 9 or greater, means all spaces are filled.
-         if (board.winner == '' && board.count >= 9) {
-            board.open = false
-            board.winner = 'Tie'
-            document.getElementById(board.name).style.filter = 'blur(2px)'
-         }
-      // if the board that the user must play in is open, it sets previousSpace to the string value of the required board.
-         if (boardArray[num-1].open) {
-            previousSpace = boardArray[num-1].name
-         } else {
-            previousSpace = ''
-         }
-      //switches player, if 1 change to 2, if 2 change to 1
-         if (currentPlayer == p1Char) {
-            currentPlayer = p2Char;
-         } else {
-            currentPlayer = p1Char;
-         }
-      //runs functions to tell the player where and who to play
-         placement();
-         cursor()
+         // This if statement checks if they are playing in the correct board, if that board is open, there has not been a winner, and if the space is empty, else function stops
+         if ((board.name == previousSpace || previousSpace == '') && (board.open == true) && (winner == false) && (board[num] == '')){
+         // Uses the element with the id of the board, and the numbered space, changes that space in both the html and the JS object
+            document.getElementById(board.name+num).innerHTML = currentPlayer
+            board[num] = currentPlayer
+            board.count++ //used for checking ties in individual boards
+            checkWinner()
+         //checks for tie by asking if there is no winner in a board, and if the turncount is 9 or greater, means all spaces are filled.
+            if (board.winner == '' && board.count >= 9) {
+               board.open = false
+               board.winner = 'Tie'
+               document.getElementById(board.name).style.filter = 'blur(2px)'
+            }
+         // if the board that the user must play in is open, it sets previousSpace to the string value of the required board.
+            if (boardArray[num-1].open) {
+               previousSpace = boardArray[num-1].name
+            } else {
+               previousSpace = ''
+            }
+         //switches player, if 1 change to 2, if 2 change to 1
+            if (currentPlayer == p1Char) {
+               currentPlayer = p2Char;
+            } else {
+               currentPlayer = p1Char;
+            }
+         //runs functions to tell the player where and who to play
+            placement();
+            cursor()
+         // if (cpu = true && currentPlayer==p2Char) {
+         //    cpuMove(num)
+         // }
       }
    }
 }
+
+// Attempt at an AI
+// function cpuMove(num){
+//    let rand;
+//    let randBoard;
+//    if (previousSpace == '') {
+//       rand = Math.floor(Math.random()*9)+1
+//       switch(rand) {
+//          case 1:
+//             randBoard = A
+//             break;
+//          case 1:
+//             randBoard = B
+//             break;
+//          case 1:
+//             randBoard = C
+//             break;
+//          case 1:
+//             randBoard = D
+//             break;
+//          case 1:
+//             randBoard = E
+//             break;
+//          case 1:
+//             randBoard = F
+//             break;
+//          case 1:
+//             randBoard = G
+//             break;
+//          case 1:
+//             randBoard = H
+//             break;
+//          case 1:
+//             randBoard = I
+//             break;
+//       }
+//       rand = Math.floor(Math.random()*9)+1
+//    } else{
+//       rand = Math.floor(Math.random()*9)+1;
+//       randBoard = boardArray[num-1]
+//    }
+//    playerMove(randBoard, rand)
+// }
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
 
 function checkWinner() { //Checks winner in both the small boards, and the large board, in every possible direction, as well as changing all the necessary variables
