@@ -64,16 +64,16 @@ a {
     filter:brightness(0.9);
     width:30vw;
     height:60vh;
-    font-size:28px;
+    font-size:1.75rem;
     text-align: center;
     padding:25px;
     border-radius:30px;
     color: black;
     line-height: 2.65vh;
-    transition: .4s ease;
+    transition: .2s ease;
 }
 #Desc {
-    font-size:33px;
+    font-size:2.1rem;
     line-height: 3vh;
 }
 table {

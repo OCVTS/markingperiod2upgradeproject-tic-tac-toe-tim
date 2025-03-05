@@ -65,20 +65,18 @@ function playerMove(board, num) {//playerMove function controls everything to do
                previousSpace = ''
             }
          //switches player, if 1 change to 2, if 2 change to 1
-            if (currentPlayer == p1Char) {
-               currentPlayer = p2Char;
-            } else {
-               currentPlayer = p1Char;
-            }
+         if (currentPlayer == p1Char) {
+            currentPlayer = p2Char;
+         } else if (currentPlayer == p2Char) {
+            currentPlayer = p1Char;
+         }
          //runs functions to tell the player where and who to play
             placement();
             cursor()
+            alert('test')
          if (cpu = true) {
             while (currentPlayer==p2Char && winner == false){
                cpuMove(num)
-               if (randBoard[rand] == '') {
-                  playerMove(randBoard, rand)
-               }
             }
          }
       }
@@ -87,6 +85,7 @@ function playerMove(board, num) {//playerMove function controls everything to do
 
 // Attempt at an AI
 function cpuMove(num){
+   alert(currentPlayer)
    if (previousSpace == '') {
       rand = Math.floor(Math.random()*9)+1
       switch(rand) {
@@ -119,9 +118,37 @@ function cpuMove(num){
             break;
       }
       rand = Math.floor(Math.random()*9)+1
-   } else{
+      // alert('hi')
+      // for (let i = 0; i<8;i++){ 
+      //    boardArray.forEach((board) => {
+      //       if (board[classArray[i][0]] == board[classArray[i][1]] && board[classArray[i][0]] != ''){
+      //          randBoard = board
+      //          rand = board[classArray[i][2]]
+      //       } else if (board[classArray[i][2]] == board[classArray[i][1]] && board[classArray[i][1]] != ''){
+      //          randBoard = board
+      //          rand = board[classArray[i][0]]
+      //       } else if (board[classArray[i][2]] == board[classArray[i][0]] && board[classArray[i][0]] != ''){
+      //          randBoard = board
+      //          rand = board[classArray[i][1]]
+      //       }
+      //    })
+      // }
+   }else{
       rand = Math.floor(Math.random()*9)+1;
       randBoard = boardArray[num-1]
+      // alert('hi')
+      for (let i = 0; i<8;i++){
+            if (randBoard[classArray[i][0]] == randBoard[classArray[i][1]] && randBoard[classArray[i][0]] != '' && randBoard[classArray[i][0]] != p1Char){
+               rand = randBoard[classArray[i][2]]
+            } else if (randBoard[classArray[i][2]] == randBoard[classArray[i][1]] && randBoard[classArray[i][1]] != '' && randBoard[classArray[i][1]] != p1Char){
+               rand = randBoard[classArray[i][0]]
+            } else if (randBoard[classArray[i][2]] == randBoard[classArray[i][0]] && randBoard[classArray[i][0]] != '' && randBoard[classArray[i][0]] != p1Char){
+               rand = randBoard[classArray[i][1]]
+            }
+      }
+   }
+   if (randBoard[rand] == '') {
+      playerMove(randBoard, rand)
    }
 }
 /********************* Function checks all rows, columns, and diagonals for three identical symbols ********************************/
