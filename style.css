@@ -27,12 +27,16 @@ body {
 }
 /*This is a div surrounding the bottom half of the sidebar */
 #SidebarBot {
-    /* border:1px solid white; */
+    /* border:1px solid red; */
     height:40vh;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content: center;
+}
+#sidebar {
+    justify-content: center;
+    align-items: center;
 }
 /* This is a div containing the text "super tic tac toe" and this syles it */
 #title {
@@ -144,7 +148,7 @@ h1 {
     color:white;
 }
 /* This styles our primary  buttons */
-#resetbtn, #startbtn, #resetScore {
+#resetbtn, #startbtn, #resetScore,#CPUbtn {
     width:8vw;
     height:6.5vh;
     border-radius:35px;
@@ -332,7 +336,6 @@ input[type=text] { /*the styling tag to style the inputs where you can put text,
 
 
 
-
 #tttgrid{ /*this is the board that you play on */
     filter:blur(1.5rem); /*the board starts blurred and unblurs when you start the game */
     color: white;
@@ -366,6 +369,15 @@ input[type=text] { /*the styling tag to style the inputs where you can put text,
     margin-top: .4vh;
 }
 
+#CPUgrid{
+    width:100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    display:flex;
+}
+#cpuDec{
+    margin-left:1vw;
+}
 @media(max-width:580px){ /*allows for that when the webpage gets a specific height and width itll change parts of the page this particularly is for a phone */
 * {
     margin:0;
@@ -423,7 +435,8 @@ height:5vh;
 #resetbtn{
 width:25vw;
 height:5vh;
-    }
+}
+
 #cselect{
     visibility: hidden; /*the selected items hidden unless another change occurs */
 }

@@ -73,8 +73,8 @@ function playerMove(board, num) {//playerMove function controls everything to do
          //runs functions to tell the player where and who to play
             placement();
             cursor()
-            alert('test')
-         if (cpu = true) {
+            alert(cpu)
+         if (cpu == true) {
             while (currentPlayer==p2Char && winner == false){
                cpuMove(num)
             }
@@ -429,4 +429,18 @@ function closeOpenLandingLightbox(lightbox) {
       document.getElementById('DescL').classList.remove('visible')
       document.getElementById('OptionsL').classList.remove('visible')
    }
+}
+function CPU(){
+   if(gameStart == false){
+   if(cpu == true){
+      cpu = false;
+      document.getElementById('cpuDec').innerHTML = 'Disabled'
+   }else if (cpu == false){
+      cpu = true;
+      document.getElementById('cpuDec').innerHTML = 'Enabled'
+
+   }
+}else{
+   alert('Game in progress!')
+}
 }
